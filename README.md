@@ -1,5 +1,15 @@
 # Mesos UI
 
+[![wercker status](https://app.wercker.com/status/3e566621ba967bfeb6ee57a76ddf42cc/s/master "wercker status")](https://app.wercker.com/project/bykey/3e566621ba967bfeb6ee57a76ddf42cc)
+
+A responsive, realtime dashboard for Apache Mesos built using Node.js, React.js and Socket.io.
+
+![dashboard](docs/dashboard.png)
+
+## Compatibility
+
+This code has been tested against Mesos version 0.23 at the time of writing.
+
 ## Developing locally
 
 ### Prerequisites
@@ -48,7 +58,7 @@ docker build .
 ### Running the Docker container
 
 ```
-docker run -p 5000:5000 -p 8000:8000 -p 31111:31111 -v /var/run/docker.sock:/var/run/docker.sock capgemini/mesos-ui
+docker run -p 5000:5000 -p 8000:8000 -v /var/run/docker.sock:/var/run/docker.sock capgemini/mesos-ui
 ```
 
 The application should be available on http://localhost:5000.
@@ -61,5 +71,5 @@ The UI can be pointed at the real APIs by providing an environment variables to 
 container as follows:
 
 ```
-docker run -p 5000:5000 -p 31111:31111 -v /var/run/docker.sock:/var/run/docker.sock -e MESOS_ENDPOINT=http://production_endpoint:5050 capgemini/mesos-ui
+docker run -p 5000:5000 -v /var/run/docker.sock:/var/run/docker.sock -e MESOS_ENDPOINT=http://production_endpoint:5050 capgemini/mesos-ui
 ```
