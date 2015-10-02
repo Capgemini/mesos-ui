@@ -33,10 +33,6 @@ class App extends React.Component {
     };
   }
 
-  componentWillMount() {
-   // ThemeManager.setTheme(ApolloTheme);
-  }
-
   componentDidMount() {
     this.mounted = true;
     window.addEventListener('resize', this.handleResize);
@@ -76,7 +72,7 @@ class App extends React.Component {
   }
 
   handleResize() {
-    let widthCurrent = window.matchMedia('(minWidth: 1024px)').matches;
+    let widthCurrent = window.matchMedia('(min-width: 1024px)').matches;
     if (this.state.widthMedium !== widthCurrent) {
       this.setState({widthMedium: widthCurrent});
     }
@@ -115,13 +111,13 @@ class App extends React.Component {
         transition: 'flex 0.5s ease-out',
         flex: '0 0 66px',
         backgroundColor: '#20272b',
-        '@media (minWidth: 1024px)': {
+        '@media (min-width: 1024px)': {
           flex: '0 0 170px'
         }
       },
       columns: {
         padding: '20px 0 0 10px',
-        '@media (minWidth: 1024px)': {
+        '@media (min-width: 1024px)': {
           padding: '20px 24px 0'
         }
       },

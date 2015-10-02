@@ -28,3 +28,12 @@ ul {
   padding: 0;
 }
 
+body {
+  font-size: 13px;
+  line-height: 20px;
+}
+
+.box {
+  padding-bottom: 5px;
+  margin-bottom: 1rem;
+}
