@@ -4,11 +4,12 @@
   "description": "A UI for Mesos built on React.JS.",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/capgemini/react-scaffold/issues"
+    "url": "https://github.com/capgemini/mesos-ui/issues"
   },
-  "homepage": "https://github.com/capgemini/react-scaffold",
+  "homepage": "https://github.com/capgemini/mesos-ui",
   "keywords": [
     "mesos",
+    "apache",
     "ui",
     "react"
   ],

@@ -50,6 +50,15 @@ so you don't necessarily need a working Mesos Cluster. For that we are using
 
 ## Usage
 
+### Deploying the UI through Marathon
+
+Edit ```marathon.json``` and replace ```MESOS_ENDPOINT``` with the URL of your
+Mesos master, and adjust the cpu or memory if desired, and then execute -
+
+```
+curl -X POST -HContent-Type:application/json -d @marathon.json http://MARATHON_ENDPOINT:8080/v2/apps
+```
+
 ### Building the Docker container
 
 ```

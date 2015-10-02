@@ -4,8 +4,7 @@
   "cpus": 0.1,
   "mem": 512,
   "env": {
-    "MESOS_ENDPOINT": "http://127.0.0.1:5050",
-    "MARATHON_ENDPOINT": "http://127.0.0.1:8080"
+    "MESOS_ENDPOINT": "http://127.0.0.1:5050"
   },
   "labels": {
     "DCOS_PACKAGE_NAME": "mesos-ui",
