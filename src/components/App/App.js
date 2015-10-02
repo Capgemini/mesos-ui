@@ -5,6 +5,7 @@ import mui, { FontIcon } from 'material-ui';
 import Logo from '../Logo';
 import Navigation from '../Navigation';
 import Radium from 'radium';
+import ClusterStore from '../../stores/ClusterStore';
 
 let ThemeManager = new mui.Styles.ThemeManager();
 
@@ -19,6 +20,11 @@ class App extends React.Component {
   constructor() {
     super();
     this.handleResize = this.handleResize.bind(this);
+    this.state = {
+      stats: ClusterStore.getStats(),
+      frameworks: ClusterStore.getFrameworks(),
+      nodes: ClusterStore.getNodes()
+    };
   }
 
   getChildContext() {
@@ -32,8 +38,41 @@ class App extends React.Component {
   }
 
   componentDidMount() {
+    this.mounted = true;
     window.addEventListener('resize', this.handleResize);
     this.handleResize();
+
+    ClusterStore.addChangeListener(this.refreshStats.bind(this));
+    ClusterStore.addChangeListener(this.refreshState.bind(this));
+
+    // Setup socket connections. We use the global io() object here which
+    // should be available in the browser.
+    this.socket = io(); //eslint-disable-line
+
+    // cluster metrics
+    this.socket.on('metricsReceived', function (data) {
+      ClusterStore.metricsReceived(data);
+    });
+
+    // cluster state
+    this.socket.on('stateReceived', function (data) {
+      ClusterStore.stateReceived(data);
+    });
+  }
+
+  refreshState() {
+    if (this.mounted) {
+      this.setState( {
+        frameworks: ClusterStore.getFrameworks(),
+        nodes: ClusterStore.getNodes()
+      });
+    }
+  }
+
+  refreshStats() {
+    if (this.mounted) {
+      this.setState( { stats: ClusterStore.getStats() });
+    }
   }
 
   handleResize() {
@@ -44,7 +83,10 @@ class App extends React.Component {
   }
 
   componentWillUnMount() {
+    this.mounted = false;
     window.removeEventListener('resize', this.handleResize);
+    ClusterStore.removeChangeListener(this.refreshStats.bind(this));
+    ClusterStore.removeChangeListener(this.refreshState.bind(this));
   }
 
   menuItems() {
@@ -92,6 +134,7 @@ class App extends React.Component {
 
   render() {
     let style = this.getStyle();
+
     return (
       <div>
         <div className="row">
@@ -103,7 +146,8 @@ class App extends React.Component {
           </div>
           <div className="col-xs-9 col-sm-10">
             <div style={style.columns} className="col-xs-12">
-              <RouteHandler {...this.props} />
+              <RouteHandler {...this.props} nodes={this.state.nodes}
+              frameworks={this.state.frameworks} stats={this.state.stats} />
             </div>
           </div>
         </div>
