@@ -23,6 +23,8 @@ let io = socketIo.listen(app.listen(app.get('port'), () => {
 
 // Default routes
 require('./routes/default')(app, io);
+// Mesos API routes
+require('./routes/api/mesos')(app, io);
 
 // If we're in development mode spin up a mock server as we may not have a
 // running Mesos cluster, so lets just use the stub API in ./stub.json.
@@ -34,11 +36,10 @@ if (process.env.NODE_ENV === 'development') {
   let server = jsonServer.create();
 
   // Set default middlewares (logger, static, cors and no-cache)
-  server.use(jsonServer.defaults);
+  server.use(jsonServer.defaults());
 
-  // Returns an Express router
-  let routes = JSON.parse(fs.readFileSync('./src/stub.json'));
-  let router = jsonServer.router(routes);
+  const stubFile = './src/stub.json';
+  let router = jsonServer.router(stubFile);
   server.use(router);
 
   server.listen(8000);
