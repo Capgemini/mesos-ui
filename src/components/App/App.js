@@ -83,10 +83,10 @@ class App extends React.Component {
   }
 
   componentWillUnMount() {
-    this.mounted = false;
     window.removeEventListener('resize', this.handleResize);
     ClusterStore.removeChangeListener(this.refreshStats.bind(this));
     ClusterStore.removeChangeListener(this.refreshState.bind(this));
+    this.mounted = false;
   }
 
   menuItems() {

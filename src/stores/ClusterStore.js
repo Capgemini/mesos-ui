@@ -20,7 +20,7 @@ var state = {
  * Refresh cluster stats
  */
 function refreshStats(statistics) {
-  _.assign(stats,
+  assign(stats,
     { memFreeBytes: statistics['system/mem_free_bytes'] },
     { memTotalBytes: statistics['system/mem_total_bytes'] },
     { cpusPercent: statistics['master/cpus_percent'] },
@@ -47,18 +47,18 @@ function refreshState(data) {
 
   // Get the framework data.
   state.frameworks = data.frameworks.map(function(framework) {
-
-    let frameworkData = frameworkScheme;
+    let frameworkData = assign({}, frameworkScheme);
 
     for(var propertyName in framework) {
       frameworkData[_.camelCase(propertyName)] = framework[propertyName];
     }
+
     return frameworkData;
   });
 
   // Get the node data.
   state.nodes = data.slaves.map(function(node) {
-    let nodeData = nodeScheme;
+    let nodeData = assign({}, nodeScheme);
 
     for(var propertyName in node) {
       nodeData[_.camelCase(propertyName)] = node[propertyName];
