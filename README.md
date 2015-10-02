@@ -1,4 +1,5 @@
 # Mesos UI
+[![wercker status](https://app.wercker.com/status/3e566621ba967bfeb6ee57a76ddf42cc/s/master "wercker status")](https://app.wercker.com/project/bykey/3e566621ba967bfeb6ee57a76ddf42cc)
 
 ## Developing locally
 
