@@ -5,6 +5,7 @@
 A responsive, realtime dashboard for Apache Mesos built using Node.js, React.js and Socket.io.
 
 ![dashboard](docs/dashboard.png)
+![dashboard-small](docs/dashboard-small.png)
 
 ## Compatibility
 
