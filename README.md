@@ -48,7 +48,7 @@ docker build .
 ### Running the Docker container
 
 ```
-docker run -p 5000:5000 -p 8000:8000 -p 31111:31111 -v /var/run/docker.sock:/var/run/docker.sock capgemini/mesos-ui
+docker run -p 5000:5000 -p 8000:8000 capgemini/mesos-ui
 ```
 
 The application should be available on http://localhost:5000.
@@ -61,5 +61,5 @@ The UI can be pointed at the real APIs by providing an environment variables to 
 container as follows:
 
 ```
-docker run -p 5000:5000 -p 31111:31111 -v /var/run/docker.sock:/var/run/docker.sock -e MESOS_ENDPOINT=http://production_endpoint:5050 capgemini/mesos-ui
+docker run -p 5000:5000 -e MESOS_ENDPOINT=http://production_endpoint:5050 capgemini/mesos-ui
 ```
