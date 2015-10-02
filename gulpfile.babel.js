@@ -82,7 +82,7 @@ gulp.task('bundle', cb => {
 });
 
 // Build the app from source code
-gulp.task('build', ['clean'], cb => {
+gulp.task('build', cb => {
   runSequence(['assets', 'resources'], ['bundle'], cb);
 });
 
