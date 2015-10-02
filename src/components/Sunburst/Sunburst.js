@@ -2,6 +2,9 @@ import React from 'react';
 import d3 from 'd3';
 import _ from 'lodash';
 import Legend from './Legend.js';
+import { Styles, Utils } from 'material-ui';
+let { Colors } = Styles;
+let { ColorManipulator } = Utils;
 
 class Sunburst extends React.Component {
   static propTypes = {
@@ -26,7 +29,7 @@ class Sunburst extends React.Component {
       cpus: '#512DA8', /* @todo pull this from the theme */
       mem: '#00BCD4',
       disk: '#FF9800',
-      canvas: '#363c40'
+      canvas: ColorManipulator.fade(Colors.darkBlack, 0.1)
     }
   };
 
