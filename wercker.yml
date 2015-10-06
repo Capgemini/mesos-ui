@@ -4,6 +4,11 @@ build:
     - npm-install
     - npm-test
     - script:
+        name: collect coverage
+        code: |
+          npm install -g codeclimate-test-reporter
+          CODECLIMATE_REPO_TOKEN=$CODECLIMATE_REPO_TOKEN codeclimate-test-reporter < coverage/lcov.info
+    - script:
         name: echo nodejs information
         code: |
           echo "node version $(node -v) running"

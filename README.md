@@ -1,6 +1,8 @@
 # Mesos UI
 
 [![wercker status](https://app.wercker.com/status/3e566621ba967bfeb6ee57a76ddf42cc/s/master "wercker status")](https://app.wercker.com/project/bykey/3e566621ba967bfeb6ee57a76ddf42cc)
+[![Code Climate](https://codeclimate.com/repos/5613e8d3e30ba0426b004fdb/badges/f0180273f265b5710bed/gpa.svg)](https://codeclimate.com/repos/5613e8d3e30ba0426b004fdb/feed)
+[![Test Coverage](https://codeclimate.com/repos/5613e8d3e30ba0426b004fdb/badges/f0180273f265b5710bed/coverage.svg)](https://codeclimate.com/repos/5613e8d3e30ba0426b004fdb/coverage)
 
 A responsive, realtime dashboard for Apache Mesos built using Node.js, React.js and Socket.io.
 
