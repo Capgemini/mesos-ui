@@ -1,3 +1,5 @@
+/*jshint esnext: true */
+
 import 'babel/polyfill';
 import React from 'react';
 import FastClick from 'fastclick';
