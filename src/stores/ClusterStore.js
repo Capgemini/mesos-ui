@@ -8,6 +8,7 @@ import _ from 'lodash';
 
 var CHANGE_EVENT = 'change';
 var METRICS_RECEIVED_EVENT = 'metricsReceived';
+var LOGS_RECEIVED_EVENT = 'logsReceived';
 var STATE_RECEIVED_EVENT = 'stateReceived';
 
 var stats = require('./schemes/statsScheme.js');
@@ -16,6 +17,8 @@ var state = {
   nodes: [],
   frameworks: []
 };
+
+var logs = {}
 
 /**
  * Refresh cluster stats
@@ -40,6 +43,11 @@ function refreshStats(statistics) {
     { tasksRunning: statistics['master/tasks_running'] },
     { tasksStaging: statistics['master/tasks_staging'] }
   );
+}
+
+function refreshLogs(currentLogs) {
+  assign(logs, currentLogs)
+  return logs['data']
 }
 
 function refreshState(data) {
@@ -76,6 +84,10 @@ var ClusterStore = assign({}, EventEmitter.prototype, {
    */
   getStats() {
     return stats;
+  },
+
+  getLogs() {
+    return logs;
   },
 
   getNodes() {
@@ -128,6 +140,13 @@ var ClusterStore = assign({}, EventEmitter.prototype, {
     this.emit(METRICS_RECEIVED_EVENT, data);
   },
 
+  logsReceived(data) {
+    /* @todo - check if the data we are receiving is different from what we have
+    already to avoid calling unecessary DOM updates */
+    ClusterActions.refreshLogs(data);
+    this.emit(LOGS_RECEIVED_EVENT, data);
+  },
+
   stateReceived(data) {
     /* @todo - check if the data we are receiving is different from what we have
     already to avoid calling unecessary DOM updates */
@@ -143,6 +162,11 @@ ClusterStore.dispatchToken = AppDispatcher.register((action) => {
 
     case ClusterConstants.CLUSTER_REFRESH_STATS:
       refreshStats(action.stats);
+      ClusterStore.emitChange();
+      break;
+
+    case ClusterConstants.CLUSTER_REFRESH_LOGS:
+      refreshLogs(action.logs);
       ClusterStore.emitChange();
       break;
 

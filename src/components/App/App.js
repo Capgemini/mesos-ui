@@ -23,6 +23,7 @@ class App extends React.Component {
     this.handleResize = this.handleResize.bind(this);
     this.state = {
       stats: ClusterStore.getStats(),
+      logs: ClusterStore.getLogs(),
       frameworks: ClusterStore.getFrameworks(),
       nodes: ClusterStore.getNodes()
     };
@@ -40,6 +41,7 @@ class App extends React.Component {
     this.handleResize();
 
     ClusterStore.addChangeListener(this.refreshStats.bind(this));
+    ClusterStore.addChangeListener(this.refreshLogs.bind(this));
     ClusterStore.addChangeListener(this.refreshState.bind(this));
 
     // Setup socket connections. We use the global io() object here which
@@ -49,6 +51,11 @@ class App extends React.Component {
     // cluster metrics
     this.socket.on('metricsReceived', function (data) {
       ClusterStore.metricsReceived(data);
+    });
+
+    // cluster logs
+    this.socket.on('logsReceived', function (data) {
+      ClusterStore.logsReceived(data);
     });
 
     // cluster state
@@ -72,6 +79,12 @@ class App extends React.Component {
     }
   }
 
+  refreshLogs() {
+    if (this.mounted) {
+      this.setState( { logs: ClusterStore.getLogs() });
+    }
+  }
+
   handleResize() {
     let widthCurrent = window.matchMedia('(min-width: 1024px)').matches;
     if (this.state.widthMedium !== widthCurrent) {
@@ -82,6 +95,7 @@ class App extends React.Component {
   componentWillUnMount() {
     window.removeEventListener('resize', this.handleResize);
     ClusterStore.removeChangeListener(this.refreshStats.bind(this));
+    ClusterStore.removeChangeListener(this.refreshLogs.bind(this));
     ClusterStore.removeChangeListener(this.refreshState.bind(this));
     this.mounted = false;
   }
@@ -94,15 +108,18 @@ class App extends React.Component {
     let dashboardIcon = React.createElement(FontIcon, {style: iconStyle, className: 'material-icons'}, 'settings_input_svideo' );
     let nodesIcon = React.createElement(FontIcon, {style: iconStyle, className: 'material-icons'}, 'dns' );
     let frameworksIcon = React.createElement(FontIcon, {style: iconStyle, className: 'material-icons'}, 'build' );
+    let logsIcon = React.createElement(FontIcon, {style: iconStyle, className: 'material-icons'}, 'assignment ' );
 
     let dashboardText = this.state.widthMedium ? 'Dashboard' : '';
     let frameworksText = this.state.widthMedium ? 'Frameworks' : '';
     let nodesText = this.state.widthMedium ? 'Nodes' : '';
+    let logsText = this.state.widthMedium ? 'Logs' : '';
 
     return [
       { route: '/', text: dashboardText, icon: dashboardIcon },
       { route: 'frameworks', text: frameworksText, icon: frameworksIcon },
-      { route: 'nodes', text: nodesText, icon: nodesIcon }
+      { route: 'nodes', text: nodesText, icon: nodesIcon },
+      { route: 'logs', text: logsText, icon: logsIcon }
     ];
   }
 
@@ -144,7 +161,7 @@ class App extends React.Component {
           <div className="col-xs-9 col-sm-10">
             <div style={style.columns} className="col-xs-12">
               <RouteHandler {...this.props} nodes={this.state.nodes}
-              frameworks={this.state.frameworks} stats={this.state.stats} />
+              frameworks={this.state.frameworks} stats={this.state.stats} logs={this.state.logs}/>
             </div>
           </div>
         </div>
