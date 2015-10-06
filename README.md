@@ -4,8 +4,7 @@
 
 A responsive, realtime dashboard for Apache Mesos built using Node.js, React.js and Socket.io.
 
-![dashboard](docs/dashboard.png =100x20)
-![dashboard-small](docs/dashboard-small.png)
+![dashboard](docs/dashboard.png)
 
 ## Compatibility
 
@@ -52,11 +51,11 @@ so you don't necessarily need a working Mesos Cluster. For that we are using
 
 ### Deploying the UI through Marathon
 
-Edit ```marathon.json``` and replace ```MESOS_ENDPOINT``` with the URL of your
+Edit ```mesosui.json``` and replace ```MESOS_ENDPOINT``` with the URL of your
 Mesos master, and adjust the cpu or memory if desired, and then execute -
 
 ```
-curl -X POST -HContent-Type:application/json -d @marathon.json http://MARATHON_ENDPOINT:8080/v2/apps
+curl -X POST -HContent-Type:application/json -d @mesosui.json http://MARATHON_ENDPOINT:8080/v2/apps
 ```
 
 ### Building the Docker container
