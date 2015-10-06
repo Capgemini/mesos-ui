@@ -1,3 +1,4 @@
+/*jshint esnext: true */
 import path from 'path';
 import cp from 'child_process';
 import gulp from 'gulp';
