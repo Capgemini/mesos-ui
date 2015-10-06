@@ -18,7 +18,7 @@ var state = {
   frameworks: []
 };
 
-var logs = {}
+var logs = {};
 
 /**
  * Refresh cluster stats
@@ -46,8 +46,8 @@ function refreshStats(statistics) {
 }
 
 function refreshLogs(currentLogs) {
-  assign(logs, currentLogs)
-  return logs['data']
+  assign(logs, currentLogs);
+  return logs.data;
 }
 
 function refreshState(data) {

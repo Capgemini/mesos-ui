@@ -68,8 +68,8 @@ var mesos = {
   getSocketLogs(socket) {
     // Get metrics.
     this.getLogs(function(err, response){
-      let size = response.body['offset']
-      let offset = parseInt(size-60000)>0 ? parseInt(size-60000) : 0
+      let size = response.body.offset;
+      let offset = parseInt(size-60000)>0 ? parseInt(size-60000) : 0;
       let url = mesos.baseUrl + '/files/read.json?path=/master/log&offset=' + offset + '&length=' + parseInt(offset+100000);
       request
       .get(url)
