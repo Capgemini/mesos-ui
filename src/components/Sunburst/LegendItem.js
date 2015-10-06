@@ -1,3 +1,4 @@
+/*jshint esnext: true */
 import React, { PropTypes } from 'react';
 
 class LegendItem extends React.Component {

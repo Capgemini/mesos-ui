@@ -1,3 +1,6 @@
+/*jshint esnext: true */
+// __tests__/ClusterStore-test.js
+
 jest.dontMock('../../constants/ClusterConstants');
 jest.dontMock('../ClusterStore');
 jest.dontMock('object-assign');

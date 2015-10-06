@@ -1,3 +1,4 @@
+/*jshint esnext: true */
 import React from 'react';
 import d3 from 'd3';
 import { Styles } from 'material-ui';

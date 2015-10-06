@@ -1,3 +1,5 @@
+/*jshint esnext: true */
+
 import React, { PropTypes } from 'react'; // eslint-disable-line no-unused-vars
 import emptyFunction from '../../node_modules/react/lib/emptyFunction';
 

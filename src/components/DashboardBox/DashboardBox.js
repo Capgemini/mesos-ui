@@ -1,3 +1,5 @@
+/*jshint esnext: true */
+
 import React, { PropTypes } from 'react';
 import { Card, CardTitle } from 'material-ui';
 import _ from 'lodash';

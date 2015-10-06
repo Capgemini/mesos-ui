@@ -1,3 +1,4 @@
+/*jshint esnext: true */
 import React, { PropTypes } from 'react';
 import { Styles, RaisedButton } from 'material-ui';
 let { Colors } = Styles;
