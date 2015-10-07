@@ -33,8 +33,8 @@ class DashboardBox extends React.Component {
         minHeight: 315
       },
       card: {
-        titleColor: '#ffffff',
-        subtitleColor: '#ffffff'
+        titleColor: '#000000',
+        subtitleColor: '#000000'
       }
     };
   }
