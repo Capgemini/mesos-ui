@@ -18,14 +18,14 @@ class Logo extends React.Component {
   };
 
   logoStyles() {
-   let styles = {
-     'root': {
-       backgroundColor: '#004561'
-     },
-     'svg': {
-       padding: '10px 0 4px 11px'
-     }
-   };
+    let styles = {
+      'root': {
+        backgroundColor: '#004561'
+      },
+      'svg': {
+        padding: '10px 0 4px 11px'
+      }
+    };
     return styles;
   };
 
