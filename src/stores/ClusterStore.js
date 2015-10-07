@@ -46,8 +46,8 @@ function refreshStats(statistics) {
 }
 
 function refreshLogs(currentLogs) {
-  assign(logs, currentLogs);
-  return logs.data;
+  Array.isArray(currentLogs) ? assign(logs, currentLogs[0]) : assign(logs, currentLogs);
+  return logs;
 }
 
 function refreshState(data) {
