@@ -42,6 +42,18 @@ var mesos = {
     .end(callback);
   },
 
+  /**
+   * [getLogs description]
+   * @param  {Function} callback [description]
+   * @return {[type]}            [description]
+   */
+  getLogs(callback) {
+    let url = this.baseUrl + '/files/read.json?path=/master/log&offset=-1';
+    request
+    .get(url)
+    .end(callback);
+  },
+
   getSocketMetrics(socket) {
     // Get metrics.
     this.getMetrics(function(err, response){
@@ -50,6 +62,24 @@ var mesos = {
         return;
       }
       socket.emit('metricsReceived', response.body);
+    });
+  },
+
+  getSocketLogs(socket) {
+    // Get metrics.
+    this.getLogs(function(err, response){
+      let size = response.body.offset;
+      let offset = parseInt(size-60000)>0 ? parseInt(size-60000) : 0;
+      let url = mesos.baseUrl + '/files/read.json?path=/master/log&offset=' + offset + '&length=' + parseInt(offset+100000);
+      request
+      .get(url)
+      .end(function(err, response){
+        if (err) {
+          console.log(err);
+          return;
+        }
+        socket.emit('logsReceived', response.body);
+      });
     });
   },
 
@@ -78,11 +108,13 @@ module.exports = function(app, io) {
     // Get metrics and state on connect.
     mesos.getSocketMetrics(socket);
     mesos.getSocketState(socket);
+    mesos.getSocketLogs(socket);
 
     // Get metrics and state on interval
     setInterval(function(){
       mesos.getSocketMetrics(socket);
       mesos.getSocketState(socket);
+      mesos.getSocketLogs(socket);
     }, config.updateInterval);
 
     socket.on('disconnect', function() {

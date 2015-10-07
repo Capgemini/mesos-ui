@@ -1,438 +1,472 @@
 {
-    "metrics/snapshot": {
-        "master/cpus_percent": 0.125,
-        "master/cpus_total": 4,
-        "master/cpus_used": 0.5,
-        "master/disk_percent": 0,
-        "master/disk_total": 7924,
-        "master/disk_used": 0,
-        "master/dropped_messages": 1,
-        "master/elected": 1,
-        "master/event_queue_dispatches": 17,
-        "master/event_queue_http_requests": 0,
-        "master/event_queue_messages": 0,
-        "master/frameworks_active": 2,
-        "master/frameworks_connected": 2,
-        "master/frameworks_disconnected": 0,
-        "master/frameworks_inactive": 0,
-        "master/invalid_framework_to_executor_messages": 0,
-        "master/invalid_status_update_acknowledgements": 0,
-        "master/invalid_status_updates": 0,
-        "master/mem_percent": 0.0934306569343066,
-        "master/mem_total": 5480,
-        "master/mem_used": 512,
-        "master/messages_authenticate": 0,
-        "master/messages_deactivate_framework": 0,
-        "master/messages_decline_offers": 171,
-        "master/messages_exited_executor": 0,
-        "master/messages_framework_to_executor": 0,
-        "master/messages_kill_task": 0,
-        "master/messages_launch_tasks": 1,
-        "master/messages_reconcile_tasks": 0,
-        "master/messages_register_framework": 2,
-        "master/messages_register_slave": 2,
-        "master/messages_reregister_framework": 0,
-        "master/messages_reregister_slave": 0,
-        "master/messages_resource_request": 0,
-        "master/messages_revive_offers": 0,
-        "master/messages_status_update": 1,
-        "master/messages_status_update_acknowledgement": 1,
-        "master/messages_unregister_framework": 0,
-        "master/messages_unregister_slave": 0,
-        "master/outstanding_offers": 0,
-        "master/recovery_slave_removals": 0,
-        "master/slave_registrations": 2,
-        "master/slave_removals": 0,
-        "master/slave_reregistrations": 0,
-        "master/slave_shutdowns_canceled": 0,
-        "master/slave_shutdowns_scheduled": 0,
-        "master/slaves_active": 2,
-        "master/slaves_connected": 2,
-        "master/slaves_disconnected": 0,
-        "master/slaves_inactive": 0,
-        "master/tasks_error": 0,
-        "master/tasks_failed": 0,
-        "master/tasks_finished": 0,
-        "master/tasks_killed": 0,
-        "master/tasks_lost": 0,
-        "master/tasks_running": 1,
-        "master/tasks_staging": 0,
-        "master/tasks_starting": 0,
-        "master/uptime_secs": 345.803990016,
-        "master/valid_framework_to_executor_messages": 0,
-        "master/valid_status_update_acknowledgements": 1,
-        "master/valid_status_updates": 1,
-        "registrar/queued_operations": 0,
-        "registrar/registry_size_bytes": 425,
-        "registrar/state_fetch_ms": 23.94112,
-        "registrar/state_store_ms": 7.277056,
-        "registrar/state_store_ms/count": 3,
-        "registrar/state_store_ms/max": 57.295104,
-        "registrar/state_store_ms/min": 5.813248,
-        "registrar/state_store_ms/p50": 7.277056,
-        "registrar/state_store_ms/p90": 47.2914944,
-        "registrar/state_store_ms/p95": 52.2932992,
-        "registrar/state_store_ms/p99": 56.29474304,
-        "registrar/state_store_ms/p999": 57.195067904,
-        "registrar/state_store_ms/p9999": 57.2851003904,
-        "system/cpus_total": 1,
-        "system/load_15min": 0.28,
-        "system/load_1min": 0.14,
-        "system/load_5min": 0.42,
-        "system/mem_free_bytes": 2672201728,
-        "system/mem_total_bytes": 3947372544
-    },
-    "master/slaves": {
-        "slaves": [{
-            "active": true,
-            "attributes": {},
-            "hostname": "52.19.171.65",
-            "id": "20150827-145231-1258422282-5050-1-S1",
-            "offered_resources": {
-                "cpus": 0,
-                "disk": 0,
-                "mem": 0
-            },
-            "pid": "slave(1)@10.0.0.211:5051",
-            "registered_time": 1440687224.10234,
-            "reserved_resources": {},
-            "resources": {
-                "cpus": 2,
-                "disk": 3962,
-                "mem": 2740,
-                "ports": "[31000-32000]"
-            },
-            "unreserved_resources": {
-                "cpus": 2,
-                "disk": 3962,
-                "mem": 2740,
-                "ports": "[31000-32000]"
-            },
-            "used_resources": {
-                "cpus": 0,
-                "disk": 0,
-                "mem": 0
-            }
+  "metrics/snapshot": {
+    "master/cpus_percent": 0.125,
+    "master/cpus_total": 4,
+    "master/cpus_used": 0.5,
+    "master/disk_percent": 0,
+    "master/disk_total": 7924,
+    "master/disk_used": 0,
+    "master/dropped_messages": 1,
+    "master/elected": 1,
+    "master/event_queue_dispatches": 17,
+    "master/event_queue_http_requests": 0,
+    "master/event_queue_messages": 0,
+    "master/frameworks_active": 2,
+    "master/frameworks_connected": 2,
+    "master/frameworks_disconnected": 0,
+    "master/frameworks_inactive": 0,
+    "master/invalid_framework_to_executor_messages": 0,
+    "master/invalid_status_update_acknowledgements": 0,
+    "master/invalid_status_updates": 0,
+    "master/mem_percent": 0.0934306569343066,
+    "master/mem_total": 5480,
+    "master/mem_used": 512,
+    "master/messages_authenticate": 0,
+    "master/messages_deactivate_framework": 0,
+    "master/messages_decline_offers": 171,
+    "master/messages_exited_executor": 0,
+    "master/messages_framework_to_executor": 0,
+    "master/messages_kill_task": 0,
+    "master/messages_launch_tasks": 1,
+    "master/messages_reconcile_tasks": 0,
+    "master/messages_register_framework": 2,
+    "master/messages_register_slave": 2,
+    "master/messages_reregister_framework": 0,
+    "master/messages_reregister_slave": 0,
+    "master/messages_resource_request": 0,
+    "master/messages_revive_offers": 0,
+    "master/messages_status_update": 1,
+    "master/messages_status_update_acknowledgement": 1,
+    "master/messages_unregister_framework": 0,
+    "master/messages_unregister_slave": 0,
+    "master/outstanding_offers": 0,
+    "master/recovery_slave_removals": 0,
+    "master/slave_registrations": 2,
+    "master/slave_removals": 0,
+    "master/slave_reregistrations": 0,
+    "master/slave_shutdowns_canceled": 0,
+    "master/slave_shutdowns_scheduled": 0,
+    "master/slaves_active": 2,
+    "master/slaves_connected": 2,
+    "master/slaves_disconnected": 0,
+    "master/slaves_inactive": 0,
+    "master/tasks_error": 0,
+    "master/tasks_failed": 0,
+    "master/tasks_finished": 0,
+    "master/tasks_killed": 0,
+    "master/tasks_lost": 0,
+    "master/tasks_running": 1,
+    "master/tasks_staging": 0,
+    "master/tasks_starting": 0,
+    "master/uptime_secs": 345.803990016,
+    "master/valid_framework_to_executor_messages": 0,
+    "master/valid_status_update_acknowledgements": 1,
+    "master/valid_status_updates": 1,
+    "registrar/queued_operations": 0,
+    "registrar/registry_size_bytes": 425,
+    "registrar/state_fetch_ms": 23.94112,
+    "registrar/state_store_ms": 7.277056,
+    "registrar/state_store_ms/count": 3,
+    "registrar/state_store_ms/max": 57.295104,
+    "registrar/state_store_ms/min": 5.813248,
+    "registrar/state_store_ms/p50": 7.277056,
+    "registrar/state_store_ms/p90": 47.2914944,
+    "registrar/state_store_ms/p95": 52.2932992,
+    "registrar/state_store_ms/p99": 56.29474304,
+    "registrar/state_store_ms/p999": 57.195067904,
+    "registrar/state_store_ms/p9999": 57.2851003904,
+    "system/cpus_total": 1,
+    "system/load_15min": 0.28,
+    "system/load_1min": 0.14,
+    "system/load_5min": 0.42,
+    "system/mem_free_bytes": 2672201728,
+    "system/mem_total_bytes": 3947372544
+  },
+  "master/slaves": {
+    "slaves": [
+      {
+        "active": true,
+        "attributes": {},
+        "hostname": "52.19.171.65",
+        "id": "20150827-145231-1258422282-5050-1-S1",
+        "offered_resources": {
+          "cpus": 0,
+          "disk": 0,
+          "mem": 0
         },
+        "pid": "slave(1)@10.0.0.211:5051",
+        "registered_time": 1440687224.10234,
+        "reserved_resources": {},
+        "resources": {
+          "cpus": 2,
+          "disk": 3962,
+          "mem": 2740,
+          "ports": "[31000-32000]"
+        },
+        "unreserved_resources": {
+          "cpus": 2,
+          "disk": 3962,
+          "mem": 2740,
+          "ports": "[31000-32000]"
+        },
+        "used_resources": {
+          "cpus": 0,
+          "disk": 0,
+          "mem": 0
+        }
+      },
+      {
+        "active": true,
+        "attributes": {},
+        "hostname": "52.19.171.62",
+        "id": "20150827-145231-1258422282-5050-1-S1",
+        "offered_resources": {
+          "cpus": 0,
+          "disk": 0,
+          "mem": 0
+        },
+        "pid": "slave(1)@10.0.0.211:5051",
+        "registered_time": 1440687224.10234,
+        "reserved_resources": {},
+        "resources": {
+          "cpus": 2,
+          "disk": 3962,
+          "mem": 2740,
+          "ports": "[31000-32000]"
+        },
+        "unreserved_resources": {
+          "cpus": 2,
+          "disk": 3962,
+          "mem": 2740,
+          "ports": "[31000-32000]"
+        },
+        "used_resources": {
+          "cpus": 0,
+          "disk": 0,
+          "mem": 0
+        }
+      },
+      {
+        "active": true,
+        "attributes": {},
+        "hostname": "52.19.64.255",
+        "id": "20150827-145231-1258422282-5050-1-S0",
+        "offered_resources": {
+          "cpus": 0,
+          "disk": 0,
+          "mem": 0
+        },
+        "pid": "slave(1)@10.0.1.68:5051",
+        "registered_time": 1440687223.01831,
+        "reserved_resources": {},
+        "resources": {
+          "cpus": 2,
+          "disk": 3962,
+          "mem": 2740,
+          "ports": "[31000-32000]"
+        },
+        "unreserved_resources": {
+          "cpus": 2,
+          "disk": 3962,
+          "mem": 2740,
+          "ports": "[31000-32000]"
+        },
+        "used_resources": {
+          "cpus": 0.5,
+          "disk": 0,
+          "mem": 512,
+          "ports": "[31637-31637]"
+        }
+      }
+    ]
+  },
+  "master/state.json": {
+    "activated_slaves": 2,
+    "build_date": "2015-07-24 10:05:39",
+    "build_time": 1437732339,
+    "build_user": "root",
+    "cluster": "eu-west-1",
+    "completed_frameworks": [],
+    "deactivated_slaves": 0,
+    "elected_time": 1440687155.427,
+    "flags": {
+      "allocation_interval": "1secs",
+      "allocator": "HierarchicalDRF",
+      "authenticate": "false",
+      "authenticate_slaves": "false",
+      "authenticators": "crammd5",
+      "cluster": "eu-west-1",
+      "framework_sorter": "drf",
+      "help": "false",
+      "hostname": "52.19.160.202",
+      "initialize_driver_logging": "true",
+      "ip": "10.0.2.75",
+      "log_auto_initialize": "true",
+      "log_dir": "/var/log/mesos",
+      "logbufsecs": "0",
+      "logging_level": "INFO",
+      "max_slave_ping_timeouts": "5",
+      "port": "5050",
+      "quiet": "false",
+      "quorum": "2",
+      "recovery_slave_removal_limit": "100%",
+      "registry": "in_memory",
+      "registry_fetch_timeout": "1mins",
+      "registry_store_timeout": "5secs",
+      "registry_strict": "false",
+      "root_submissions": "true",
+      "slave_ping_timeout": "15secs",
+      "slave_reregister_timeout": "10mins",
+      "user_sorter": "drf",
+      "version": "false",
+      "webui_dir": "/usr/share/mesos/webui",
+      "work_dir": "/var/lib/mesos",
+      "zk": "zk://52.19.105.210:2181,52.19.160.202:2181,52.19.161.40:2181/mesos",
+      "zk_session_timeout": "10secs"
+    },
+    "frameworks": [
+      {
+        "active": true,
+        "checkpoint": true,
+        "completed_tasks": [],
+        "executors": [],
+        "failover_timeout": 604800,
+        "hostname": "52.19.64.255",
+        "id": "20150827-145231-1258422282-5050-1-0001",
+        "name": "chronos",
+        "offered_resources": {
+          "cpus": 0,
+          "disk": 0,
+          "mem": 0
+        },
+        "offers": [],
+        "pid": "scheduler-ec56ac9a-b4af-4649-90fa-417bea5b1427@10.0.1.68:37764",
+        "registered_time": 1440687285.97698,
+        "resources": {
+          "cpus": 0,
+          "disk": 0,
+          "mem": 0
+        },
+        "role": "*",
+        "tasks": [],
+        "unregistered_time": 0,
+        "used_resources": {
+          "cpus": 0,
+          "disk": 0,
+          "mem": 0
+        },
+        "user": "root",
+        "webui_url": "http://52.19.64.255:31637"
+      },
+      {
+        "active": true,
+        "checkpoint": true,
+        "completed_tasks": [],
+        "executors": [],
+        "failover_timeout": 604800,
+        "hostname": "505d1f064540",
+        "id": "20150827-145231-1258422282-5050-1-0000",
+        "name": "marathon",
+        "offered_resources": {
+          "cpus": 0,
+          "disk": 0,
+          "mem": 0
+        },
+        "offers": [],
+        "pid": "scheduler-9491ddc8-196b-40fa-a47c-b2b9b78bc420@10.2.2.11:42725",
+        "registered_time": 1440687200.66084,
+        "resources": {
+          "cpus": 0.5,
+          "disk": 0,
+          "mem": 512,
+          "ports": "[31637-31637]"
+        },
+        "role": "*",
+        "tasks": [
           {
-            "active": true,
-            "attributes": {},
-            "hostname": "52.19.171.62",
-            "id": "20150827-145231-1258422282-5050-1-S1",
-            "offered_resources": {
-                "cpus": 0,
-                "disk": 0,
-                "mem": 0
-            },
-            "pid": "slave(1)@10.0.0.211:5051",
-            "registered_time": 1440687224.10234,
-            "reserved_resources": {},
-            "resources": {
-                "cpus": 2,
-                "disk": 3962,
-                "mem": 2740,
-                "ports": "[31000-32000]"
-            },
-            "unreserved_resources": {
-                "cpus": 2,
-                "disk": 3962,
-                "mem": 2740,
-                "ports": "[31000-32000]"
-            },
-            "used_resources": {
-                "cpus": 0,
-                "disk": 0,
-                "mem": 0
-            }
-        }, {
-            "active": true,
-            "attributes": {},
-            "hostname": "52.19.64.255",
-            "id": "20150827-145231-1258422282-5050-1-S0",
-            "offered_resources": {
-                "cpus": 0,
-                "disk": 0,
-                "mem": 0
-            },
-            "pid": "slave(1)@10.0.1.68:5051",
-            "registered_time": 1440687223.01831,
-            "reserved_resources": {},
-            "resources": {
-                "cpus": 2,
-                "disk": 3962,
-                "mem": 2740,
-                "ports": "[31000-32000]"
-            },
-            "unreserved_resources": {
-                "cpus": 2,
-                "disk": 3962,
-                "mem": 2740,
-                "ports": "[31000-32000]"
-            },
-            "used_resources": {
-                "cpus": 0.5,
-                "disk": 0,
-                "mem": 512,
-                "ports": "[31637-31637]"
-            }
-        }]
-    },
-    "master/state.json": {
-        "activated_slaves": 2,
-        "build_date": "2015-07-24 10:05:39",
-        "build_time": 1437732339,
-        "build_user": "root",
-        "cluster": "eu-west-1",
-        "completed_frameworks": [],
-        "deactivated_slaves": 0,
-        "elected_time": 1440687155.427,
-        "flags": {
-            "allocation_interval": "1secs",
-            "allocator": "HierarchicalDRF",
-            "authenticate": "false",
-            "authenticate_slaves": "false",
-            "authenticators": "crammd5",
-            "cluster": "eu-west-1",
-            "framework_sorter": "drf",
-            "help": "false",
-            "hostname": "52.19.160.202",
-            "initialize_driver_logging": "true",
-            "ip": "10.0.2.75",
-            "log_auto_initialize": "true",
-            "log_dir": "/var/log/mesos",
-            "logbufsecs": "0",
-            "logging_level": "INFO",
-            "max_slave_ping_timeouts": "5",
-            "port": "5050",
-            "quiet": "false",
-            "quorum": "2",
-            "recovery_slave_removal_limit": "100%",
-            "registry": "in_memory",
-            "registry_fetch_timeout": "1mins",
-            "registry_store_timeout": "5secs",
-            "registry_strict": "false",
-            "root_submissions": "true",
-            "slave_ping_timeout": "15secs",
-            "slave_reregister_timeout": "10mins",
-            "user_sorter": "drf",
-            "version": "false",
-            "webui_dir": "/usr/share/mesos/webui",
-            "work_dir": "/var/lib/mesos",
-            "zk": "zk://52.19.105.210:2181,52.19.160.202:2181,52.19.161.40:2181/mesos",
-            "zk_session_timeout": "10secs"
-        },
-        "frameworks": [{
-            "active": true,
-            "checkpoint": true,
-            "completed_tasks": [],
-            "executors": [],
-            "failover_timeout": 604800,
-            "hostname": "52.19.64.255",
-            "id": "20150827-145231-1258422282-5050-1-0001",
+            "executor_id": "",
+            "framework_id": "20150827-145231-1258422282-5050-1-0000",
+            "id": "chronos.813abb60-4ccb-11e5-9eed-02420a02020b",
+            "labels": [
+              {
+                "key": "DCOS_PACKAGE_RELEASE",
+                "value": "1"
+              },
+              {
+                "key": "DCOS_PACKAGE_SOURCE",
+                "value": "https://github.com/Capgemini/universe/archive/version-1.x.zip"
+              },
+              {
+                "key": "DCOS_PACKAGE_METADATA",
+                "value": "eyJkZXNjcmlwdGlvbiI6ICJBIGZhdWx0IHRvbGVyYW50IGpvYiBzY2hlZHVsZXIgZm9yIE1lc29zIHdoaWNoIGhhbmRsZXMgZGVwZW5kZW5jaWVzIGFuZCBJU084NjAxIGJhc2VkIHNjaGVkdWxlcy4iLCAiZnJhbWV3b3JrIjogdHJ1ZSwgImltYWdlcyI6IHsiaWNvbi1sYXJnZSI6ICJodHRwczovL2Rvd25sb2Fkcy5tZXNvc3BoZXJlLmlvL2Nocm9ub3MvYXNzZXRzL2ljb24tc2VydmljZS1jaHJvbm9zLWxhcmdlLnBuZyIsICJpY29uLW1lZGl1bSI6ICJodHRwczovL2Rvd25sb2Fkcy5tZXNvc3BoZXJlLmlvL2Nocm9ub3MvYXNzZXRzL2ljb24tc2VydmljZS1jaHJvbm9zLW1lZGl1bS5wbmciLCAiaWNvbi1zbWFsbCI6ICJodHRwczovL2Rvd25sb2Fkcy5tZXNvc3BoZXJlLmlvL2Nocm9ub3MvYXNzZXRzL2ljb24tc2VydmljZS1jaHJvbm9zLXNtYWxsLnBuZyJ9LCAibGljZW5zZXMiOiBbeyJuYW1lIjogIkFwYWNoZSBMaWNlbnNlIFZlcnNpb24gMi4wIiwgInVybCI6ICJodHRwczovL2dpdGh1Yi5jb20vbWVzb3MvY2hyb25vcy9ibG9iL21hc3Rlci9MSUNFTlNFIn1dLCAibWFpbnRhaW5lciI6ICJzdXBwb3J0QG1lc29zcGhlcmUuaW8iLCAibmFtZSI6ICJjaHJvbm9zIiwgInBvc3RJbnN0YWxsTm90ZXMiOiAiQ2hyb25vcyBEQ09TIFNlcnZpY2UgaGFzIGJlZW4gc3VjY2Vzc2Z1bGx5IGluc3RhbGxlZCFcblxuXHREb2N1bWVudGF0aW9uOiBodHRwOi8vbWVzb3MuZ2l0aHViLmlvL2Nocm9ub3Ncblx0SXNzdWVzOiBodHRwczovL2dpdGh1Yi5jb20vbWVzb3MvY2hyb25vcy9pc3N1ZXMiLCAicG9zdFVuaW5zdGFsbE5vdGVzIjogIlRoZSBDaHJvbm9zIERDT1MgU2VydmljZSBoYXMgYmVlbiB1bmluc3RhbGxlZCBhbmQgd2lsbCBubyBsb25nZXIgcnVuLlxuUGxlYXNlIGZvbGxvdyB0aGUgaW5zdHJ1Y3Rpb25zIGF0IGh0dHA6Ly9kb2NzLm1lc29zcGhlcmUuY29tL3NlcnZpY2VzL2Nocm9ub3MvI3VuaW5zdGFsbCB0byBjbGVhbiB1cCBhbnkgcGVyc2lzdGVkIHN0YXRlIiwgInByZUluc3RhbGxOb3RlcyI6ICJXZSByZWNvbW1lbmQgYSBtaW5pbXVtIG9mIG9uZSBub2RlIHdpdGggYXQgbGVhc3QgMSBDUFUgYW5kIDJHQiBvZiBSQU0gYXZhaWxhYmxlIGZvciB0aGUgQ2hyb25vcyBTZXJ2aWNlLiIsICJzY20iOiAiaHR0cHM6Ly9naXRodWIuY29tL21lc29zL2Nocm9ub3MuZ2l0IiwgInRhZ3MiOiBbIm1lc29zcGhlcmUiLCAiZnJhbWV3b3JrIl0sICJ2ZXJzaW9uIjogIjIuNC4wIn0="
+              },
+              {
+                "key": "DCOS_PACKAGE_REGISTRY_VERSION",
+                "value": "1.0.0-rc1"
+              },
+              {
+                "key": "DCOS_PACKAGE_FRAMEWORK_NAME",
+                "value": "chronos"
+              },
+              {
+                "key": "DCOS_PACKAGE_VERSION",
+                "value": "2.4.0"
+              },
+              {
+                "key": "DCOS_PACKAGE_NAME",
+                "value": "chronos"
+              },
+              {
+                "key": "DCOS_PACKAGE_IS_FRAMEWORK",
+                "value": "true"
+              }
+            ],
             "name": "chronos",
-            "offered_resources": {
-                "cpus": 0,
-                "disk": 0,
-                "mem": 0
-            },
-            "offers": [],
-            "pid": "scheduler-ec56ac9a-b4af-4649-90fa-417bea5b1427@10.0.1.68:37764",
-            "registered_time": 1440687285.97698,
             "resources": {
-                "cpus": 0,
-                "disk": 0,
-                "mem": 0
+              "cpus": 0.5,
+              "disk": 0,
+              "mem": 512,
+              "ports": "[31637-31637]"
             },
-            "role": "*",
-            "tasks": [],
-            "unregistered_time": 0,
-            "used_resources": {
-                "cpus": 0,
-                "disk": 0,
-                "mem": 0
-            },
-            "user": "root",
-            "webui_url": "http://52.19.64.255:31637"
-        }, {
-            "active": true,
-            "checkpoint": true,
-            "completed_tasks": [],
-            "executors": [],
-            "failover_timeout": 604800,
-            "hostname": "505d1f064540",
-            "id": "20150827-145231-1258422282-5050-1-0000",
-            "name": "marathon",
-            "offered_resources": {
-                "cpus": 0,
-                "disk": 0,
-                "mem": 0
-            },
-            "offers": [],
-            "pid": "scheduler-9491ddc8-196b-40fa-a47c-b2b9b78bc420@10.2.2.11:42725",
-            "registered_time": 1440687200.66084,
-            "resources": {
-                "cpus": 0.5,
-                "disk": 0,
-                "mem": 512,
-                "ports": "[31637-31637]"
-            },
-            "role": "*",
-            "tasks": [{
-                "executor_id": "",
-                "framework_id": "20150827-145231-1258422282-5050-1-0000",
-                "id": "chronos.813abb60-4ccb-11e5-9eed-02420a02020b",
-                "labels": [{
-                    "key": "DCOS_PACKAGE_RELEASE",
-                    "value": "1"
-                }, {
-                    "key": "DCOS_PACKAGE_SOURCE",
-                    "value": "https://github.com/Capgemini/universe/archive/version-1.x.zip"
-                }, {
-                    "key": "DCOS_PACKAGE_METADATA",
-                    "value": "eyJkZXNjcmlwdGlvbiI6ICJBIGZhdWx0IHRvbGVyYW50IGpvYiBzY2hlZHVsZXIgZm9yIE1lc29zIHdoaWNoIGhhbmRsZXMgZGVwZW5kZW5jaWVzIGFuZCBJU084NjAxIGJhc2VkIHNjaGVkdWxlcy4iLCAiZnJhbWV3b3JrIjogdHJ1ZSwgImltYWdlcyI6IHsiaWNvbi1sYXJnZSI6ICJodHRwczovL2Rvd25sb2Fkcy5tZXNvc3BoZXJlLmlvL2Nocm9ub3MvYXNzZXRzL2ljb24tc2VydmljZS1jaHJvbm9zLWxhcmdlLnBuZyIsICJpY29uLW1lZGl1bSI6ICJodHRwczovL2Rvd25sb2Fkcy5tZXNvc3BoZXJlLmlvL2Nocm9ub3MvYXNzZXRzL2ljb24tc2VydmljZS1jaHJvbm9zLW1lZGl1bS5wbmciLCAiaWNvbi1zbWFsbCI6ICJodHRwczovL2Rvd25sb2Fkcy5tZXNvc3BoZXJlLmlvL2Nocm9ub3MvYXNzZXRzL2ljb24tc2VydmljZS1jaHJvbm9zLXNtYWxsLnBuZyJ9LCAibGljZW5zZXMiOiBbeyJuYW1lIjogIkFwYWNoZSBMaWNlbnNlIFZlcnNpb24gMi4wIiwgInVybCI6ICJodHRwczovL2dpdGh1Yi5jb20vbWVzb3MvY2hyb25vcy9ibG9iL21hc3Rlci9MSUNFTlNFIn1dLCAibWFpbnRhaW5lciI6ICJzdXBwb3J0QG1lc29zcGhlcmUuaW8iLCAibmFtZSI6ICJjaHJvbm9zIiwgInBvc3RJbnN0YWxsTm90ZXMiOiAiQ2hyb25vcyBEQ09TIFNlcnZpY2UgaGFzIGJlZW4gc3VjY2Vzc2Z1bGx5IGluc3RhbGxlZCFcblxuXHREb2N1bWVudGF0aW9uOiBodHRwOi8vbWVzb3MuZ2l0aHViLmlvL2Nocm9ub3Ncblx0SXNzdWVzOiBodHRwczovL2dpdGh1Yi5jb20vbWVzb3MvY2hyb25vcy9pc3N1ZXMiLCAicG9zdFVuaW5zdGFsbE5vdGVzIjogIlRoZSBDaHJvbm9zIERDT1MgU2VydmljZSBoYXMgYmVlbiB1bmluc3RhbGxlZCBhbmQgd2lsbCBubyBsb25nZXIgcnVuLlxuUGxlYXNlIGZvbGxvdyB0aGUgaW5zdHJ1Y3Rpb25zIGF0IGh0dHA6Ly9kb2NzLm1lc29zcGhlcmUuY29tL3NlcnZpY2VzL2Nocm9ub3MvI3VuaW5zdGFsbCB0byBjbGVhbiB1cCBhbnkgcGVyc2lzdGVkIHN0YXRlIiwgInByZUluc3RhbGxOb3RlcyI6ICJXZSByZWNvbW1lbmQgYSBtaW5pbXVtIG9mIG9uZSBub2RlIHdpdGggYXQgbGVhc3QgMSBDUFUgYW5kIDJHQiBvZiBSQU0gYXZhaWxhYmxlIGZvciB0aGUgQ2hyb25vcyBTZXJ2aWNlLiIsICJzY20iOiAiaHR0cHM6Ly9naXRodWIuY29tL21lc29zL2Nocm9ub3MuZ2l0IiwgInRhZ3MiOiBbIm1lc29zcGhlcmUiLCAiZnJhbWV3b3JrIl0sICJ2ZXJzaW9uIjogIjIuNC4wIn0="
-                }, {
-                    "key": "DCOS_PACKAGE_REGISTRY_VERSION",
-                    "value": "1.0.0-rc1"
-                }, {
-                    "key": "DCOS_PACKAGE_FRAMEWORK_NAME",
-                    "value": "chronos"
-                }, {
-                    "key": "DCOS_PACKAGE_VERSION",
-                    "value": "2.4.0"
-                }, {
-                    "key": "DCOS_PACKAGE_NAME",
-                    "value": "chronos"
-                }, {
-                    "key": "DCOS_PACKAGE_IS_FRAMEWORK",
-                    "value": "true"
-                }],
-                "name": "chronos",
-                "resources": {
-                    "cpus": 0.5,
-                    "disk": 0,
-                    "mem": 512,
-                    "ports": "[31637-31637]"
-                },
-                "slave_id": "20150827-145231-1258422282-5050-1-S0",
+            "slave_id": "20150827-145231-1258422282-5050-1-S0",
+            "state": "TASK_RUNNING",
+            "statuses": [
+              {
                 "state": "TASK_RUNNING",
-                "statuses": [{
-                    "state": "TASK_RUNNING",
-                    "timestamp": 1440687273.07235
-                }]
-            }],
-            "unregistered_time": 0,
-            "used_resources": {
-                "cpus": 0.5,
-                "disk": 0,
-                "mem": 512,
-                "ports": "[31637-31637]"
-            },
-            "user": "root",
-            "webui_url": "http://52.19.160.202:8080"
-        }],
-        "git_sha": "4ce5475346a0abb7ef4b7ffc9836c5836d7c7a66",
-        "git_tag": "0.23.0",
-        "hostname": "52.19.160.202",
-        "id": "20150827-145231-1258422282-5050-1",
-        "leader": "master@10.0.2.75:5050",
-        "log_dir": "/var/log/mesos",
-        "orphan_tasks": [],
-        "pid": "master@10.0.2.75:5050",
-        "slaves": [{
-            "active": true,
-            "attributes": {},
-            "hostname": "52.19.171.62",
-            "id": "20150827-145231-1258422282-5050-1-S1",
-            "offered_resources": {
-                "cpus": 0,
-                "disk": 0,
-                "mem": 0
-            },
-            "pid": "slave(1)@10.0.0.211:5051",
-            "registered_time": 1440687224.10234,
-            "reserved_resources": {},
-            "resources": {
-                "cpus": 2,
-                "disk": 3962,
-                "mem": 2740,
-                "ports": "[31000-32000]"
-            },
-            "unreserved_resources": {
-                "cpus": 2,
-                "disk": 3962,
-                "mem": 2740,
-                "ports": "[31000-32000]"
-            },
-            "used_resources": {
-                "cpus": 1,
-                "disk": 1940,
-                "mem": 648
-            }
+                "timestamp": 1440687273.07235
+              }
+            ]
+          }
+        ],
+        "unregistered_time": 0,
+        "used_resources": {
+          "cpus": 0.5,
+          "disk": 0,
+          "mem": 512,
+          "ports": "[31637-31637]"
         },
-          {
-            "active": true,
-            "attributes": {},
-            "hostname": "52.19.171.62",
-            "id": "20150827-145231-1258422282-5050-1-S1",
-            "offered_resources": {
-                "cpus": 0,
-                "disk": 0,
-                "mem": 0
-            },
-            "pid": "slave(1)@10.0.0.211:5051",
-            "registered_time": 1440687224.10234,
-            "reserved_resources": {},
-            "resources": {
-                "cpus": 2,
-                "disk": 3962,
-                "mem": 2740,
-                "ports": "[31000-32000]"
-            },
-            "unreserved_resources": {
-                "cpus": 2,
-                "disk": 3962,
-                "mem": 2740,
-                "ports": "[31000-32000]"
-            },
-            "used_resources": {
-                "cpus": 1,
-                "disk": 1240,
-                "mem": 1024
-            }
-        }, {
-            "active": true,
-            "attributes": {},
-            "hostname": "52.19.64.255",
-            "id": "20150827-145231-1258422282-5050-1-S0",
-            "offered_resources": {
-                "cpus": 0,
-                "disk": 0,
-                "mem": 0
-            },
-            "pid": "slave(1)@10.0.1.68:5051",
-            "registered_time": 1440687223.01831,
-            "reserved_resources": {},
-            "resources": {
-                "cpus": 2,
-                "disk": 3962,
-                "mem": 2740,
-                "ports": "[31000-32000]"
-            },
-            "unreserved_resources": {
-                "cpus": 2,
-                "disk": 3962,
-                "mem": 2740,
-                "ports": "[31000-32000]"
-            },
-            "used_resources": {
-                "cpus": 0.5,
-                "disk": 0,
-                "mem": 512,
-                "ports": "[31637-31637]"
-            }
-        }],
-        "start_time": 1440687151.94147,
-        "unregistered_frameworks": [],
-        "version": "0.23.0"
+        "user": "root",
+        "webui_url": "http://52.19.160.202:8080"
+      }
+    ],
+    "git_sha": "4ce5475346a0abb7ef4b7ffc9836c5836d7c7a66",
+    "git_tag": "0.23.0",
+    "hostname": "52.19.160.202",
+    "id": "20150827-145231-1258422282-5050-1",
+    "leader": "master@10.0.2.75:5050",
+    "log_dir": "/var/log/mesos",
+    "orphan_tasks": [],
+    "pid": "master@10.0.2.75:5050",
+    "slaves": [
+      {
+        "active": true,
+        "attributes": {},
+        "hostname": "52.19.171.62",
+        "id": "20150827-145231-1258422282-5050-1-S1",
+        "offered_resources": {
+          "cpus": 0,
+          "disk": 0,
+          "mem": 0
+        },
+        "pid": "slave(1)@10.0.0.211:5051",
+        "registered_time": 1440687224.10234,
+        "reserved_resources": {},
+        "resources": {
+          "cpus": 2,
+          "disk": 3962,
+          "mem": 2740,
+          "ports": "[31000-32000]"
+        },
+        "unreserved_resources": {
+          "cpus": 2,
+          "disk": 3962,
+          "mem": 2740,
+          "ports": "[31000-32000]"
+        },
+        "used_resources": {
+          "cpus": 1,
+          "disk": 1940,
+          "mem": 648
+        }
+      },
+      {
+        "active": true,
+        "attributes": {},
+        "hostname": "52.19.171.62",
+        "id": "20150827-145231-1258422282-5050-1-S1",
+        "offered_resources": {
+          "cpus": 0,
+          "disk": 0,
+          "mem": 0
+        },
+        "pid": "slave(1)@10.0.0.211:5051",
+        "registered_time": 1440687224.10234,
+        "reserved_resources": {},
+        "resources": {
+          "cpus": 2,
+          "disk": 3962,
+          "mem": 2740,
+          "ports": "[31000-32000]"
+        },
+        "unreserved_resources": {
+          "cpus": 2,
+          "disk": 3962,
+          "mem": 2740,
+          "ports": "[31000-32000]"
+        },
+        "used_resources": {
+          "cpus": 1,
+          "disk": 1240,
+          "mem": 1024
+        }
+      },
+      {
+        "active": true,
+        "attributes": {},
+        "hostname": "52.19.64.255",
+        "id": "20150827-145231-1258422282-5050-1-S0",
+        "offered_resources": {
+          "cpus": 0,
+          "disk": 0,
+          "mem": 0
+        },
+        "pid": "slave(1)@10.0.1.68:5051",
+        "registered_time": 1440687223.01831,
+        "reserved_resources": {},
+        "resources": {
+          "cpus": 2,
+          "disk": 3962,
+          "mem": 2740,
+          "ports": "[31000-32000]"
+        },
+        "unreserved_resources": {
+          "cpus": 2,
+          "disk": 3962,
+          "mem": 2740,
+          "ports": "[31000-32000]"
+        },
+        "used_resources": {
+          "cpus": 0.5,
+          "disk": 0,
+          "mem": 512,
+          "ports": "[31637-31637]"
+        }
+      }
+    ],
+    "start_time": 1440687151.94147,
+    "unregistered_frameworks": [],
+    "version": "0.23.0"
+  },
+  "files/read.json": [
+    {
+      "path": "/master/log",
+      "offset": -1,
+      "data": ""
+    },
+    {
+      "path": "/master/log",
+      "offset": 0,
+      "data": "//'Log file created at: 2015/10/07 10:10:22\nRunning on machine: ip-10-0-0-189\nLog line format: [IWEF]mmdd hh:mm:ss.uuuuuu threadid file:line] msg\nI1007 10:10:22.616417     1 logging.cpp:172] INFO level logging started!\nI1007 10:10:22.616888     1 main.cpp:181] Build: 2015-07-24 10:05:39 by root\nI1007 10:10:22.616904     1 main.cpp:183] Version: 0.23.0\n"
     }
+  ]
 }

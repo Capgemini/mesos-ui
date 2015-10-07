@@ -11,6 +11,12 @@ export default {
       stats: stats
     });
   },
+  refreshLogs(logs) {
+    Dispatcher.dispatch({
+      actionType: ClusterConstants.CLUSTER_REFRESH_LOGS,
+      logs: logs
+    });
+  },
   refreshState(state) {
     Dispatcher.dispatch({
       actionType: ClusterConstants.CLUSTER_REFRESH_STATE,
