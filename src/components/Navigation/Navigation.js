@@ -39,7 +39,9 @@ class Navigation extends React.Component {
     return {
       minHeight: '800',
       borderRadius: 0,
-      zIndex: 0
+      zIndex: 0,
+      boxShadow: 'none',
+      whiteSpace: 'pre'
     };
   }
 
