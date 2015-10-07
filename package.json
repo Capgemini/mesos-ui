@@ -37,6 +37,7 @@
     "object-assign": "~4.0.1",
     "radium": "~0.14.1",
     "react": "0.13.3",
+    "react-motion": "^0.3.0",
     "react-router": "0.13.3",
     "react-tap-event-plugin": "<0.2.0",
     "sass-loader": "~1.0.3",

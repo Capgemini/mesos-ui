@@ -7,6 +7,7 @@ import Logo from '../Logo';
 import Navigation from '../Navigation';
 import Radium from 'radium';
 import ClusterStore from '../../stores/ClusterStore';
+import {Motion, spring} from 'react-motion';
 
 let ThemeManager = new mui.Styles.ThemeManager();
 
@@ -14,13 +15,28 @@ let ThemeManager = new mui.Styles.ThemeManager();
 @Radium
 class App extends React.Component {
 
+  static propTypes = {
+    navMedium: React.PropTypes.number,
+    navSmall: React.PropTypes.number,
+    motionStiffness: React.PropTypes.number,
+    motionDamping: React.PropTypes.number
+  };
+
   static childContextTypes = {
     muiTheme: React.PropTypes.object
+  };
+
+  static defaultProps = {
+    navMedium: 170,
+    navSmall: 64,
+    motionStiffness: 390,
+    motionDamping: 35
   };
 
   constructor() {
     super();
     this.handleResize = this.handleResize.bind(this);
+    this.handleClick = this.handleClick.bind(this);
     this.state = {
       stats: ClusterStore.getStats(),
       logs: ClusterStore.getLogs(),
@@ -90,6 +106,13 @@ class App extends React.Component {
     if (this.state.widthMedium !== widthCurrent) {
       this.setState({widthMedium: widthCurrent});
     }
+    if (this.state.leftNavExpanded !== widthCurrent) {
+      this.setState({leftNavExpanded: widthCurrent});
+    }
+  }
+
+  handleClick() {
+    this.setState({leftNavExpanded: !this.state.leftNavExpanded});
   }
 
   componentWillUnMount() {
@@ -110,10 +133,10 @@ class App extends React.Component {
     let frameworksIcon = React.createElement(FontIcon, {style: iconStyle, className: 'material-icons'}, 'build' );
     let logsIcon = React.createElement(FontIcon, {style: iconStyle, className: 'material-icons'}, 'assignment ' );
 
-    let dashboardText = this.state.widthMedium ? 'Dashboard' : '';
-    let frameworksText = this.state.widthMedium ? 'Frameworks' : '';
-    let nodesText = this.state.widthMedium ? 'Nodes' : '';
-    let logsText = this.state.widthMedium ? 'Logs' : '';
+    let logsText = this.state.leftNavExpanded ? 'Logs' : '';
+    let dashboardText = this.state.leftNavExpanded ? 'Dashboard' : '';
+    let frameworksText = this.state.leftNavExpanded ? 'Frameworks' : '';
+    let nodesText = this.state.leftNavExpanded ? 'Nodes' : '';
 
     return [
       { route: '/', text: dashboardText, icon: dashboardIcon },
@@ -124,13 +147,23 @@ class App extends React.Component {
   }
 
   getStyle() {
+    let burgerColor = this.state.leftNavExpanded ? '#000000' : '#9e9e9e';
     let style = {
-      sideBar: {
-        transition: 'flex 0.5s ease-out',
-        flex: '0 0 66px',
-        backgroundColor: '#20272b',
+      burger: {
+        display: 'block',
+        padding: '14px 0 14px 24px',
+        color: burgerColor,
+        background: '#ffffff',
+        cursor: 'pointer',
         '@media (min-width: 1024px)': {
-          flex: '0 0 170px'
+          display: 'none'
+        }
+      },
+      'menuDivider': {
+        width: '100%',
+        borderBottom: '2px solid #9e9e9e',
+        '@media (min-width: 1024px)': {
+          display: 'none'
         }
       },
       columns: {
@@ -152,18 +185,49 @@ class App extends React.Component {
     return (
       <div>
         <div className="row">
-          <div style={style.sideBar}>
-            <div style={style.logo}>
-              <Logo width={50} height={50} />
+          
+          <Motion style={{
+            thisWidth: spring(this.state.leftNavExpanded ? this.props.navMedium : this.props.navSmall, [this.props.motionStiffness, this.props.motionDamping])
+          }}>
+            {({thisWidth}) =>
+            <div style={{
+              position: 'fixed',
+              height: '100%',
+              width: `${thisWidth}px`,
+              boxShadow: '2px 0px 3px 0px rgba(0,0,0,0.2)',
+              zIndex: 5
+            }}>
+            <Logo width={50} height={50} />
+            <div
+              style={style.burger}
+              className="material-icons"
+              onClick={this.handleClick}>
+              menu
             </div>
+            <div style={style.menuDivider}></div>
             <Navigation menuItems={this.menuItems()} />
-          </div>
-          <div className="col-xs-9 col-sm-10">
-            <div style={style.columns} className="col-xs-12">
-              <RouteHandler {...this.props} nodes={this.state.nodes}
-              frameworks={this.state.frameworks} stats={this.state.stats} logs={this.state.logs}/>
             </div>
-          </div>
+            }
+          </Motion>
+
+          <Motion style={{
+            thisMargin: spring(this.state.widthMedium ? this.props.navMedium: this.props.navSmall, [this.props.motionStiffness, this.props.motionDamping])
+          }}>
+          {({thisMargin}) =>
+            <div style={{marginLeft:`${thisMargin}px`}} className="col-xs-9 col-sm-10">
+              <div style={style.columns} className="col-xs-12">
+                <RouteHandler
+                  {...this.props}
+                  nodes={this.state.nodes}
+                  frameworks={this.state.frameworks}
+                  stats={this.state.stats}
+                  logs={this.state.logs}
+                />
+              </div>
+            </div>
+          }
+          </Motion>
+
         </div>
       </div>
     );
