@@ -149,6 +149,9 @@ class App extends React.Component {
   getStyle() {
     let burgerColor = this.state.leftNavExpanded ? '#000000' : '#9e9e9e';
     let style = {
+      logo: {
+        padding: '10px 12px'
+      },
       burger: {
         display: 'block',
         padding: '14px 0 14px 24px',
@@ -167,13 +170,25 @@ class App extends React.Component {
         }
       },
       columns: {
+        position: 'relative',
         padding: '20px 0 0 10px',
+        '@media (min-width: 768px)': {
+          padding: '20px 0 0 24px'
+        },
         '@media (min-width: 1024px)': {
           padding: '20px 24px 0'
         }
       },
-      logo: {
-        padding: '10px 12px'
+      githubIcon: {
+        position: 'absolute',
+        right: 0,
+        top: '17px',
+        width: '22px',
+        fontSize: '180%',
+        overflow: 'hidden',
+        '@media (min-width: 1024px)': {
+          right: '23px'
+        }
       }
     };
     return style;
@@ -185,7 +200,7 @@ class App extends React.Component {
     return (
       <div>
         <div className="row">
-          
+
           <Motion style={{
             thisWidth: spring(this.state.leftNavExpanded ? this.props.navMedium : this.props.navSmall, [this.props.motionStiffness, this.props.motionDamping])
           }}>
@@ -194,10 +209,11 @@ class App extends React.Component {
               position: 'fixed',
               height: '100%',
               width: `${thisWidth}px`,
+              backgroundColor: '#ffffff',
               boxShadow: '2px 0px 3px 0px rgba(0,0,0,0.2)',
               zIndex: 5
             }}>
-            <Logo width={50} height={50} />
+            <Logo width={45} height={45} />
             <div
               style={style.burger}
               className="material-icons"
@@ -216,6 +232,12 @@ class App extends React.Component {
           {({thisMargin}) =>
             <div style={{marginLeft:`${thisMargin}px`}} className="col-xs-9 col-sm-10">
               <div style={style.columns} className="col-xs-12">
+                <a
+                  style={style.githubIcon}
+                  className="muidocs-icon-custom-github"
+                  href="https://github.com/capgemini/mesos-ui">
+                  GitHub
+                </a>
                 <RouteHandler
                   {...this.props}
                   nodes={this.state.nodes}
