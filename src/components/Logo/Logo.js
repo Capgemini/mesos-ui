@@ -23,7 +23,7 @@ class Logo extends React.Component {
         backgroundColor: '#004561'
       },
       'svg': {
-        padding: '10px 0 4px 11px'
+        padding: '10px 0 4px 13px'
       }
     };
     return styles;
@@ -37,7 +37,8 @@ class Logo extends React.Component {
 
     return (
      <div style={logoStyles.root}>
-       <svg style={logoStyles.svg} width={props.width} height={props.height} viewBox={viewBox} preserveAspectRatio="xMidYMid">
+       <svg style={logoStyles.svg} width={props.width} height={props.height} viewBox={viewBox} preserveAspectRatio="xMidYMid" role="img" aria-label="Mesos logo">
+         <title>Mesos UI</title>
          <g>
            <path d="M190.180109,177.16993 L190.180109,113.804451 L135.537556,145.539486 L190.180109,177.16993" fill={styles.backColour}></path>
            <path d="M186.644918,107.621603 L131.906739,75.9702412 L131.906739,139.348669 L186.644918,107.621603" fill={styles.fillColour}></path>
