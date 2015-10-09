@@ -106,16 +106,16 @@ const appConfig = merge({}, config, {
     filename: 'app.js'
   },
   node: {
-    fs: "empty",
+    fs: 'empty',
   },
   devtool: DEBUG ? 'source-map' : false,
   plugins: config.plugins.concat([
-      new DefinePlugin(merge(GLOBALS, {'__SERVER__': false}))
-    ].concat(DEBUG ? [] : [
-      new webpack.optimize.DedupePlugin(),
-      new webpack.optimize.UglifyJsPlugin(),
-      new webpack.optimize.AggressiveMergingPlugin()
-    ])
+    new DefinePlugin(merge(GLOBALS, {'__SERVER__': false}))
+  ].concat(DEBUG ? [] : [
+    new webpack.optimize.DedupePlugin(),
+    new webpack.optimize.UglifyJsPlugin(),
+    new webpack.optimize.AggressiveMergingPlugin()
+  ])
   )
 });
 

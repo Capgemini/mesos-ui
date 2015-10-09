@@ -1,0 +1,15 @@
+{
+  "curly": true,
+  "moz": false,
+  "node": true,
+  "strict": false,
+  "undef": true,
+  "unused": true,
+  "predef": [
+    "describe",
+    "beforeEach",
+    "it",
+    "jest",
+    "expect"
+  ]
+}
