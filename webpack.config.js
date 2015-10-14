@@ -3,6 +3,9 @@ import webpack, { DefinePlugin, BannerPlugin } from 'webpack';
 import merge from 'lodash/object/merge';
 import autoprefixer from 'autoprefixer-core';
 import minimist from 'minimist';
+let conf = require('./src/config/config');
+let buildType = conf['buildType'];
+var buildConfig = conf['buildConfig'][buildType];
 
 const argv = minimist(process.argv.slice(2));
 const DEBUG = !argv.release;
@@ -85,6 +88,10 @@ const config = {
         loader: 'url-loader?limit=10000&mimetype=image/svg+xml'
       },
       {
+
+        loader: "transform?envify",
+      },
+      {
         test: /\.jsx?$/,
         exclude: /node_modules/,
         loader: 'babel-loader'
@@ -102,7 +109,7 @@ const config = {
 const appConfig = merge({}, config, {
   entry: './src/app.js',
   output: {
-    path: './build/public',
+    path: './build/' + buildConfig['publicFolder'],
     filename: 'app.js'
   },
   node: {

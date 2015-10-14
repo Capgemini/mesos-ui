@@ -8,6 +8,9 @@ import mkdirp from 'mkdirp';
 import runSequence from 'run-sequence';
 import webpack from 'webpack';
 import minimist from 'minimist';
+let config = require('./src/config/config')
+let buildType = config['buildType']
+var buildConfig = config['buildConfig'][buildType]
 
 const $ = gulpLoadPlugins();
 const argv = minimist(process.argv.slice(2));
@@ -22,7 +25,7 @@ gulp.task('default', ['sync']);
 // Clean output directory
 gulp.task('clean', cb => {
   del(['.tmp', 'build/*', '!build/.git'], {dot: true}, () => {
-    mkdirp('build/public', cb);
+    mkdirp('build/' + buildConfig['publicFolder'], cb);
   });
 });
 
@@ -30,18 +33,24 @@ gulp.task('clean', cb => {
 gulp.task('assets', () => {
   src.assets = 'src/public/**';
   return gulp.src(src.assets)
-    .pipe($.changed('build/public'))
-    .pipe(gulp.dest('build/public'))
+    .pipe($.changed('build/' + buildConfig['publicFolder']))
+    .pipe(gulp.dest('build/' + buildConfig['publicFolder']))
     .pipe($.size({title: 'assets'}));
 });
 
 // Resource files
 gulp.task('resources', () => {
   src.resources = [
-    'package.json',
-    'src/templates*/**'
+    'src/templates/' + buildConfig['templateFolder'] + '/**',
+    'package.json'
   ];
-  return gulp.src(src.resources)
+
+  gulp.src('src/templates/' + buildConfig['templateFolder'] + '/**')
+    .pipe($.changed('build'))
+    .pipe(gulp.dest('build/' + buildConfig['templateTargetFolder']))
+    .pipe($.size({title: 'resources'}));
+
+  return gulp.src('package.json')
     .pipe($.changed('build'))
     .pipe(gulp.dest('build'))
     .pipe($.size({title: 'resources'}));
@@ -101,7 +110,7 @@ gulp.task('build:watch', cb => {
 gulp.task('serve', ['build:watch'], cb => {
   src.server = [
     'build/server.js',
-    'build/templates/**/*'
+    'build/' + buildConfig['templateTargetFolder'] + '/**/*'
   ];
   let started = false;
   let server = (function startup() {
