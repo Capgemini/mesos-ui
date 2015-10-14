@@ -101,13 +101,15 @@
           "cpus": 2,
           "disk": 3962,
           "mem": 2740,
-          "ports": "[31000-32000]"
+          "ports": "[31000-32000]",
+          "ephemeral_ports": "[32768-57344]"
         },
         "unreserved_resources": {
           "cpus": 2,
           "disk": 3962,
           "mem": 2740,
-          "ports": "[31000-32000]"
+          "ports": "[31000-32000]",
+          "ephemeral_ports": "[32768-57344]"
         },
         "used_resources": {
           "cpus": 0,
@@ -132,13 +134,15 @@
           "cpus": 2,
           "disk": 3962,
           "mem": 2740,
-          "ports": "[31000-32000]"
+          "ports": "[31000-32000]",
+          "ephemeral_ports": "[32768-57344]"
         },
         "unreserved_resources": {
           "cpus": 2,
           "disk": 3962,
           "mem": 2740,
-          "ports": "[31000-32000]"
+          "ports": "[31000-32000]",
+          "ephemeral_ports": "[32768-57344]"
         },
         "used_resources": {
           "cpus": 0,
@@ -163,13 +167,15 @@
           "cpus": 2,
           "disk": 3962,
           "mem": 2740,
-          "ports": "[31000-32000]"
+          "ports": "[31000-32000]",
+          "ephemeral_ports": "[32768-57344]"
         },
         "unreserved_resources": {
           "cpus": 2,
           "disk": 3962,
           "mem": 2740,
-          "ports": "[31000-32000]"
+          "ports": "[31000-32000]",
+          "ephemeral_ports": "[32768-57344]"
         },
         "used_resources": {
           "cpus": 0.5,
@@ -375,13 +381,15 @@
           "cpus": 2,
           "disk": 3962,
           "mem": 2740,
-          "ports": "[31000-32000]"
+          "ports": "[31000-32000]",
+          "ephemeral_ports": "[32768-57344]"
         },
         "unreserved_resources": {
           "cpus": 2,
           "disk": 3962,
           "mem": 2740,
-          "ports": "[31000-32000]"
+          "ports": "[31000-32000]",
+          "ephemeral_ports": "[32768-57344]"
         },
         "used_resources": {
           "cpus": 1,
@@ -406,13 +414,15 @@
           "cpus": 2,
           "disk": 3962,
           "mem": 2740,
-          "ports": "[31000-32000]"
+          "ports": "[31000-32000]",
+          "ephemeral_ports": "[32768-57344]"
         },
         "unreserved_resources": {
           "cpus": 2,
           "disk": 3962,
           "mem": 2740,
-          "ports": "[31000-32000]"
+          "ports": "[31000-32000]",
+          "ephemeral_ports": "[32768-57344]"
         },
         "used_resources": {
           "cpus": 1,
@@ -437,13 +447,15 @@
           "cpus": 2,
           "disk": 3962,
           "mem": 2740,
-          "ports": "[31000-32000]"
+          "ports": "[31000-32000]",
+          "ephemeral_ports": "[32768-57344]"
         },
         "unreserved_resources": {
           "cpus": 2,
           "disk": 3962,
           "mem": 2740,
-          "ports": "[31000-32000]"
+          "ports": "[31000-32000]",
+          "ephemeral_ports": "[32768-57344]"
         },
         "used_resources": {
           "cpus": 0.5,
