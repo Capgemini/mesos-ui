@@ -1,4 +1,4 @@
-FROM mesosphere/mesos-master:VERSION
+FROM mesosphere/mesos-master:0.23.0-1.0.ubuntu1404
 MAINTAINER alberto.garcial@hotmail.com
 COPY build/master /web-ui/master
 ENV MESOS_WEBUI_DIR /web-ui

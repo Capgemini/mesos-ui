@@ -10,7 +10,7 @@ import routes from './react-routes';
 module.exports = function(app) {
 
   // The top-level React component + HTML template for it
-  const templateFile = path.join(__dirname, 'templates/index.html');
+  const templateFile = path.join(__dirname, 'master/static/index.html');
   const template = _.template(fs.readFileSync(templateFile, 'utf8'));
 
   app.get('*', function(req, res, next) {
