@@ -10,11 +10,53 @@ A responsive, realtime dashboard for Apache Mesos built using Node.js, React.js 
 
 ![dashboard](docs/mesos-ui.gif)
 
+## Replacing Mesos default UI
+
+Run:
+```
+git clone https://github.com/Capgemini/mesos-ui.git mesos-ui
+cd mesos-ui
+npm install
+export MESOS_UI_BUILD_TYPE=mesos-server
+gulp build
+```
+
+Test it with Mesos overriding the default UI e.g:
+
+```./bin/mesos-master.sh --ip=127.0.0.1 --work_dir=/var/lib/mesos --log_dir=/var/lib/mesos/logs --webui_dir=/path-to/mesos-ui/build/```
+
+or using environment variables:
+
+```export MESOS_WEBUI_DIR=/your-path/mesos-ui/build/```
+
+See http://mesos.apache.org/gettingstarted/
+
+See http://mesos.apache.org/documentation/latest/configuration/
+
 ## Compatibility
 
 This code has been tested against Mesos version 0.23 at the time of writing.
 
 ## Developing locally
+
+At the moment two flavors of the Mesos UI coexist in this repo:
+
+* Standalone
+
+This provides a standalone app served by nodejs.
+Nodejs server requests Mesos periodically and comunicates with mesos-ui client via sockets.
+
+* Mesos server
+
+This generates the static files ready to be run a as default UI served by Mesos core.
+
+Run
+```
+export MESOS_UI_BUILD_TYPE=mesos-server
+gulp build
+```
+
+Make sure you set ```--webui_dir=/path-to/mesos-ui/build/``` or ```export MESOS_WEBUI_DIR=/your-path/mesos-ui/build/``` when runing Mesos.
 
 ### Prerequisites
 

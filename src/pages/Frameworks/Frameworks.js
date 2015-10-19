@@ -4,6 +4,11 @@ import React, { PropTypes } from 'react';
 import PageTitle from '../../components/PageTitle';
 import DashboardBox from '../../components/DashboardBox';
 import FrameworkBlock from '../../components/FrameworkBlock';
+import config from '../../config/config';
+
+let buildType = config['buildType']
+let buildConfig = config['buildConfig'][buildType]
+var assetsPath = buildConfig.assetsFolder
 
 class Frameworks extends React.Component {
 
@@ -22,7 +27,7 @@ class Frameworks extends React.Component {
 
     let widgets = frameworks.map(function(framework, i){
       return React.createElement(DashboardBox, { styles: { root: { minHeight: 'auto' } }, key: i, title: framework.name, xsColSize: 6, smColSize: 4, mdColSize: 3 },
-        React.createElement(FrameworkBlock, { key: i, name: framework.name, url: framework.webuiUrl, tasks: framework.tasks.length })
+        React.createElement(FrameworkBlock, { key: i, name: framework.name, url: framework.webuiUrl, tasks: framework.tasks.length, assetsPath: assetsPath})
       );
     });
 

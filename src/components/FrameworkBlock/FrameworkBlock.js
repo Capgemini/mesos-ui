@@ -10,7 +10,8 @@ class FrameworkBlock extends React.Component {
     logoFile: PropTypes.string,
     version: PropTypes.string,
     tasks: PropTypes.number,
-    url: React.PropTypes.string
+    url: React.PropTypes.string,
+    assetsPath: React.PropTypes.string
   };
 
   static contextTypes = {
@@ -18,7 +19,7 @@ class FrameworkBlock extends React.Component {
   }
 
   defaultLogo() {
-    return '/assets/icon-framework-' + this.props.name + '.png';
+    return this.props.assetsPath + '/assets/icon-framework-' + this.props.name + '.png';
   }
 
   render() {

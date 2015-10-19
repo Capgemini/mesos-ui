@@ -6,11 +6,14 @@ import path from 'path';
 import React from 'react';
 import Router from 'react-router';
 import routes from './react-routes';
+let config = require('../config/config')
+let buildType = config['buildType']
+var buildConfig = config['buildConfig'][buildType]
 
 module.exports = function(app) {
 
   // The top-level React component + HTML template for it
-  const templateFile = path.join(__dirname, 'templates/index.html');
+  const templateFile = path.join(__dirname, buildConfig['templateTargetFolder'] + '/index.html');
   const template = _.template(fs.readFileSync(templateFile, 'utf8'));
 
   app.get('*', function(req, res, next) {

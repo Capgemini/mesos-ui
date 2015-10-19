@@ -6,6 +6,8 @@ import express from 'express';
 import socketIo from 'socket.io';
 
 let config = require('./config/config');
+let buildType = config['buildType']
+var buildConfig = config['buildConfig'][buildType]
 let app = express();
 
 // Serve static files from /public folder.
@@ -23,10 +25,12 @@ let io = socketIo.listen(app.listen(app.get('port'), () => {
   }
 }));
 
-// Default routes
-require('./routes/default')(app, io);
-// Mesos API routes
-require('./routes/api/mesos')(app, io);
+// // Default routes
+require('./routes/default')(app);
+// // Mesos API routes
+if (buildConfig['fluxPropagator'] === 'mesosSocketClient') {
+  require('./routes/api/mesosSocketServer')(app, io);
+}
 
 // If we're in development mode spin up a mock server as we may not have a
 // running Mesos cluster, so lets just use the stub API in ./stub.json.
