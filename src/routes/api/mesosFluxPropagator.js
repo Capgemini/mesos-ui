@@ -1,9 +1,9 @@
 import request from 'superagent';
 import ClusterStore from '../../stores/ClusterStore';
 
-var mesos = require('./mesos')
+import mesos from './mesos'
 
-var mesosFluxPropagator = {
+let mesosFluxPropagator = {
 
   propagateNewMetrics() {
     // Get metrics.
