@@ -5,7 +5,7 @@ build
 node_modules
 npm-debug.log
 coverage
-.TempDockerfile
+TempDockerfile
 
 # Local files.
 .DS_Store
