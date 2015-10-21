@@ -1,5 +1,14 @@
+/* flexboxgrid CSS */
+@import "flexboxgrid.min.css";
+
+/* Google Roboto font */
+@import "font/roboto/style..css";
+
+/* material design icons */
+@import "font-icons/material-icons/style.css";
+
 /* custom font icons */
-@import "font-icons/style.css";
+@import "font-icons/material-ui-icons/style.css";
 
 a {
   color: #ff4081;
