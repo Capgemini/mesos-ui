@@ -107,7 +107,7 @@ The application should be available on http://localhost:5000.
 
 The stub data is at [src/stub.json](https://github.com/Capgemini/mesos-ui/blob/master/src/stub.json). The UI for json-server should be available on http://localhost:8000
 
-For using the previews standalone version of mesos-ui [check this out](link to github tag)
+For using the previews standalone version of mesos-ui [check this out](https://github.com/Capgemini/mesos-ui/tree/0.1.0)
 
 
 
