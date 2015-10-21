@@ -158,24 +158,24 @@ class App extends React.Component {
         color: burgerColor,
         background: '#ffffff',
         cursor: 'pointer',
-        '@media (min-width: 1024px)': {
+        '@media (minWidth: 1024px)': {
           display: 'none'
         }
       },
       'menuDivider': {
         width: '100%',
         borderBottom: '2px solid #9e9e9e',
-        '@media (min-width: 1024px)': {
+        '@media (minWidth: 1024px)': {
           display: 'none'
         }
       },
       columns: {
         position: 'relative',
         padding: '20px 0 0 10px',
-        '@media (min-width: 768px)': {
+        '@media (minWidth: 768px)': {
           padding: '20px 0 0 24px'
         },
-        '@media (min-width: 1024px)': {
+        '@media (minWidth: 1024px)': {
           padding: '20px 24px 0'
         }
       },
@@ -186,7 +186,7 @@ class App extends React.Component {
         width: '22px',
         fontSize: '180%',
         overflow: 'hidden',
-        '@media (min-width: 1024px)': {
+        '@media (minWidth: 1024px)': {
           right: '23px'
         }
       }
