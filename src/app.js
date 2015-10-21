@@ -6,6 +6,7 @@ import FastClick from 'fastclick';
 import Router from 'react-router';
 import routes from './routes/react-routes';
 import injectTapEventPlugin from 'react-tap-event-plugin';
+import createHashHistory from 'history/lib/createHashHistory';
 
 let onSetMeta = (name, content) => {
   // Remove and create a new <meta /> tag in order to make it work
@@ -22,6 +23,7 @@ let onSetMeta = (name, content) => {
   document.getElementsByTagName('head')[0].appendChild(meta);
 };
 
+
 function run() {
   //Needed for onTouchTap
   //Can go away when react 1.0 release
@@ -29,10 +31,14 @@ function run() {
   //https://github.com/zilverline/react-tap-event-plugin
   injectTapEventPlugin();
 
+  // Mesos requests that trigger the Flux worflow passing the data through.
+  let fluxPropagator = require('./routes/api/mesosFluxPropagator');
+  fluxPropagator.propagateMesosData();
+
   //Needed for React Developer Tools
   window.React = React;
+  Router.run(routes, Router.HashHistory, function(Handler, state) {
 
-  Router.run(routes, Router.HistoryLocation, function(Handler, state) {
     React.render(<Handler
       context={{
         onSetTitle: value => document.title = value,

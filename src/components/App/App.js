@@ -8,6 +8,8 @@ import Navigation from '../Navigation';
 import Radium from 'radium';
 import ClusterStore from '../../stores/ClusterStore';
 import {Motion, spring} from 'react-motion';
+import request from 'superagent';
+/*jshint esnext: true */
 
 let ThemeManager = new mui.Styles.ThemeManager();
 
@@ -53,6 +55,7 @@ class App extends React.Component {
 
   componentDidMount() {
     this.mounted = true;
+
     window.addEventListener('resize', this.handleResize);
     this.handleResize();
 
@@ -60,24 +63,6 @@ class App extends React.Component {
     ClusterStore.addChangeListener(this.refreshLogs.bind(this));
     ClusterStore.addChangeListener(this.refreshState.bind(this));
 
-    // Setup socket connections. We use the global io() object here which
-    // should be available in the browser.
-    this.socket = io(); //eslint-disable-line
-
-    // cluster metrics
-    this.socket.on('metricsReceived', function (data) {
-      ClusterStore.metricsReceived(data);
-    });
-
-    // cluster logs
-    this.socket.on('logsReceived', function (data) {
-      ClusterStore.logsReceived(data);
-    });
-
-    // cluster state
-    this.socket.on('stateReceived', function (data) {
-      ClusterStore.stateReceived(data);
-    });
   }
 
   refreshState() {
