@@ -13,68 +13,59 @@ class ZookeeperRedirect extends React.Component {
     this.redirectToLeader()
   }
 
+  shouldComponentUpdate(nextProps, nextState) {
+    return nextProps.leader !== this.props.leader;
+  }
+
   componentDidUpdate() {
     this.redirectToLeader()
   }
 
-  // method mostly copy from https://github.com/apache/mesos/blob/master/src/webui/master/static/js/controllers.js
   redirectToLeader() {
-
-    var zookeeperRedirect = React.findDOMNode(this);
-
     if (this.props.leader) {
       // Redirect if we aren't the leader.
       if (this.props.leader != this.props.pid) {
-
-        if (zookeeperRedirect != null) {
-
-          zookeeperRedirect.classList.remove('hide');
-          zookeeperRedirect.querySelector('#redirecting-leader-alert').classList.remove('hide');
-          zookeeperRedirect.querySelector('#no-leader-alert').setAttribute('class', 'hide');
-
-          var redirectTime = this.props.redirectTime
-          var countdown = function() {
-            if (redirectTime == 0) {
-              window.location = '/master/redirect';
-            } else {
-              redirectTime = redirectTime - 1000;
-              setInterval(function(){
-                countdown();
-              }, 1000);
-            }
-          };
-          countdown();
-        }
+        setTimeout(function () {
+          window.location = '/master/redirect';
+        }, this.props.redirectTime);
       }
     }
-    else {
-      zookeeperRedirect.classList.remove('hide');
-      zookeeperRedirect.querySelector('#no-leader-alert').classList.remove('hide');
-    }
   }
-
 
   /* @todo - allow overridable styles */
   getStyles() {
     let styles = {
-      fontWeight: 100,
+      fontWeight: 500,
       marginBottom: 20
     };
     return styles;
   }
 
+  createAlert() {
+    var className = 'hide';
+    var alert = null;
+
+    if (this.props.leader) {
+      if (this.props.leader != this.props.pid) {
+        className = 'show';
+        alert = React.createElement('span', null, 'This master is not the leader, redirecting...');
+      }
+    }
+    else {
+      className = 'show';
+      alert = React.createElement('span', null, 'No master currently leading...');
+    }
+    return { 'alert': alert, 'className': className }
+  }
+
   render() {
 
-    let styles = this.getStyles();
+    let style = this.getStyles();
+    let alert = this.createAlert().alert;
+    let className = this.createAlert().className;
     return (
-      <div className="hide" id="zookeeper-leader-alert">
-        <div className="hide" id="no-leader-alert" style={styles}>
-          <strong><u>No master currently leading...</u></strong>
-        </div>
-        <div className="hide" id="redirecting-leader-alert">
-          <strong>This master is <u>not the leader</u>, redirecting...</strong>
-          <a href="/master/redirect">go now</a>
-        </div>
+      <div style={style} className={className} id="zookeeper-leader-alert">
+        {alert}
       </div>
     );
   }
