@@ -5,6 +5,7 @@ IMPROVEMENTS:
   * This version removes the dependency with the nodejs server.
   * This version provides a ready to be served by mesos-core UI.
   * This version provides zookeeper leader redirect functionality.
+  * This version removes any dependency with external static files.
   * This version **deprecates the standalone previews mode** in order to provide deeper and easy integration with mesos core.
 
 
