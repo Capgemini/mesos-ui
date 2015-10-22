@@ -9,6 +9,7 @@ import Radium from 'radium';
 import ClusterStore from '../../stores/ClusterStore';
 import {Motion, spring} from 'react-motion';
 import request from 'superagent';
+import ZookeeperRedirect from '../ZookeeperRedirect';
 /*jshint esnext: true */
 
 let ThemeManager = new mui.Styles.ThemeManager();
@@ -43,8 +44,11 @@ class App extends React.Component {
       stats: ClusterStore.getStats(),
       logs: ClusterStore.getLogs(),
       frameworks: ClusterStore.getFrameworks(),
-      nodes: ClusterStore.getNodes()
+      nodes: ClusterStore.getNodes(),
+      leader: ClusterStore.getLeader(),
+      pid: ClusterStore.getPid(),
     };
+    this.redirect = 3000;
   }
 
   getChildContext() {
@@ -62,14 +66,15 @@ class App extends React.Component {
     ClusterStore.addChangeListener(this.refreshStats.bind(this));
     ClusterStore.addChangeListener(this.refreshLogs.bind(this));
     ClusterStore.addChangeListener(this.refreshState.bind(this));
-
   }
 
   refreshState() {
     if (this.mounted) {
       this.setState( {
         frameworks: ClusterStore.getFrameworks(),
-        nodes: ClusterStore.getNodes()
+        nodes: ClusterStore.getNodes(),
+        leader: ClusterStore.getLeader(),
+        pid: ClusterStore.getPid(),
       });
     }
   }
@@ -181,11 +186,9 @@ class App extends React.Component {
 
   render() {
     let style = this.getStyle();
-
     return (
       <div>
         <div className="row">
-
           <Motion style={{
             thisWidth: spring(this.state.leftNavExpanded ? this.props.navMedium : this.props.navSmall, [this.props.motionStiffness, this.props.motionDamping])
           }}>
@@ -216,7 +219,9 @@ class App extends React.Component {
           }}>
           {({thisMargin}) =>
             <div style={{marginLeft:`${thisMargin}px`}} className="col-xs-9 col-sm-10">
+
               <div style={style.columns} className="col-xs-12">
+                <ZookeeperRedirect leader={this.state.leader} pid={this.state.pid} redirectTime={3000} />
                 <a
                   style={style.githubIcon}
                   className="muidocs-icon-custom-github"

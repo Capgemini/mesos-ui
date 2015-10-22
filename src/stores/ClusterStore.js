@@ -15,7 +15,9 @@ var stats = require('./schemes/statsScheme.js');
 
 var state = {
   nodes: [],
-  frameworks: []
+  frameworks: [],
+  leader: '',
+  pid: ''
 };
 
 var logs = {};
@@ -51,6 +53,7 @@ function refreshLogs(currentLogs) {
 }
 
 function refreshState(data) {
+
   let frameworkScheme = require('./schemes/frameworkScheme.js');
   let nodeScheme = require('./schemes/nodeScheme.js');
 
@@ -74,6 +77,9 @@ function refreshState(data) {
     }
     return nodeData;
   });
+
+  state.leader = data.leader;
+  state.pid = data.pid;
 }
 
 var ClusterStore = assign({}, EventEmitter.prototype, {
@@ -96,6 +102,14 @@ var ClusterStore = assign({}, EventEmitter.prototype, {
 
   getFrameworks() {
     return state.frameworks;
+  },
+
+  getLeader() {
+    return state.leader;
+  },
+
+  getPid() {
+    return state.pid;
   },
 
   /**

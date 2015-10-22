@@ -46,3 +46,7 @@ body {
   padding-bottom: 5px;
   margin-bottom: 1rem;
 }
+
+.hide {
+  display: none;
+}
