@@ -3,8 +3,8 @@
 [![Join the chat at https://gitter.im/Capgemini/mesos-ui](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/Capgemini/mesos-ui?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 [![wercker status](https://app.wercker.com/status/3e566621ba967bfeb6ee57a76ddf42cc/s/master "wercker status")](https://app.wercker.com/project/bykey/3e566621ba967bfeb6ee57a76ddf42cc)
-[![Code Climate](https://codeclimate.com/repos/5613e8d3e30ba0426b004fdb/badges/f0180273f265b5710bed/gpa.svg)](https://codeclimate.com/repos/5613e8d3e30ba0426b004fdb/feed)
-[![Test Coverage](https://codeclimate.com/repos/5613e8d3e30ba0426b004fdb/badges/f0180273f265b5710bed/coverage.svg)](https://codeclimate.com/repos/5613e8d3e30ba0426b004fdb/coverage)
+[![Code Climate](https://codeclimate.com/github/Capgemini/mesos-ui/badges/gpa.svg)](https://codeclimate.com/github/Capgemini/mesos-ui)
+[![Test Coverage](https://codeclimate.com/github/Capgemini/mesos-ui/badges/coverage.svg)](https://codeclimate.com/github/Capgemini/mesos-ui/coverage)
 
 A responsive, realtime dashboard for Apache Mesos built using Node.js, React.js.
 
