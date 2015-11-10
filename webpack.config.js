@@ -86,7 +86,7 @@ const config = {
       },
       {
 
-        loader: "transform?envify",
+        loader: 'transform?envify',
       },
       {
         test: /\.jsx?$/,
