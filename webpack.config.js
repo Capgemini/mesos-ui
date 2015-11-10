@@ -85,6 +85,10 @@ const config = {
         loader: 'url-loader?limit=10000&mimetype=image/svg+xml'
       },
       {
+
+        loader: "transform?envify",
+      },
+      {
         test: /\.jsx?$/,
         exclude: /node_modules/,
         loader: 'babel-loader'
@@ -102,7 +106,7 @@ const config = {
 const appConfig = merge({}, config, {
   entry: './src/app.js',
   output: {
-    path: './build/public',
+    path: './build/master/static',
     filename: 'app.js'
   },
   node: {

@@ -8,14 +8,19 @@ import _ from 'lodash';
 
 var CHANGE_EVENT = 'change';
 var METRICS_RECEIVED_EVENT = 'metricsReceived';
+var LOGS_RECEIVED_EVENT = 'logsReceived';
 var STATE_RECEIVED_EVENT = 'stateReceived';
 
 var stats = require('./schemes/statsScheme.js');
 
 var state = {
   nodes: [],
-  frameworks: []
+  frameworks: [],
+  leader: '',
+  pid: ''
 };
+
+var logs = {};
 
 /**
  * Refresh cluster stats
@@ -42,7 +47,13 @@ function refreshStats(statistics) {
   );
 }
 
+function refreshLogs(currentLogs) {
+  Array.isArray(currentLogs) ? assign(logs, currentLogs[0]) : assign(logs, currentLogs);
+  return logs;
+}
+
 function refreshState(data) {
+
   let frameworkScheme = require('./schemes/frameworkScheme.js');
   let nodeScheme = require('./schemes/nodeScheme.js');
 
@@ -66,6 +77,9 @@ function refreshState(data) {
     }
     return nodeData;
   });
+
+  state.leader = data.leader;
+  state.pid = data.pid;
 }
 
 var ClusterStore = assign({}, EventEmitter.prototype, {
@@ -78,12 +92,24 @@ var ClusterStore = assign({}, EventEmitter.prototype, {
     return stats;
   },
 
+  getLogs() {
+    return logs;
+  },
+
   getNodes() {
     return state.nodes;
   },
 
   getFrameworks() {
     return state.frameworks;
+  },
+
+  getLeader() {
+    return state.leader;
+  },
+
+  getPid() {
+    return state.pid;
   },
 
   /**
@@ -128,6 +154,13 @@ var ClusterStore = assign({}, EventEmitter.prototype, {
     this.emit(METRICS_RECEIVED_EVENT, data);
   },
 
+  logsReceived(data) {
+    /* @todo - check if the data we are receiving is different from what we have
+    already to avoid calling unecessary DOM updates */
+    ClusterActions.refreshLogs(data);
+    this.emit(LOGS_RECEIVED_EVENT, data);
+  },
+
   stateReceived(data) {
     /* @todo - check if the data we are receiving is different from what we have
     already to avoid calling unecessary DOM updates */
@@ -143,6 +176,11 @@ ClusterStore.dispatchToken = AppDispatcher.register((action) => {
 
     case ClusterConstants.CLUSTER_REFRESH_STATS:
       refreshStats(action.stats);
+      ClusterStore.emitChange();
+      break;
+
+    case ClusterConstants.CLUSTER_REFRESH_LOGS:
+      refreshLogs(action.logs);
       ClusterStore.emitChange();
       break;
 

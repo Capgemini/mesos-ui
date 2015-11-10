@@ -18,7 +18,7 @@ class FrameworkBlock extends React.Component {
   }
 
   defaultLogo() {
-    return '/assets/icon-framework-' + this.props.name + '.png';
+    return 'master/static/assets/icon-framework-' + this.props.name + '.png';
   }
 
   render() {

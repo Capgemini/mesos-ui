@@ -65,8 +65,8 @@ class Sunburst extends React.Component {
 
   drawInitialComponent(props) {
     let twoPie = 2 * Math.PI;
-    let totalResources = _.omit(props.totalResources, 'ports');
-    let usedResources = _.omit(props.usedResources, 'ports');
+    let totalResources = _.omit(props.totalResources, 'ports', 'ephemeral_ports');
+    let usedResources = _.omit(props.usedResources, 'ports', 'ephemeral_ports');
     let outerRadius = props.width / 2.;
     let innerRadius = props.width / 2.24;
     let radiusDifference = 12;
@@ -109,8 +109,8 @@ class Sunburst extends React.Component {
 
   updateDonuts(props) {
     let twoPie = 2 * Math.PI;
-    let totalResources = _.omit(props.totalResources, 'ports');
-    let usedResources = _.omit(props.usedResources, 'ports');
+    let totalResources = _.omit(props.totalResources, 'ports', 'ephemeral_ports');
+    let usedResources = _.omit(props.usedResources, 'ports', 'ephemeral_ports');
     let transitionDuration = props.transitionDuration;
     let _this = this; //eslint-disable-line
 

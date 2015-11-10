@@ -24,7 +24,7 @@ gulp.task('default', ['sync']);
 // Clean output directory
 gulp.task('clean', cb => {
   del(['.tmp', 'build/*', '!build/.git'], {dot: true}, () => {
-    mkdirp('build/public', cb);
+    mkdirp('build/master/static', cb);
   });
 });
 
@@ -48,8 +48,8 @@ gulp.task('lint', function () {
 gulp.task('assets', () => {
   src.assets = 'src/public/**';
   return gulp.src(src.assets)
-    .pipe($.changed('build/public'))
-    .pipe(gulp.dest('build/public'))
+    .pipe($.changed('build/master/static'))
+    .pipe(gulp.dest('build/master/static'))
     .pipe($.size({title: 'assets'}));
 });
 
@@ -57,11 +57,11 @@ gulp.task('assets', () => {
 gulp.task('resources', () => {
   src.resources = [
     'package.json',
-    'src/templates*/**'
+    'src/templates/**'
   ];
   return gulp.src(src.resources)
-    .pipe($.changed('build'))
-    .pipe(gulp.dest('build'))
+    .pipe($.changed('build/master/static'))
+    .pipe(gulp.dest('build/master/static'))
     .pipe($.size({title: 'resources'}));
 });
 
@@ -119,7 +119,7 @@ gulp.task('build:watch', cb => {
 gulp.task('serve', ['build:watch'], cb => {
   src.server = [
     'build/server.js',
-    'build/templates/**/*'
+    'build/master/static/**/*'
   ];
   let started = false;
   let server = (function startup() {

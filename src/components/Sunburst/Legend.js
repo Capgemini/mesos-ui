@@ -34,8 +34,8 @@ class Legend extends React.Component {
 
   render() {
     let props = this.props;
-    let totalResources = _.omit(props.totalResources, 'ports');
-    let usedResources = _.omit(props.usedResources, 'ports');
+    let totalResources = _.omit(props.totalResources, 'ports', 'ephemeral_ports');
+    let usedResources = _.omit(props.usedResources, 'ports', 'ephemeral_ports');
     let legendItems = [];
     let _this = this; //eslint-disable-line
 

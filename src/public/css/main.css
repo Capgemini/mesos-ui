@@ -1,5 +1,14 @@
+/* flexboxgrid CSS */
+@import "flexboxgrid.min.css";
+
+/* Google Roboto font */
+@import "fonts/roboto/style.css";
+
+/* material design icons */
+@import "font-icons/material-icons/style.css";
+
 /* custom font icons */
-@import "font-icons/style.css";
+@import "font-icons/material-ui-icons/style.css";
 
 a {
   color: #ff4081;
@@ -36,4 +45,8 @@ body {
 .box {
   padding-bottom: 5px;
   margin-bottom: 1rem;
+}
+
+.hide {
+  display: none;
 }
