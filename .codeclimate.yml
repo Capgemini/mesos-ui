@@ -6,3 +6,5 @@ engines:
    enabled: true
  fixme:
    enabled: true (edited)
+ requiresafe:
+   enabled: true
