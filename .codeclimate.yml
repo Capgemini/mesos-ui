@@ -6,5 +6,6 @@ engines:
    enabled: true
  fixme:
    enabled: true (edited)
- requiresafe:
-   enabled: true
+
+exclude_paths:
+- src/public/css/flexboxgrid.min.css
