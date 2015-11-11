@@ -1,3 +1,4 @@
+'use strict';
 var frameworkScheme = {
   'active': true,
   'checkpoint': true,

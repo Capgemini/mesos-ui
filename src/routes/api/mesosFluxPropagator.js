@@ -1,3 +1,4 @@
+'use strict';
 import request from 'superagent';
 import ClusterStore from '../../stores/ClusterStore';
 

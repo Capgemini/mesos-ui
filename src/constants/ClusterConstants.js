@@ -1,3 +1,4 @@
+'use strict';
 /*jshint esnext: true */
 
 import keyMirror from 'react/lib/keyMirror';

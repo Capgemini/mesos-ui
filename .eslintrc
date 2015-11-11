@@ -10,19 +10,26 @@
   },
   "globals": {
     "__DEV__": true,
-    "__SERVER__": true
+    "__SERVER__": true,
+    "window": true,
+    "document": true
   },
   "ecmaFeatures": {
     "jsx": true
   },
   "rules": {
     // Strict mode
-    "strict": [2, "never"],
+    "strict": [2, "global"],
 
     // Code style
     "indent": [2, 2, {SwitchCase: 1}],
     "jsx-quotes": 1,
     "quotes": [2, "single"],
+    "camelcase": 2,
+    "no-undefined": 2,
+    "no-unused-vars": 2,
+    "curly": 2,
+    "no-trailing-spaces": 2,
 
     // React
     "react/display-name": 0,

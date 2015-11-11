@@ -1,3 +1,4 @@
+'use strict';
 /*jshint esnext: true */
 
 import 'babel/polyfill';
@@ -6,7 +7,6 @@ import FastClick from 'fastclick';
 import Router from 'react-router';
 import routes from './routes/react-routes';
 import injectTapEventPlugin from 'react-tap-event-plugin';
-import createHashHistory from 'history/lib/createHashHistory';
 
 let onSetMeta = (name, content) => {
   // Remove and create a new <meta /> tag in order to make it work

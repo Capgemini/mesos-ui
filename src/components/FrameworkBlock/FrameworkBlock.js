@@ -1,7 +1,8 @@
+'use strict';
 /*jshint esnext: true */
 import React, { PropTypes } from 'react';
-import { Styles, RaisedButton } from 'material-ui';
-let { Colors } = Styles;
+import { /*Styles, */RaisedButton } from 'material-ui';
+// let { Colors } = Styles;
 
 class FrameworkBlock extends React.Component {
 

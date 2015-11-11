@@ -1,3 +1,4 @@
+'use strict';
 /*jshint esnext: true */
 import request from 'superagent';
 
@@ -57,5 +58,3 @@ var mesos = {
 };
 
 module.exports = mesos
-
-

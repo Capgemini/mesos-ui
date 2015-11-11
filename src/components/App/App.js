@@ -1,3 +1,4 @@
+'use strict';
 /*jshint esnext: true */
 import React from 'react';
 import { RouteHandler } from 'react-router';
@@ -8,7 +9,6 @@ import Navigation from '../Navigation';
 import Radium from 'radium';
 import ClusterStore from '../../stores/ClusterStore';
 import {Motion, spring} from 'react-motion';
-import request from 'superagent';
 import ZookeeperRedirect from '../ZookeeperRedirect';
 /*jshint esnext: true */
 
