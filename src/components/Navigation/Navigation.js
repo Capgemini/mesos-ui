@@ -1,5 +1,5 @@
 'use strict';
-/*jshint esnext: true */
+
 import React from 'react';
 import { Menu } from 'material-ui';
 

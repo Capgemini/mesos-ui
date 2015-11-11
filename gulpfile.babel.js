@@ -1,5 +1,5 @@
 'use strict';
-/*jshint esnext: true */
+
 import path from 'path';
 import cp from 'child_process';
 import gulp from 'gulp';
@@ -29,7 +29,7 @@ gulp.task('clean', cb => {
 });
 
 gulp.task('lint', function () {
-  return gulp.src(['src/**/*.js', 'src/**/*.js', 'gulpfile.babel.js', 'webpack.config.js'])
+  return gulp.src(['src/**/*.js', 'gulpfile.babel.js', 'webpack.config.js'])
     // eslint() attaches the lint output to the eslint property
     // of the file object so it can be used by other modules.
     .pipe(eslint())

@@ -1,5 +1,5 @@
 'use strict';
-/*jshint esnext: true */
+
 import React, { PropTypes } from 'react';
 
 class ZookeeperRedirect extends React.Component {

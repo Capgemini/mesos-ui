@@ -1,5 +1,4 @@
 'use strict';
-/*jshint esnext: true */
 
 import _ from 'lodash';
 import fs from 'fs';

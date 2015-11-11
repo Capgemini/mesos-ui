@@ -1,5 +1,5 @@
 'use strict';
-/*jshint esnext: true */
+
 import webpack, { DefinePlugin, BannerPlugin } from 'webpack';
 import merge from 'lodash/object/merge';
 import autoprefixer from 'autoprefixer-core';

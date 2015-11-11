@@ -1,5 +1,4 @@
 'use strict';
-/*jshint esnext: true */
 
 import React, { PropTypes } from 'react';
 import PageTitle from '../../components/PageTitle';

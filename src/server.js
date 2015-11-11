@@ -1,5 +1,4 @@
 'use strict';
-/*jshint esnext: true */
 
 import 'babel/polyfill';
 import path from 'path';

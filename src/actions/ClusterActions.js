@@ -1,5 +1,4 @@
 'use strict';
-/*jshint esnext: true */
 
 import Dispatcher from '../core/Dispatcher';
 import ClusterConstants from '../constants/ClusterConstants';

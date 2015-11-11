@@ -1,5 +1,5 @@
 'use strict';
-/*jshint esnext: true */
+
 import request from 'superagent';
 
 let config = require('../../config/config');

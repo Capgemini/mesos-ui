@@ -1,5 +1,5 @@
 'use strict';
-/*jshint esnext: true */
+
 import React from 'react';
 import d3 from 'd3';
 import _ from 'lodash';
