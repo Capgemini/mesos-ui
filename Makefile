@@ -11,5 +11,5 @@ build_ui_snapshot:
 	gulp build
 
 build: build_ui_snapshot
-	sed "s/VERSION/$(MESOS_VERSION)/g" Dockerfile > TempDockerfile
+	sed "s/VERSION/$(MESOS_VERSION)/g" DockerfileMesos > TempDockerfile
 	docker build -f TempDockerfile -t capgemini/mesos-ui:$(MESOS_UI_VERSION) .

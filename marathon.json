@@ -1,0 +1,41 @@
+
+{
+  "id": "mesos-ui",
+  "instances": 1,
+  "cpus": 1,
+  "mem": 512,
+  "env": {
+    "MESOS_ENDPOINT": "http://127.0.0.1:5050"
+  },
+  "labels": {
+    "DCOS_PACKAGE_NAME": "mesos-ui",
+    "DCOS_PACKAGE_IS_FRAMEWORK": "false",
+    "DCOS_PACKAGE_VERSION": "0.1.0"
+  },
+  "healthChecks": [
+    {
+      "gracePeriodSeconds": 120,
+      "intervalSeconds": 15,
+      "maxConsecutiveFailures": 10,
+      "path": "/",
+      "portIndex": 0,
+      "protocol": "HTTP",
+      "timeoutSeconds": 5
+    }
+  ],
+  "container": {
+    "type": "DOCKER",
+    "docker": {
+      "image": "capgemini/mesos-ui:standalone",
+      "network": "BRIDGE",
+      "portMappings": [
+        {
+          "containerPort": 5000,
+          "hostPort": 0,
+          "servicePort": 5000,
+          "protocol": "tcp"
+        }
+      ]
+    }
+  }
+}
