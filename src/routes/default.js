@@ -6,12 +6,22 @@ import path from 'path';
 import React from 'react';
 import Router from 'react-router';
 import routes from './react-routes';
+import proxy from 'express-http-proxy';
 
 module.exports = function(app) {
 
   // The top-level React component + HTML template for it
   const templateFile = path.join(__dirname, 'master/static/index.html');
   const template = _.template(fs.readFileSync(templateFile, 'utf8'));
+  var config = require('../config/config');
+
+  app.get(config.proxyPath + '*', proxy(process.env.MESOS_ENDPOINT, {
+    forwardPath: function(req, res) {
+      // Gets the path after 'proxy/'.
+      let path = require('url').parse(req.url).path;
+      return path.slice(config.mesosEndpoint.length);
+    }
+  }));
 
   app.get('*', function(req, res, next) {
     try {
