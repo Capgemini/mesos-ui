@@ -10,7 +10,19 @@ A responsive, realtime dashboard for Apache Mesos built using Node.js, React.js.
 
 ![dashboard](docs/mesos-ui.gif)
 
-## Usage
+## Usage as standalone.
+
+You can run and deploy this app in standalone mode via docker like:
+
+```docker run -p 5000:5000 -e MESOS_ENDPOINT=http://production_endpoint:5050 capgemini/mesos-ui:stand-alone```
+
+or using marathon:
+
+replace MESOS_ENDPOINT with the URL of your Mesos master and run:
+
+``` curl -X POST -HContent-Type:application/json -d @marathon.json http://MARATHON_ENDPOINT:8080/v2/apps ```
+
+## Usage as Mesos defaul UI
 
 The quickest way to check it out is just run:
 
