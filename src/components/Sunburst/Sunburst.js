@@ -28,9 +28,9 @@ class Sunburst extends React.Component {
     data: [],
     transitionDuration: 1000,
     colors: {
-      cpus: '#512DA8', /* @todo pull this from the theme */
-      mem: '#00BCD4',
-      disk: '#FF9800',
+      cpus: Colors.deepPurple700, /* @todo pull this from the theme */
+      mem: Colors.cyan500,
+      disk: Colors.orange500,
       canvas: ColorManipulator.fade(Colors.darkBlack, 0.1)
     }
   };
