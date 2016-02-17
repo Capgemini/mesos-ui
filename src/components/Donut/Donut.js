@@ -30,7 +30,11 @@ class Donut extends React.Component {
     colors: {
       green: Colors.green500,
       red: Colors.red500,
-      amber: Colors.amber500
+      amber: Colors.amber500,
+      grey: Colors.grey300,
+      deepPurple: Colors.deepPurple700,
+      cyan: Colors.cyan500,
+      orange: Colors.orange500
     }
   };
 
