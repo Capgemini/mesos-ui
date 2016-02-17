@@ -23,8 +23,8 @@ class Dashboard extends React.Component {
     let stats = this.props.stats;
     let cpuFree = stats.cpusTotal - stats.cpusUsed;
     return ([
-      {name: 'Used', count: _.round(stats.cpusUsed, 2), color: 'red'},
-      {name: 'Free', count: _.round(cpuFree, 2), color: 'green'}
+      {name: 'Used', count: _.round(stats.cpusUsed, 2), color: 'deepPurple'},
+      {name: 'Free', count: _.round(cpuFree, 2), color: 'grey'}
     ]);
   }
 
@@ -32,8 +32,8 @@ class Dashboard extends React.Component {
     let stats = this.props.stats;
     let memoryFree = stats.memTotal - stats.memUsed;
     return ([
-      {name: 'Used', count: ClusterStore.convertMBtoGB(stats.memUsed), color: 'red'},
-      {name: 'Free', count: ClusterStore.convertMBtoGB(memoryFree), color: 'green'}
+      {name: 'Used', count: ClusterStore.convertMBtoGB(stats.memUsed), color: 'cyan'},
+      {name: 'Free', count: ClusterStore.convertMBtoGB(memoryFree), color: 'grey'}
     ]);
   }
 
@@ -41,8 +41,8 @@ class Dashboard extends React.Component {
     let stats = this.props.stats;
     let diskFree = stats.diskTotal - stats.diskUsed;
     return ([
-      {name: 'Used', count: ClusterStore.convertMBtoGB(stats.diskUsed), color: 'red'},
-      {name: 'Free', count: ClusterStore.convertMBtoGB(diskFree), color: 'green'}
+      {name: 'Used', count: ClusterStore.convertMBtoGB(stats.diskUsed), color: 'orange'},
+      {name: 'Free', count: ClusterStore.convertMBtoGB(diskFree), color: 'grey'}
     ]);
   }
 
