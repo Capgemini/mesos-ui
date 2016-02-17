@@ -73,16 +73,16 @@ class Dashboard extends React.Component {
             <Donut title="Total CPUs" data={this.cpuStats()} />
           </DashboardBox>
 
-          <DashboardBox title="Tasks">
-            <Donut title="Total Tasks" data={this.taskStats()} />
-          </DashboardBox>
-
           <DashboardBox title="Memory Usage">
             <Donut title="Total Memory (GB)" data={this.memoryStats()} />
           </DashboardBox>
 
           <DashboardBox title="Disk Usage">
             <Donut title="Total Disk (GB)" data={this.diskStats()} />
+          </DashboardBox>
+
+          <DashboardBox title="Tasks">
+            <Donut title="Total Tasks" data={this.taskStats()} />
           </DashboardBox>
 
           <DashboardBox title="Nodes">
