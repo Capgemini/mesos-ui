@@ -1,5 +1,7 @@
 /*jshint esnext: true */
 import React, { PropTypes } from 'react';
+import { Styles, Utils } from 'material-ui';
+let { Colors } = Styles;
 import _ from 'lodash';
 import LegendItem from './LegendItem.js';
 
@@ -16,9 +18,9 @@ class Legend extends React.Component {
 
   static defaultProps = {
     colors: {
-      cpus: '#512DA8', /* @todo pull this from the theme */
-      mem: '#00BCD4',
-      disk: '#FF9800'
+      cpus: Colors.deepPurple700, /* @todo pull this from the theme */
+      mem: Colors.cyan500,
+      disk: Colors.orange500
     }
   };
 

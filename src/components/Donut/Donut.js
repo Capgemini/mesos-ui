@@ -29,7 +29,11 @@ class Donut extends React.Component {
     colors: {
       green: Colors.green500,
       red: Colors.red500,
-      amber: Colors.amber500
+      amber: Colors.amber500,
+      grey: Colors.grey300,
+      deepPurple: Colors.deepPurple700,
+      cyan: Colors.cyan500,
+      orange: Colors.orange500
     }
   };
 
@@ -87,7 +91,7 @@ class Donut extends React.Component {
       .attr('transform', 'translate(' + (props.width) / 2 + ',' + (props.height) / 2 + ')');
 
     let d3Colors = d3.scale.ordinal().range(color);
-    let outerRadius = props.width / 2.1;
+    let outerRadius = props.width / 2.2;
     let innerRadius = props.width / 2;
     let arc = d3.svg.arc()
       .outerRadius(outerRadius)
