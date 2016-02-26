@@ -26,7 +26,7 @@
   "container": {
     "type": "DOCKER",
     "docker": {
-      "image": "capgemini/mesos-ui:standalone",
+      "image": "capgemini/mesos-ui:standalone-0.1.2",
       "network": "BRIDGE",
       "portMappings": [
         {
