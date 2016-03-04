@@ -15,6 +15,7 @@ var stats = require('./schemes/statsScheme.js');
 var state = {
   nodes: [],
   frameworks: [],
+  tasks: {},
   leader: '',
   pid: ''
 };
@@ -77,8 +78,41 @@ function refreshState(data) {
     return nodeData;
   });
 
+  // build tasks hash grouping by framework and name.
+  // This give us time complexity O(n) rather than O(n*m) plus ease to change the patron for grouping.
+  // O(n*m) shoudn't be a problem as number of frameworks never will be massive.
+  let taskData = {};
+  let allTasks = [];
+  let tasksByFrameworkId = {};
+  let tasksByFrameworkIdByName = {};
+
+  for(var index in data.frameworks) {
+    allTasks = allTasks.concat(data.frameworks[index].tasks);
+  }
+
+  for(var index in allTasks) {
+    let frameworkId = allTasks[index].framework_id
+    tasksByFrameworkId[frameworkId] = tasksByFrameworkId[frameworkId] || [];
+    tasksByFrameworkId[frameworkId].push(allTasks[index]);
+  }
+
+  for(var index in allTasks) {
+    let frameworkId = allTasks[index].framework_id
+    let taskName = allTasks[index].name
+    tasksByFrameworkIdByName[frameworkId] = tasksByFrameworkIdByName[frameworkId] || [];
+    tasksByFrameworkIdByName[frameworkId][taskName] = tasksByFrameworkIdByName[frameworkId][taskName] || [];
+    tasksByFrameworkIdByName[frameworkId][taskName].push(allTasks[index]);
+  }
+  // console.log('allTasks');
+  // console.log(allTasks);
+  // console.log('tasksByFramework');
+  // console.log(tasksByFrameworkId);
+  // console.log('tasksByFrameworkIdByName');
+  // console.log(tasksByFrameworkIdByName);
+
   state.leader = data.leader;
   state.pid = data.pid;
+  state.tasks = allTasks;
 }
 
 var ClusterStore = assign({}, EventEmitter.prototype, {
@@ -101,6 +135,10 @@ var ClusterStore = assign({}, EventEmitter.prototype, {
 
   getFrameworks() {
     return state.frameworks;
+  },
+
+  getTasks() {
+    return state.tasks;
   },
 
   getLeader() {

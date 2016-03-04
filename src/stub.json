@@ -290,9 +290,575 @@
         "role": "*",
         "tasks": [
           {
+            "id": "stubby-subscriptions.99b498a8-dee3-11e5-9a50-5ac2a4ac00a4",
+            "name": "stubby-subscriptions",
+            "framework_id": "82cde340-9d3b-40a6-87e2-953952745763-0000",
             "executor_id": "",
-            "framework_id": "20150827-145231-1258422282-5050-1-0000",
-            "id": "chronos.813abb60-4ccb-11e5-9eed-02420a02020b",
+            "slave_id": "02223256-125c-4c3d-81db-3cdafbf233cd-S4",
+            "state": "TASK_RUNNING",
+            "resources": {
+              "cpus": 0.3,
+              "disk": 0,
+              "mem": 64,
+              "ports": "[31506-31506]"
+            },
+            "statuses": [
+              {
+                "state": "TASK_RUNNING",
+                "timestamp": 1456750475.33811,
+                "labels": [
+                  {
+                    "key": "Docker.NetworkSettings.IPAddress",
+                    "value": "10.34.0.7"
+                  }
+                ],
+                "container_status": {
+                  "network_infos": [
+                    {
+                      "ip_address": "10.34.0.7",
+                      "ip_addresses": [
+                        {
+                          "ip_address": "10.34.0.7"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              }
+            ],
+            "labels": [
+              {
+                "key": "traefik.frontend.value",
+                "value": "stubby-subscriptions.{environment:[a-z]+}.service.vcloud"
+              }
+            ],
+            "container": {
+              "type": "DOCKER",
+              "docker": {
+                "image": "docker-registry.service.tmp.vcloud:5000/stubby",
+                "network": "BRIDGE",
+                "port_mappings": [
+                  {
+                    "host_port": 31506,
+                    "container_port": 8008,
+                    "protocol": "tcp"
+                  }
+                ],
+                "privileged": false,
+                "force_pull_image": false
+              }
+            }
+          },
+          {
+            "id": "stubby-tat.8ca9ab06-dee3-11e5-9a50-5ac2a4ac00a4",
+            "name": "stubby-tat",
+            "framework_id": "82cde340-9d3b-40a6-87e2-953952745763-0000",
+            "executor_id": "",
+            "slave_id": "02223256-125c-4c3d-81db-3cdafbf233cd-S1",
+            "state": "TASK_RUNNING",
+            "resources": {
+              "cpus": 0.3,
+              "disk": 0,
+              "mem": 64,
+              "ports": "[31623-31623]"
+            },
+            "statuses": [
+              {
+                "state": "TASK_RUNNING",
+                "timestamp": 1456750456.25417,
+                "labels": [
+                  {
+                    "key": "Docker.NetworkSettings.IPAddress",
+                    "value": "10.36.0.7"
+                  }
+                ],
+                "container_status": {
+                  "network_infos": [
+                    {
+                      "ip_address": "10.36.0.7",
+                      "ip_addresses": [
+                        {
+                          "ip_address": "10.36.0.7"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              }
+            ],
+            "labels": [
+              {
+                "key": "traefik.frontend.value",
+                "value": "stubby-tat.{environment:[a-z]+}.service.vcloud"
+              }
+            ],
+            "container": {
+              "type": "DOCKER",
+              "docker": {
+                "image": "docker-registry.service.tmp.vcloud:5000/stubby",
+                "network": "BRIDGE",
+                "port_mappings": [
+                  {
+                    "host_port": 31623,
+                    "container_port": 8008,
+                    "protocol": "tcp"
+                  }
+                ],
+                "privileged": false,
+                "force_pull_image": false
+              }
+            }
+          },
+          {
+            "id": "stubby-quickprice.86112164-dee3-11e5-9a50-5ac2a4ac00a4",
+            "name": "stubby-quickprice",
+            "framework_id": "82cde340-9d3b-40a6-87e2-953952745763-0000",
+            "executor_id": "",
+            "slave_id": "02223256-125c-4c3d-81db-3cdafbf233cd-S1",
+            "state": "TASK_RUNNING",
+            "resources": {
+              "cpus": 0.3,
+              "disk": 0,
+              "mem": 64,
+              "ports": "[31362-31362]"
+            },
+            "statuses": [
+              {
+                "state": "TASK_RUNNING",
+                "timestamp": 1456750445.20799,
+                "labels": [
+                  {
+                    "key": "Docker.NetworkSettings.IPAddress",
+                    "value": "10.36.0.6"
+                  }
+                ],
+                "container_status": {
+                  "network_infos": [
+                    {
+                      "ip_address": "10.36.0.6",
+                      "ip_addresses": [
+                        {
+                          "ip_address": "10.36.0.6"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              }
+            ],
+            "labels": [
+              {
+                "key": "traefik.frontend.value",
+                "value": "stubby-quickprice.{environment:[a-z]+}.service.vcloud"
+              }
+            ],
+            "container": {
+              "type": "DOCKER",
+              "docker": {
+                "image": "docker-registry.service.tmp.vcloud:5000/stubby",
+                "network": "BRIDGE",
+                "port_mappings": [
+                  {
+                    "host_port": 31362,
+                    "container_port": 8008,
+                    "protocol": "tcp"
+                  }
+                ],
+                "privileged": false,
+                "force_pull_image": false
+              }
+            }
+          },
+          {
+            "id": "docker-registry.9835e0c7-dedb-11e5-9a50-5ac2a4ac00a4",
+            "name": "docker-registry",
+            "framework_id": "82cde340-9d3b-40a6-87e2-953952745763-0000",
+            "executor_id": "",
+            "slave_id": "02223256-125c-4c3d-81db-3cdafbf233cd-S1",
+            "state": "TASK_RUNNING",
+            "resources": {
+              "cpus": 0.3,
+              "disk": 0,
+              "mem": 128,
+              "ports": "[31211-31211]"
+            },
+            "statuses": [
+              {
+                "state": "TASK_RUNNING",
+                "timestamp": 1456747039.71318,
+                "container_status": {
+                  "network_infos": [
+                    {
+                      "ip_address": "10.66.1.159",
+                      "ip_addresses": [
+                        {
+                          "ip_address": "10.66.1.159"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              }
+            ],
+            "labels": [
+              {
+                "key": "traefik.frontend.value",
+                "value": "docker-registry.service.vcloud"
+              }
+            ],
+            "container": {
+              "type": "DOCKER",
+              "volumes": [
+                {
+                  "mode": "RW",
+                  "container_path": "/var/lib/registry",
+                  "host_path": "/tmp/docker-registry"
+                }
+              ],
+              "docker": {
+                "image": "registry:2",
+                "network": "HOST",
+                "privileged": false,
+                "force_pull_image": false
+              }
+            }
+          },
+          {
+            "id": "stubby-tat.8ca95ce5-dee3-11e5-9a50-5ac2a4ac00a4",
+            "name": "stubby-tat",
+            "framework_id": "82cde340-9d3b-40a6-87e2-953952745763-0000",
+            "executor_id": "",
+            "slave_id": "02223256-125c-4c3d-81db-3cdafbf233cd-S2",
+            "state": "TASK_RUNNING",
+            "resources": {
+              "cpus": 0.3,
+              "disk": 0,
+              "mem": 64,
+              "ports": "[31099-31099]"
+            },
+            "statuses": [
+              {
+                "state": "TASK_RUNNING",
+                "timestamp": 1456750457.30767,
+                "labels": [
+                  {
+                    "key": "Docker.NetworkSettings.IPAddress",
+                    "value": "10.44.0.7"
+                  }
+                ],
+                "container_status": {
+                  "network_infos": [
+                    {
+                      "ip_address": "10.44.0.7",
+                      "ip_addresses": [
+                        {
+                          "ip_address": "10.44.0.7"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              }
+            ],
+            "labels": [
+              {
+                "key": "traefik.frontend.value",
+                "value": "stubby-tat.{environment:[a-z]+}.service.vcloud"
+              }
+            ],
+            "container": {
+              "type": "DOCKER",
+              "docker": {
+                "image": "docker-registry.service.tmp.vcloud:5000/stubby",
+                "network": "BRIDGE",
+                "port_mappings": [
+                  {
+                    "host_port": 31099,
+                    "container_port": 8008,
+                    "protocol": "tcp"
+                  }
+                ],
+                "privileged": false,
+                "force_pull_image": false
+              }
+            }
+          },
+          {
+            "id": "stubby-tat.9b64af0e-dee2-11e5-9a50-5ac2a4ac00a4",
+            "name": "stubby-tat",
+            "framework_id": "82cde340-9d3b-40a6-87e2-953952745763-0000",
+            "executor_id": "",
+            "slave_id": "02223256-125c-4c3d-81db-3cdafbf233cd-S4",
+            "state": "TASK_RUNNING",
+            "resources": {
+              "cpus": 0.3,
+              "disk": 0,
+              "mem": 64,
+              "ports": "[31887-31887]"
+            },
+            "statuses": [
+              {
+                "state": "TASK_RUNNING",
+                "timestamp": 1456750048.6963,
+                "labels": [
+                  {
+                    "key": "Docker.NetworkSettings.IPAddress",
+                    "value": "10.34.0.6"
+                  }
+                ],
+                "container_status": {
+                  "network_infos": [
+                    {
+                      "ip_address": "10.34.0.6",
+                      "ip_addresses": [
+                        {
+                          "ip_address": "10.34.0.6"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              }
+            ],
+            "labels": [
+              {
+                "key": "traefik.frontend.value",
+                "value": "stubby-tat.{environment:[a-z]+}.service.vcloud"
+              }
+            ],
+            "container": {
+              "type": "DOCKER",
+              "docker": {
+                "image": "docker-registry.service.tmp.vcloud:5000/stubby",
+                "network": "BRIDGE",
+                "port_mappings": [
+                  {
+                    "host_port": 31887,
+                    "container_port": 8008,
+                    "protocol": "tcp"
+                  }
+                ],
+                "privileged": false,
+                "force_pull_image": false
+              }
+            }
+          },
+          {
+            "id": "qa-mailhog.e2a6d099-dedd-11e5-9a50-5ac2a4ac00a4",
+            "name": "qa-mailhog",
+            "framework_id": "82cde340-9d3b-40a6-87e2-953952745763-0000",
+            "executor_id": "",
+            "slave_id": "02223256-125c-4c3d-81db-3cdafbf233cd-S1",
+            "state": "TASK_RUNNING",
+            "resources": {
+              "cpus": 0.3,
+              "disk": 0,
+              "mem": 128,
+              "ports": "[31310-31311]"
+            },
+            "statuses": [
+              {
+                "state": "TASK_RUNNING",
+                "timestamp": 1456748023.72745,
+                "labels": [
+                  {
+                    "key": "Docker.NetworkSettings.IPAddress",
+                    "value": "10.36.0.3"
+                  }
+                ],
+                "container_status": {
+                  "network_infos": [
+                    {
+                      "ip_address": "10.36.0.3",
+                      "ip_addresses": [
+                        {
+                          "ip_address": "10.36.0.3"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              }
+            ],
+            "labels": [
+              {
+                "key": "traefik.frontend.value",
+                "value": "mailhog.qa.service.vcloud"
+              }
+            ],
+            "container": {
+              "type": "DOCKER",
+              "docker": {
+                "image": "mailhog/mailhog",
+                "network": "BRIDGE",
+                "port_mappings": [
+                  {
+                    "host_port": 31310,
+                    "container_port": 8025,
+                    "protocol": "tcp"
+                  },
+                  {
+                    "host_port": 31311,
+                    "container_port": 1025,
+                    "protocol": "tcp"
+                  }
+                ],
+                "privileged": false,
+                "force_pull_image": false
+              }
+            }
+          },
+          {
+            "id": "stubby-quickprice.8c210f7d-dee2-11e5-9a50-5ac2a4ac00a4",
+            "name": "stubby-quickprice",
+            "framework_id": "82cde340-9d3b-40a6-87e2-953952745763-0000",
+            "executor_id": "",
+            "slave_id": "02223256-125c-4c3d-81db-3cdafbf233cd-S4",
+            "state": "TASK_RUNNING",
+            "resources": {
+              "cpus": 0.3,
+              "disk": 0,
+              "mem": 64,
+              "ports": "[31835-31835]"
+            },
+            "statuses": [
+              {
+                "state": "TASK_RUNNING",
+                "timestamp": 1456750028.23214,
+                "labels": [
+                  {
+                    "key": "Docker.NetworkSettings.IPAddress",
+                    "value": "10.34.0.5"
+                  }
+                ],
+                "container_status": {
+                  "network_infos": [
+                    {
+                      "ip_address": "10.34.0.5",
+                      "ip_addresses": [
+                        {
+                          "ip_address": "10.34.0.5"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              }
+            ],
+            "labels": [
+              {
+                "key": "traefik.frontend.value",
+                "value": "stubby-quickprice.{environment:[a-z]+}.service.vcloud"
+              }
+            ],
+            "container": {
+              "type": "DOCKER",
+              "docker": {
+                "image": "docker-registry.service.tmp.vcloud:5000/stubby",
+                "network": "BRIDGE",
+                "port_mappings": [
+                  {
+                    "host_port": 31835,
+                    "container_port": 8008,
+                    "protocol": "tcp"
+                  }
+                ],
+                "privileged": false,
+                "force_pull_image": false
+              }
+            }
+          },
+          {
+            "id": "stubby-subscriptions.9f68ab1f-dee2-11e5-9a50-5ac2a4ac00a4",
+            "name": "stubby-subscriptions",
+            "framework_id": "82cde340-9d3b-40a6-87e2-953952745763-0000",
+            "executor_id": "",
+            "slave_id": "02223256-125c-4c3d-81db-3cdafbf233cd-S2",
+            "state": "TASK_RUNNING",
+            "resources": {
+              "cpus": 0.3,
+              "disk": 0,
+              "mem": 64,
+              "ports": "[31964-31964]"
+            },
+            "statuses": [
+              {
+                "state": "TASK_RUNNING",
+                "timestamp": 1456750059.27985,
+                "labels": [
+                  {
+                    "key": "Docker.NetworkSettings.IPAddress",
+                    "value": "10.44.0.3"
+                  }
+                ],
+                "container_status": {
+                  "network_infos": [
+                    {
+                      "ip_address": "10.44.0.3",
+                      "ip_addresses": [
+                        {
+                          "ip_address": "10.44.0.3"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              }
+            ],
+            "labels": [
+              {
+                "key": "traefik.frontend.value",
+                "value": "stubby-subscriptions.{environment:[a-z]+}.service.vcloud"
+              }
+            ],
+            "container": {
+              "type": "DOCKER",
+              "docker": {
+                "image": "docker-registry.service.tmp.vcloud:5000/stubby",
+                "network": "BRIDGE",
+                "port_mappings": [
+                  {
+                    "host_port": 31964,
+                    "container_port": 8008,
+                    "protocol": "tcp"
+                  }
+                ],
+                "privileged": false,
+                "force_pull_image": false
+              }
+            }
+          },
+          {
+            "id": "chronos.9c11f849-dfa1-11e5-9a50-5ac2a4ac00a4",
+            "name": "chronos",
+            "framework_id": "82cde340-9d3b-40a6-87e2-953952745763-0000",
+            "executor_id": "",
+            "slave_id": "02223256-125c-4c3d-81db-3cdafbf233cd-S4",
+            "state": "TASK_RUNNING",
+            "resources": {
+              "cpus": 0.5,
+              "disk": 0,
+              "mem": 512,
+              "ports": "[31499-31499]"
+            },
+            "statuses": [
+              {
+                "state": "TASK_RUNNING",
+                "timestamp": 1456832234.05129,
+                "container_status": {
+                  "network_infos": [
+                    {
+                      "ip_address": "10.66.1.158",
+                      "ip_addresses": [
+                        {
+                          "ip_address": "10.66.1.158"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              }
+            ],
             "labels": [
               {
                 "key": "DCOS_PACKAGE_RELEASE",
@@ -304,7 +870,7 @@
               },
               {
                 "key": "DCOS_PACKAGE_METADATA",
-                "value": "eyJkZXNjcmlwdGlvbiI6ICJBIGZhdWx0IHRvbGVyYW50IGpvYiBzY2hlZHVsZXIgZm9yIE1lc29zIHdoaWNoIGhhbmRsZXMgZGVwZW5kZW5jaWVzIGFuZCBJU084NjAxIGJhc2VkIHNjaGVkdWxlcy4iLCAiZnJhbWV3b3JrIjogdHJ1ZSwgImltYWdlcyI6IHsiaWNvbi1sYXJnZSI6ICJodHRwczovL2Rvd25sb2Fkcy5tZXNvc3BoZXJlLmlvL2Nocm9ub3MvYXNzZXRzL2ljb24tc2VydmljZS1jaHJvbm9zLWxhcmdlLnBuZyIsICJpY29uLW1lZGl1bSI6ICJodHRwczovL2Rvd25sb2Fkcy5tZXNvc3BoZXJlLmlvL2Nocm9ub3MvYXNzZXRzL2ljb24tc2VydmljZS1jaHJvbm9zLW1lZGl1bS5wbmciLCAiaWNvbi1zbWFsbCI6ICJodHRwczovL2Rvd25sb2Fkcy5tZXNvc3BoZXJlLmlvL2Nocm9ub3MvYXNzZXRzL2ljb24tc2VydmljZS1jaHJvbm9zLXNtYWxsLnBuZyJ9LCAibGljZW5zZXMiOiBbeyJuYW1lIjogIkFwYWNoZSBMaWNlbnNlIFZlcnNpb24gMi4wIiwgInVybCI6ICJodHRwczovL2dpdGh1Yi5jb20vbWVzb3MvY2hyb25vcy9ibG9iL21hc3Rlci9MSUNFTlNFIn1dLCAibWFpbnRhaW5lciI6ICJzdXBwb3J0QG1lc29zcGhlcmUuaW8iLCAibmFtZSI6ICJjaHJvbm9zIiwgInBvc3RJbnN0YWxsTm90ZXMiOiAiQ2hyb25vcyBEQ09TIFNlcnZpY2UgaGFzIGJlZW4gc3VjY2Vzc2Z1bGx5IGluc3RhbGxlZCFcblxuXHREb2N1bWVudGF0aW9uOiBodHRwOi8vbWVzb3MuZ2l0aHViLmlvL2Nocm9ub3Ncblx0SXNzdWVzOiBodHRwczovL2dpdGh1Yi5jb20vbWVzb3MvY2hyb25vcy9pc3N1ZXMiLCAicG9zdFVuaW5zdGFsbE5vdGVzIjogIlRoZSBDaHJvbm9zIERDT1MgU2VydmljZSBoYXMgYmVlbiB1bmluc3RhbGxlZCBhbmQgd2lsbCBubyBsb25nZXIgcnVuLlxuUGxlYXNlIGZvbGxvdyB0aGUgaW5zdHJ1Y3Rpb25zIGF0IGh0dHA6Ly9kb2NzLm1lc29zcGhlcmUuY29tL3NlcnZpY2VzL2Nocm9ub3MvI3VuaW5zdGFsbCB0byBjbGVhbiB1cCBhbnkgcGVyc2lzdGVkIHN0YXRlIiwgInByZUluc3RhbGxOb3RlcyI6ICJXZSByZWNvbW1lbmQgYSBtaW5pbXVtIG9mIG9uZSBub2RlIHdpdGggYXQgbGVhc3QgMSBDUFUgYW5kIDJHQiBvZiBSQU0gYXZhaWxhYmxlIGZvciB0aGUgQ2hyb25vcyBTZXJ2aWNlLiIsICJzY20iOiAiaHR0cHM6Ly9naXRodWIuY29tL21lc29zL2Nocm9ub3MuZ2l0IiwgInRhZ3MiOiBbIm1lc29zcGhlcmUiLCAiZnJhbWV3b3JrIl0sICJ2ZXJzaW9uIjogIjIuNC4wIn0="
+                "value": "eyJkZXNjcmlwdGlvbiI6ICJBIGZhdWx0IHRvbGVyYW50IGpvYiBzY2hlZHVsZXIgZm9yIE1lc29zIHdoaWNoIGhhbmRsZXMgZGVwZW5kZW5jaWVzIGFuZCBJU084NjAxIGJhc2VkIHNjaGVkdWxlcy4iLCAiZnJhbWV3b3JrIjogdHJ1ZSwgImltYWdlcyI6IHsiaWNvbi1sYXJnZSI6ICJodHRwczovL2Rvd25sb2Fkcy5tZXNvc3BoZXJlLmlvL2Nocm9ub3MvYXNzZXRzL2ljb24tc2VydmljZS1jaHJvbm9zLWxhcmdlLnBuZyIsICJpY29uLW1lZGl1bSI6ICJodHRwczovL2Rvd25sb2Fkcy5tZXNvc3BoZXJlLmlvL2Nocm9ub3MvYXNzZXRzL2ljb24tc2VydmljZS1jaHJvbm9zLW1lZGl1bS5wbmciLCAiaWNvbi1zbWFsbCI6ICJodHRwczovL2Rvd25sb2Fkcy5tZXNvc3BoZXJlLmlvL2Nocm9ub3MvYXNzZXRzL2ljb24tc2VydmljZS1jaHJvbm9zLXNtYWxsLnBuZyJ9LCAibGljZW5zZXMiOiBbeyJuYW1lIjogIkFwYWNoZSBMaWNlbnNlIFZlcnNpb24gMi4wIiwgInVybCI6ICJodHRwczovL2dpdGh1Yi5jb20vbWVzb3MvY2hyb25vcy9ibG9iL21hc3Rlci9MSUNFTlNFIn1dLCAibWFpbnRhaW5lciI6ICJzdXBwb3J0QG1lc29zcGhlcmUuaW8iLCAibmFtZSI6ICJjaHJvbm9zIiwgInBvc3RJbnN0YWxsTm90ZXMiOiAiQ2hyb25vcyBEQ09TIFNlcnZpY2UgaGFzIGJlZW4gc3VjY2Vzc2Z1bGx5IGluc3RhbGxlZCFcblxuXHREb2N1bWVudGF0aW9uOiBodHRwOi8vbWVzb3MuZ2l0aHViLmlvL2Nocm9ub3Ncblx0SXNzdWVzOiBodHRwczovL2dpdGh1Yi5jb20vbWVzb3MvY2hyb25vcy9pc3N1ZXMiLCAicG9zdFVuaW5zdGFsbE5vdGVzIjogIlRoZSBDaHJvbm9zIERDT1MgU2VydmljZSBoYXMgYmVlbiB1bmluc3RhbGxlZCBhbmQgd2lsbCBubyBsb25nZXIgcnVuLlxuUGxlYXNlIGZvbGxvdyB0aGUgaW5zdHJ1Y3Rpb25zIGF0IGh0dHA6Ly9kb2NzLm1lc29zcGhlcmUuY29tL3NlcnZpY2VzL2Nocm9ub3MvI3VuaW5zdGFsbCB0byBjbGVhbiB1cCBhbnkgcGVyc2lzdGVkIHN0YXRlIiwgInByZUluc3RhbGxOb3RlcyI6ICJXZSByZWNvbW1lbmQgYSBtaW5pbXVtIG9mIG9uZSBub2RlIHdpdGggYXQgbGVhc3QgMSBDUFUgYW5kIDJHQiBvZiBSQU0gYXZhaWxhYmxlIGZvciB0aGUgQ2hyb25vcyBTZXJ2aWNlLiIsICJzY20iOiAiaHR0cHM6Ly9naXRodWIuY29tL21lc29zL2Nocm9ub3MuZ2l0IiwgInRhZ3MiOiBbImNyb24iLCAiYW5hbHl0aWNzIiwgImJhdGNoIl0sICJ2ZXJzaW9uIjogIjIuNC4wIn0="
               },
               {
                 "key": "DCOS_PACKAGE_REGISTRY_VERSION",
@@ -327,21 +893,388 @@
                 "value": "true"
               }
             ],
-            "name": "chronos",
-            "resources": {
-              "cpus": 0.5,
-              "disk": 0,
-              "mem": 512,
-              "ports": "[31637-31637]"
-            },
-            "slave_id": "20150827-145231-1258422282-5050-1-S0",
+            "container": {
+              "type": "DOCKER",
+              "docker": {
+                "image": "mesosphere/chronos:chronos-2.4.0-0.1.20150828104228.ubuntu1404-mesos-0.23.0-1.0.ubuntu1404",
+                "network": "HOST",
+                "privileged": false,
+                "force_pull_image": false
+              }
+            }
+          },
+          {
+            "id": "stubby.a266a8e0-dee2-11e5-9a50-5ac2a4ac00a4",
+            "name": "stubby",
+            "framework_id": "82cde340-9d3b-40a6-87e2-953952745763-0000",
+            "executor_id": "",
+            "slave_id": "02223256-125c-4c3d-81db-3cdafbf233cd-S2",
             "state": "TASK_RUNNING",
+            "resources": {
+              "cpus": 0.3,
+              "disk": 0,
+              "mem": 64,
+              "ports": "[31801-31801]"
+            },
             "statuses": [
               {
                 "state": "TASK_RUNNING",
-                "timestamp": 1440687273.07235
+                "timestamp": 1456750064.40631,
+                "labels": [
+                  {
+                    "key": "Docker.NetworkSettings.IPAddress",
+                    "value": "10.44.0.4"
+                  }
+                ],
+                "container_status": {
+                  "network_infos": [
+                    {
+                      "ip_address": "10.44.0.4",
+                      "ip_addresses": [
+                        {
+                          "ip_address": "10.44.0.4"
+                        }
+                      ]
+                    }
+                  ]
+                }
               }
-            ]
+            ],
+            "labels": [
+              {
+                "key": "traefik.frontend.value",
+                "value": "stubby.{environment:[a-z]+}.service.vcloud"
+              }
+            ],
+            "container": {
+              "type": "DOCKER",
+              "docker": {
+                "image": "docker-registry.service.tmp.vcloud:5000/stubby",
+                "network": "BRIDGE",
+                "port_mappings": [
+                  {
+                    "host_port": 31801,
+                    "container_port": 8008,
+                    "protocol": "tcp"
+                  }
+                ],
+                "privileged": false,
+                "force_pull_image": false
+              }
+            }
+          },
+          {
+            "id": "stubby-quickprice.8610fa53-dee3-11e5-9a50-5ac2a4ac00a4",
+            "name": "stubby-quickprice",
+            "framework_id": "82cde340-9d3b-40a6-87e2-953952745763-0000",
+            "executor_id": "",
+            "slave_id": "02223256-125c-4c3d-81db-3cdafbf233cd-S2",
+            "state": "TASK_RUNNING",
+            "resources": {
+              "cpus": 0.3,
+              "disk": 0,
+              "mem": 64,
+              "ports": "[31971-31971]"
+            },
+            "statuses": [
+              {
+                "state": "TASK_RUNNING",
+                "timestamp": 1456750446.24604,
+                "labels": [
+                  {
+                    "key": "Docker.NetworkSettings.IPAddress",
+                    "value": "10.44.0.6"
+                  }
+                ],
+                "container_status": {
+                  "network_infos": [
+                    {
+                      "ip_address": "10.44.0.6",
+                      "ip_addresses": [
+                        {
+                          "ip_address": "10.44.0.6"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              }
+            ],
+            "labels": [
+              {
+                "key": "traefik.frontend.value",
+                "value": "stubby-quickprice.{environment:[a-z]+}.service.vcloud"
+              }
+            ],
+            "container": {
+              "type": "DOCKER",
+              "docker": {
+                "image": "docker-registry.service.tmp.vcloud:5000/stubby",
+                "network": "BRIDGE",
+                "port_mappings": [
+                  {
+                    "host_port": 31971,
+                    "container_port": 8008,
+                    "protocol": "tcp"
+                  }
+                ],
+                "privileged": false,
+                "force_pull_image": false
+              }
+            }
+          },
+          {
+            "id": "mesos-ui.64657438-dedc-11e5-9a50-5ac2a4ac00a4",
+            "name": "mesos-ui",
+            "framework_id": "82cde340-9d3b-40a6-87e2-953952745763-0000",
+            "executor_id": "",
+            "slave_id": "02223256-125c-4c3d-81db-3cdafbf233cd-S4",
+            "state": "TASK_RUNNING",
+            "resources": {
+              "cpus": 1,
+              "disk": 0,
+              "mem": 512,
+              "ports": "[31858-31858]"
+            },
+            "statuses": [
+              {
+                "state": "TASK_RUNNING",
+                "timestamp": 1456747451.47271,
+                "labels": [
+                  {
+                    "key": "Docker.NetworkSettings.IPAddress",
+                    "value": "10.34.0.4"
+                  }
+                ],
+                "container_status": {
+                  "network_infos": [
+                    {
+                      "ip_address": "10.34.0.4",
+                      "ip_addresses": [
+                        {
+                          "ip_address": "10.34.0.4"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              }
+            ],
+            "labels": [
+              {
+                "key": "DCOS_PACKAGE_NAME",
+                "value": "mesos-ui"
+              },
+              {
+                "key": "DCOS_PACKAGE_IS_FRAMEWORK",
+                "value": "false"
+              },
+              {
+                "key": "DCOS_PACKAGE_VERSION",
+                "value": "0.1.0"
+              }
+            ],
+            "container": {
+              "type": "DOCKER",
+              "docker": {
+                "image": "capgemini/mesos-ui:standalone-0.1.2",
+                "network": "BRIDGE",
+                "port_mappings": [
+                  {
+                    "host_port": 31858,
+                    "container_port": 5000,
+                    "protocol": "tcp"
+                  }
+                ],
+                "privileged": false,
+                "force_pull_image": false
+              }
+            }
+          },
+          {
+            "id": "stubby.82ba5542-dee3-11e5-9a50-5ac2a4ac00a4",
+            "name": "stubby",
+            "framework_id": "82cde340-9d3b-40a6-87e2-953952745763-0000",
+            "executor_id": "",
+            "slave_id": "02223256-125c-4c3d-81db-3cdafbf233cd-S1",
+            "state": "TASK_RUNNING",
+            "resources": {
+              "cpus": 0.3,
+              "disk": 0,
+              "mem": 64,
+              "ports": "[31053-31053]"
+            },
+            "statuses": [
+              {
+                "state": "TASK_RUNNING",
+                "timestamp": 1456750439.69039,
+                "labels": [
+                  {
+                    "key": "Docker.NetworkSettings.IPAddress",
+                    "value": "10.36.0.5"
+                  }
+                ],
+                "container_status": {
+                  "network_infos": [
+                    {
+                      "ip_address": "10.36.0.5",
+                      "ip_addresses": [
+                        {
+                          "ip_address": "10.36.0.5"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              }
+            ],
+            "labels": [
+              {
+                "key": "traefik.frontend.value",
+                "value": "stubby.{environment:[a-z]+}.service.vcloud"
+              }
+            ],
+            "container": {
+              "type": "DOCKER",
+              "docker": {
+                "image": "docker-registry.service.tmp.vcloud:5000/stubby",
+                "network": "BRIDGE",
+                "port_mappings": [
+                  {
+                    "host_port": 31053,
+                    "container_port": 8008,
+                    "protocol": "tcp"
+                  }
+                ],
+                "privileged": false,
+                "force_pull_image": false
+              }
+            }
+          },
+          {
+            "id": "qt-mailhog.1299e67a-dede-11e5-9a50-5ac2a4ac00a4",
+            "name": "qt-mailhog",
+            "framework_id": "82cde340-9d3b-40a6-87e2-953952745763-0000",
+            "executor_id": "",
+            "slave_id": "02223256-125c-4c3d-81db-3cdafbf233cd-S1",
+            "state": "TASK_RUNNING",
+            "resources": {
+              "cpus": 0.3,
+              "disk": 0,
+              "mem": 128,
+              "ports": "[31392-31393]"
+            },
+            "statuses": [
+              {
+                "state": "TASK_RUNNING",
+                "timestamp": 1456748104.19214,
+                "labels": [
+                  {
+                    "key": "Docker.NetworkSettings.IPAddress",
+                    "value": "10.36.0.4"
+                  }
+                ],
+                "container_status": {
+                  "network_infos": [
+                    {
+                      "ip_address": "10.36.0.4",
+                      "ip_addresses": [
+                        {
+                          "ip_address": "10.36.0.4"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              }
+            ],
+            "labels": [
+              {
+                "key": "traefik.frontend.value",
+                "value": "mailhog.qt.service.vcloud"
+              }
+            ],
+            "container": {
+              "type": "DOCKER",
+              "docker": {
+                "image": "mailhog/mailhog",
+                "network": "BRIDGE",
+                "port_mappings": [
+                  {
+                    "host_port": 31392,
+                    "container_port": 8025,
+                    "protocol": "tcp"
+                  },
+                  {
+                    "host_port": 31393,
+                    "container_port": 1025,
+                    "protocol": "tcp"
+                  }
+                ],
+                "privileged": false,
+                "force_pull_image": false
+              }
+            }
+          },
+          {
+            "id": "stubby.82ba2e31-dee3-11e5-9a50-5ac2a4ac00a4",
+            "name": "stubby",
+            "framework_id": "82cde340-9d3b-40a6-87e2-953952745763-0000",
+            "executor_id": "",
+            "slave_id": "02223256-125c-4c3d-81db-3cdafbf233cd-S2",
+            "state": "TASK_RUNNING",
+            "resources": {
+              "cpus": 0.3,
+              "disk": 0,
+              "mem": 64,
+              "ports": "[31022-31022]"
+            },
+            "statuses": [
+              {
+                "state": "TASK_RUNNING",
+                "timestamp": 1456750440.62386,
+                "labels": [
+                  {
+                    "key": "Docker.NetworkSettings.IPAddress",
+                    "value": "10.44.0.5"
+                  }
+                ],
+                "container_status": {
+                  "network_infos": [
+                    {
+                      "ip_address": "10.44.0.5",
+                      "ip_addresses": [
+                        {
+                          "ip_address": "10.44.0.5"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              }
+            ],
+            "labels": [
+              {
+                "key": "traefik.frontend.value",
+                "value": "stubby.{environment:[a-z]+}.service.vcloud"
+              }
+            ],
+            "container": {
+              "type": "DOCKER",
+              "docker": {
+                "image": "docker-registry.service.tmp.vcloud:5000/stubby",
+                "network": "BRIDGE",
+                "port_mappings": [
+                  {
+                    "host_port": 31022,
+                    "container_port": 8008,
+                    "protocol": "tcp"
+                  }
+                ],
+                "privileged": false,
+                "force_pull_image": false
+              }
+            }
           }
         ],
         "unregistered_time": 0,

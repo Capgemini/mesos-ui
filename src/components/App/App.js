@@ -41,6 +41,7 @@ class App extends React.Component {
       stats: ClusterStore.getStats(),
       logs: ClusterStore.getLogs(),
       frameworks: ClusterStore.getFrameworks(),
+      tasks: ClusterStore.getTasks(),
       nodes: ClusterStore.getNodes(),
       leader: ClusterStore.getLeader(),
       pid: ClusterStore.getPid(),
@@ -69,6 +70,7 @@ class App extends React.Component {
     if (this.mounted) {
       this.setState( {
         frameworks: ClusterStore.getFrameworks(),
+        tasks: ClusterStore.getTasks(),
         nodes: ClusterStore.getNodes(),
         leader: ClusterStore.getLeader(),
         pid: ClusterStore.getPid(),
@@ -117,18 +119,21 @@ class App extends React.Component {
     };
     let dashboardIcon = React.createElement(FontIcon, {style: iconStyle, className: 'material-icons'}, 'settings_input_svideo' );
     let nodesIcon = React.createElement(FontIcon, {style: iconStyle, className: 'material-icons'}, 'dns' );
-    let frameworksIcon = React.createElement(FontIcon, {style: iconStyle, className: 'material-icons'}, 'build' );
+    let maintenanceIcon = React.createElement(FontIcon, {style: iconStyle, className: 'material-icons'}, 'build' );
+    let frameworksIcon = React.createElement(FontIcon, {style: iconStyle, className: 'material-icons'}, 'track_changes' );
     let logsIcon = React.createElement(FontIcon, {style: iconStyle, className: 'material-icons'}, 'assignment ' );
 
     let logsText = this.state.leftNavExpanded ? 'Logs' : '';
     let dashboardText = this.state.leftNavExpanded ? 'Dashboard' : '';
     let frameworksText = this.state.leftNavExpanded ? 'Frameworks' : '';
     let nodesText = this.state.leftNavExpanded ? 'Nodes' : '';
+    let maintenanceText = this.state.leftNavExpanded ? 'Maintenance' : '';
 
     return [
       { route: '/', text: dashboardText, icon: dashboardIcon },
       { route: 'frameworks', text: frameworksText, icon: frameworksIcon },
       { route: 'nodes', text: nodesText, icon: nodesIcon },
+      { route: 'maintenance', text: maintenanceText, icon: maintenanceIcon },
       { route: 'logs', text: logsText, icon: logsIcon }
     ];
   }
@@ -229,6 +234,7 @@ class App extends React.Component {
                   {...this.props}
                   nodes={this.state.nodes}
                   frameworks={this.state.frameworks}
+                  tasks = {this.state.tasks}
                   stats={this.state.stats}
                   logs={this.state.logs}
                 />
