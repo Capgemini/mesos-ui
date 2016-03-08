@@ -91,9 +91,8 @@
     ]
   },
   "scripts": {
-    "start": "node server.js",
-    "linter": "gulp lint",
-    "lint": "eslint src gulpfile.babel.js webpack.config.js && csscomb src/components --lint",
+    "start": "node ./build/server.js",
+    "lint": "gulp lint && csscomb src/components --lint",
     "comb": "csscomb src/components --verbose",
     "test": "eslint ./src && jest",
     "coverage": "jest --coverage",
