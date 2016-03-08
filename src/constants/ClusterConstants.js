@@ -1,5 +1,3 @@
-/*jshint esnext: true */
-
 import keyMirror from 'react/lib/keyMirror';
 
 export default keyMirror({

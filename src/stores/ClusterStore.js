@@ -1,4 +1,3 @@
-/*jshint esnext: true */
 import AppDispatcher from '../core/Dispatcher';
 import EventEmitter from 'eventemitter3';
 import ClusterConstants from '../constants/ClusterConstants';

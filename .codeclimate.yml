@@ -1,0 +1,14 @@
+---
+engines:
+ csslint:
+   enabled: true
+ eslint:
+   enabled: true
+ fixme:
+   enabled: false
+
+exclude_paths:
+- src/public/css/flexboxgrid.min.css
+- src/public/css/fonts/roboto/style.css
+- src/public/css/font-icons/material-icons/style.css
+- src/public/css/font-icons/material-ui-icons/style.css

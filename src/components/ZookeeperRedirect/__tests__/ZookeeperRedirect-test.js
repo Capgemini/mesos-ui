@@ -1,4 +1,3 @@
-/*jshint esnext: true */
 jest.autoMockOff();
 describe('ZookeeperRedirect', function() {
 
