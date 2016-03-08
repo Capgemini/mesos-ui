@@ -61,6 +61,8 @@ class App extends React.Component {
     window.addEventListener('resize', this.handleResize);
     this.handleResize();
 
+    //TODO: we are rerendering components too many times
+    // everytime we make a mesos request with current approach.
     ClusterStore.addChangeListener(this.refreshStats.bind(this));
     ClusterStore.addChangeListener(this.refreshLogs.bind(this));
     ClusterStore.addChangeListener(this.refreshState.bind(this));
@@ -119,21 +121,21 @@ class App extends React.Component {
     };
     let dashboardIcon = React.createElement(FontIcon, {style: iconStyle, className: 'material-icons'}, 'settings_input_svideo' );
     let nodesIcon = React.createElement(FontIcon, {style: iconStyle, className: 'material-icons'}, 'dns' );
-    let maintenanceIcon = React.createElement(FontIcon, {style: iconStyle, className: 'material-icons'}, 'build' );
-    let frameworksIcon = React.createElement(FontIcon, {style: iconStyle, className: 'material-icons'}, 'track_changes' );
+    let TasksIcon = React.createElement(FontIcon, {style: iconStyle, className: 'material-icons'}, 'track_changes' );
+    let frameworksIcon = React.createElement(FontIcon, {style: iconStyle, className: 'material-icons'}, 'schedule' );
     let logsIcon = React.createElement(FontIcon, {style: iconStyle, className: 'material-icons'}, 'assignment ' );
 
     let logsText = this.state.leftNavExpanded ? 'Logs' : '';
     let dashboardText = this.state.leftNavExpanded ? 'Dashboard' : '';
     let frameworksText = this.state.leftNavExpanded ? 'Frameworks' : '';
     let nodesText = this.state.leftNavExpanded ? 'Nodes' : '';
-    let maintenanceText = this.state.leftNavExpanded ? 'Maintenance' : '';
+    let tasksText = this.state.leftNavExpanded ? 'Tasks' : '';
 
     return [
       { route: '/', text: dashboardText, icon: dashboardIcon },
       { route: 'frameworks', text: frameworksText, icon: frameworksIcon },
       { route: 'nodes', text: nodesText, icon: nodesIcon },
-      { route: 'maintenance', text: maintenanceText, icon: maintenanceIcon },
+      { route: 'tasks', text: tasksText, icon: TasksIcon },
       { route: 'logs', text: logsText, icon: logsIcon }
     ];
   }

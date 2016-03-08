@@ -1,0 +1,6 @@
+{
+  "name": "TaskTable",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./TaskTable.js"
+}

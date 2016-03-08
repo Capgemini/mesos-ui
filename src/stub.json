@@ -87,136 +87,152 @@
       {
         "active": true,
         "attributes": {},
-        "hostname": "52.19.171.65",
-        "id": "20150827-145231-1258422282-5050-1-S1",
+        "hostname": "10.66.1.158",
+        "id": "02223256-125c-4c3d-81db-3cdafbf233cd-S4",
         "offered_resources": {
           "cpus": 0,
           "disk": 0,
           "mem": 0
         },
-        "pid": "slave(1)@10.0.0.211:5051",
-        "registered_time": 1440687224.10234,
+        "pid": "slave(1)@10.66.1.158:5051",
+        "registered_time": 1456746637.02989,
+        "reregistered_time": 1456746688.52977,
         "reserved_resources": {},
         "resources": {
-          "cpus": 2,
-          "disk": 3962,
-          "mem": 2740,
-          "ports": "[31000-32000]",
-          "ephemeral_ports": "[32768-57344]"
+          "cpus": 8,
+          "disk": 10970,
+          "mem": 31156,
+          "ports": "[31000-32000]"
         },
         "unreserved_resources": {
-          "cpus": 2,
-          "disk": 3962,
-          "mem": 2740,
-          "ports": "[31000-32000]",
-          "ephemeral_ports": "[32768-57344]"
+          "cpus": 8,
+          "disk": 10970,
+          "mem": 31156,
+          "ports": "[31000-32000]"
         },
         "used_resources": {
-          "cpus": 0,
+          "cpus": 2.2,
           "disk": 0,
-          "mem": 0
-        }
+          "mem": 832,
+          "ports": "[31385-31386, 31506-31506, 31835-31835, 31858-31858, 31887-31887]"
+        },
+        "version": "0.27.1"
       },
       {
         "active": true,
         "attributes": {},
-        "hostname": "52.19.171.62",
-        "id": "20150827-145231-1258422282-5050-1-S1",
+        "hostname": "10.66.1.160",
+        "id": "02223256-125c-4c3d-81db-3cdafbf233cd-S2",
         "offered_resources": {
           "cpus": 0,
           "disk": 0,
           "mem": 0
         },
-        "pid": "slave(1)@10.0.0.211:5051",
-        "registered_time": 1440687224.10234,
+        "pid": "slave(1)@10.66.1.160:5051",
+        "registered_time": 1456746635.69312,
+        "reregistered_time": 1456746690.99406,
         "reserved_resources": {},
         "resources": {
-          "cpus": 2,
-          "disk": 3962,
-          "mem": 2740,
-          "ports": "[31000-32000]",
-          "ephemeral_ports": "[32768-57344]"
+          "cpus": 4,
+          "disk": 1997,
+          "mem": 6964,
+          "ports": "[31000-32000]"
         },
         "unreserved_resources": {
-          "cpus": 2,
-          "disk": 3962,
-          "mem": 2740,
-          "ports": "[31000-32000]",
-          "ephemeral_ports": "[32768-57344]"
+          "cpus": 4,
+          "disk": 1997,
+          "mem": 6964,
+          "ports": "[31000-32000]"
         },
         "used_resources": {
-          "cpus": 0,
+          "cpus": 0.9,
           "disk": 0,
-          "mem": 0
-        }
+          "mem": 192,
+          "ports": "[31099-31099, 31964-31964, 31971-31971]"
+        },
+        "version": "0.27.1"
       },
       {
         "active": true,
         "attributes": {},
-        "hostname": "52.19.64.255",
-        "id": "20150827-145231-1258422282-5050-1-S0",
+        "hostname": "10.66.1.159",
+        "id": "02223256-125c-4c3d-81db-3cdafbf233cd-S1",
         "offered_resources": {
           "cpus": 0,
           "disk": 0,
           "mem": 0
         },
-        "pid": "slave(1)@10.0.1.68:5051",
-        "registered_time": 1440687223.01831,
+        "pid": "slave(1)@10.66.1.159:5051",
+        "registered_time": 1456746635.56059,
+        "reregistered_time": 1456746691.81262,
         "reserved_resources": {},
         "resources": {
-          "cpus": 2,
-          "disk": 3962,
-          "mem": 2740,
-          "ports": "[31000-32000]",
-          "ephemeral_ports": "[32768-57344]"
+          "cpus": 8,
+          "disk": 4013,
+          "mem": 15028,
+          "ports": "[31000-32000]"
         },
         "unreserved_resources": {
-          "cpus": 2,
-          "disk": 3962,
-          "mem": 2740,
-          "ports": "[31000-32000]",
-          "ephemeral_ports": "[32768-57344]"
+          "cpus": 8,
+          "disk": 4013,
+          "mem": 15028,
+          "ports": "[31000-32000]"
         },
         "used_resources": {
-          "cpus": 0.5,
+          "cpus": 3.5,
           "disk": 0,
-          "mem": 512,
-          "ports": "[31637-31637]"
-        }
+          "mem": 1408,
+          "ports": "[31049-31049, 31062-31062, 31113-31113, 31164-31164, 31209-31209, 31244-31244, 31362-31362, 31392-31393, 31533-31533, 31607-31607, 31623-31623]"
+        },
+        "version": "0.27.1"
       }
     ]
   },
   "master/state.json": {
-    "activated_slaves": 2,
-    "build_date": "2015-07-24 10:05:39",
-    "build_time": 1437732339,
+    "version": "0.27.1",
+    "git_sha": "864fe8eabd4a83b78ce9140c501908ee3cb90beb",
+    "git_tag": "0.27.1",
+    "build_date": "2016-02-23 00:35:03",
+    "build_time": 1456187703,
     "build_user": "root",
-    "cluster": "eu-west-1",
-    "completed_frameworks": [],
+    "start_time": 1456744811.30561,
+    "elected_time": 1456746635.14476,
+    "id": "82cde340-9d3b-40a6-87e2-953952745763",
+    "pid": "master@10.66.1.157:5050",
+    "hostname": "10.66.1.157",
+    "activated_slaves": 3,
     "deactivated_slaves": 0,
-    "elected_time": 1440687155.427,
+    "cluster": "Cluster01",
+    "leader": "master@10.66.1.157:5050",
+    "log_dir": "/var/log/mesos",
     "flags": {
       "allocation_interval": "1secs",
       "allocator": "HierarchicalDRF",
       "authenticate": "false",
+      "authenticate_http": "false",
       "authenticate_slaves": "false",
       "authenticators": "crammd5",
-      "cluster": "eu-west-1",
+      "authorizers": "local",
+      "cluster": "Cluster01",
       "framework_sorter": "drf",
       "help": "false",
-      "hostname": "52.19.160.202",
+      "hostname": "10.66.1.157",
+      "hostname_lookup": "true",
+      "http_authenticators": "basic",
       "initialize_driver_logging": "true",
-      "ip": "10.0.2.75",
+      "ip": "10.66.1.157",
       "log_auto_initialize": "true",
       "log_dir": "/var/log/mesos",
       "logbufsecs": "0",
       "logging_level": "INFO",
+      "max_completed_frameworks": "50",
+      "max_completed_tasks_per_framework": "1000",
       "max_slave_ping_timeouts": "5",
       "port": "5050",
       "quiet": "false",
       "quorum": "2",
       "recovery_slave_removal_limit": "100%",
-      "registry": "in_memory",
+      "registry": "replicated_log",
       "registry_fetch_timeout": "1mins",
       "registry_store_timeout": "5secs",
       "registry_strict": "false",
@@ -227,68 +243,758 @@
       "version": "false",
       "webui_dir": "/usr/share/mesos/webui",
       "work_dir": "/var/lib/mesos",
-      "zk": "zk://52.19.105.210:2181,52.19.160.202:2181,52.19.161.40:2181/mesos",
+      "zk": "zk://10.66.1.155:2181,10.66.1.156:2181,10.66.1.157:2181/mesos",
       "zk_session_timeout": "10secs"
     },
-    "frameworks": [
+    "slaves": [
       {
-        "active": true,
-        "checkpoint": true,
-        "completed_tasks": [],
-        "executors": [],
-        "failover_timeout": 604800,
-        "hostname": "52.19.64.255",
-        "id": "20150827-145231-1258422282-5050-1-0001",
-        "name": "chronos",
+        "id": "02223256-125c-4c3d-81db-3cdafbf233cd-S4",
+        "pid": "slave(1)@10.66.1.158:5051",
+        "hostname": "10.66.1.158",
+        "registered_time": 1456746637.02989,
+        "reregistered_time": 1456746688.52977,
+        "resources": {
+          "cpus": 8,
+          "disk": 10970,
+          "mem": 31156,
+          "ports": "[31000-32000]"
+        },
+        "used_resources": {
+          "cpus": 2.2,
+          "disk": 0,
+          "mem": 832,
+          "ports": "[31385-31386, 31506-31506, 31835-31835, 31858-31858, 31887-31887]"
+        },
         "offered_resources": {
           "cpus": 0,
           "disk": 0,
           "mem": 0
         },
-        "offers": [],
-        "pid": "scheduler-ec56ac9a-b4af-4649-90fa-417bea5b1427@10.0.1.68:37764",
-        "registered_time": 1440687285.97698,
+        "reserved_resources": {},
+        "unreserved_resources": {
+          "cpus": 8,
+          "disk": 10970,
+          "mem": 31156,
+          "ports": "[31000-32000]"
+        },
+        "attributes": {},
+        "active": true,
+        "version": "0.27.1"
+      },
+      {
+        "id": "02223256-125c-4c3d-81db-3cdafbf233cd-S2",
+        "pid": "slave(1)@10.66.1.160:5051",
+        "hostname": "10.66.1.160",
+        "registered_time": 1456746635.69312,
+        "reregistered_time": 1456746690.99406,
         "resources": {
+          "cpus": 4,
+          "disk": 1997,
+          "mem": 6964,
+          "ports": "[31000-32000]"
+        },
+        "used_resources": {
+          "cpus": 0.9,
+          "disk": 0,
+          "mem": 192,
+          "ports": "[31099-31099, 31964-31964, 31971-31971]"
+        },
+        "offered_resources": {
           "cpus": 0,
           "disk": 0,
           "mem": 0
         },
-        "role": "*",
-        "tasks": [],
-        "unregistered_time": 0,
+        "reserved_resources": {},
+        "unreserved_resources": {
+          "cpus": 4,
+          "disk": 1997,
+          "mem": 6964,
+          "ports": "[31000-32000]"
+        },
+        "attributes": {},
+        "active": true,
+        "version": "0.27.1"
+      },
+      {
+        "id": "02223256-125c-4c3d-81db-3cdafbf233cd-S1",
+        "pid": "slave(1)@10.66.1.159:5051",
+        "hostname": "10.66.1.159",
+        "registered_time": 1456746635.56059,
+        "reregistered_time": 1456746691.81262,
+        "resources": {
+          "cpus": 8,
+          "disk": 4013,
+          "mem": 15028,
+          "ports": "[31000-32000]"
+        },
+        "used_resources": {
+          "cpus": 3.5,
+          "disk": 0,
+          "mem": 1408,
+          "ports": "[31049-31049, 31062-31062, 31113-31113, 31164-31164, 31209-31209, 31244-31244, 31362-31362, 31392-31393, 31533-31533, 31607-31607, 31623-31623]"
+        },
+        "offered_resources": {
+          "cpus": 0,
+          "disk": 0,
+          "mem": 0
+        },
+        "reserved_resources": {},
+        "unreserved_resources": {
+          "cpus": 8,
+          "disk": 4013,
+          "mem": 15028,
+          "ports": "[31000-32000]"
+        },
+        "attributes": {},
+        "active": true,
+        "version": "0.27.1"
+      }
+    ],
+    "frameworks": [
+      {
+        "id": "82cde340-9d3b-40a6-87e2-953952745763-0001",
+        "name": "chronos",
+        "pid": "scheduler-78b265e3-c7d7-475a-a3a9-18d87f878699@10.66.1.159:43309",
         "used_resources": {
           "cpus": 0,
           "disk": 0,
           "mem": 0
         },
-        "user": "root",
-        "webui_url": "http://52.19.64.255:31637"
-      },
-      {
-        "active": true,
-        "checkpoint": true,
-        "completed_tasks": [],
-        "executors": [],
-        "failover_timeout": 604800,
-        "hostname": "505d1f064540",
-        "id": "20150827-145231-1258422282-5050-1-0000",
-        "name": "marathon",
         "offered_resources": {
-          "cpus": 0,
+          "cpus": 3.5527136788005e-15,
           "disk": 0,
           "mem": 0
         },
-        "offers": [],
-        "pid": "scheduler-9491ddc8-196b-40fa-a47c-b2b9b78bc420@10.2.2.11:42725",
-        "registered_time": 1440687200.66084,
-        "resources": {
-          "cpus": 0.5,
-          "disk": 0,
-          "mem": 512,
-          "ports": "[31637-31637]"
-        },
+        "capabilities": [],
+        "hostname": "10.66.1.159",
+        "webui_url": "http://10.66.1.159:31062",
+        "active": true,
+        "user": "root",
+        "failover_timeout": 604800,
+        "checkpoint": true,
         "role": "*",
+        "registered_time": 1456832244.65389,
+        "unregistered_time": 0,
+        "resources": {
+          "cpus": 3.5527136788005e-15,
+          "disk": 0,
+          "mem": 0
+        },
+        "reregistered_time": 1457132324.09888,
+        "tasks": [],
+        "completed_tasks": [
+          {
+            "id": "ct:1456833941000:0:clean-docker-containers:",
+            "name": "ChronosTask:clean-docker-containers",
+            "framework_id": "82cde340-9d3b-40a6-87e2-953952745763-0001",
+            "executor_id": "",
+            "slave_id": "02223256-125c-4c3d-81db-3cdafbf233cd-S2",
+            "state": "TASK_FAILED",
+            "resources": {
+              "cpus": 0.1,
+              "disk": 256,
+              "mem": 128
+            },
+            "statuses": [
+              {
+                "state": "TASK_RUNNING",
+                "timestamp": 1456834010.55285,
+                "container_status": {
+                  "network_infos": [
+                    {
+                      "ip_address": "10.66.1.160",
+                      "ip_addresses": [
+                        {
+                          "ip_address": "10.66.1.160"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              },
+              {
+                "state": "TASK_FAILED",
+                "timestamp": 1456834010.65334,
+                "container_status": {
+                  "network_infos": [
+                    {
+                      "ip_address": "10.66.1.160",
+                      "ip_addresses": [
+                        {
+                          "ip_address": "10.66.1.160"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "id": "ct:1457361287442:1:clean-dangling-images:",
+            "name": "ChronosTask:clean-dangling-images",
+            "framework_id": "82cde340-9d3b-40a6-87e2-953952745763-0001",
+            "executor_id": "",
+            "slave_id": "02223256-125c-4c3d-81db-3cdafbf233cd-S4",
+            "state": "TASK_FINISHED",
+            "resources": {
+              "cpus": 0.1,
+              "disk": 256,
+              "mem": 128
+            },
+            "statuses": [
+              {
+                "state": "TASK_RUNNING",
+                "timestamp": 1457361283.47741,
+                "container_status": {
+                  "network_infos": [
+                    {
+                      "ip_address": "10.66.1.158",
+                      "ip_addresses": [
+                        {
+                          "ip_address": "10.66.1.158"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              },
+              {
+                "state": "TASK_FINISHED",
+                "timestamp": 1457361283.67889,
+                "container_status": {
+                  "network_infos": [
+                    {
+                      "ip_address": "10.66.1.158",
+                      "ip_addresses": [
+                        {
+                          "ip_address": "10.66.1.158"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "id": "ct:1457438741000:0:clean-docker-containers:",
+            "name": "ChronosTask:clean-docker-containers",
+            "framework_id": "82cde340-9d3b-40a6-87e2-953952745763-0001",
+            "executor_id": "",
+            "slave_id": "02223256-125c-4c3d-81db-3cdafbf233cd-S4",
+            "state": "TASK_FINISHED",
+            "resources": {
+              "cpus": 0.1,
+              "disk": 256,
+              "mem": 128
+            },
+            "statuses": [
+              {
+                "state": "TASK_RUNNING",
+                "timestamp": 1457438738.34612,
+                "container_status": {
+                  "network_infos": [
+                    {
+                      "ip_address": "10.66.1.158",
+                      "ip_addresses": [
+                        {
+                          "ip_address": "10.66.1.158"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              },
+              {
+                "state": "TASK_FINISHED",
+                "timestamp": 1457438738.54796,
+                "container_status": {
+                  "network_infos": [
+                    {
+                      "ip_address": "10.66.1.158",
+                      "ip_addresses": [
+                        {
+                          "ip_address": "10.66.1.158"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        ],
+        "offers": [],
+        "executors": []
+      },
+      {
+        "id": "82cde340-9d3b-40a6-87e2-953952745763-0000",
+        "name": "marathon",
+        "pid": "scheduler-01304873-8b9e-4e4c-939a-58764df5bf38@10.66.1.156:35515",
+        "used_resources": {
+          "cpus": 6.6,
+          "disk": 0,
+          "mem": 2432,
+          "ports": "[31049-31049, 31062-31062, 31099-31099, 31113-31113, 31164-31164, 31209-31209, 31244-31244, 31362-31362, 31385-31386, 31392-31393, 31506-31506, 31533-31533, 31607-31607, 31623-31623, 31835-31835, 31858-31858, 31887-31887, 31964-31964]"
+        },
+        "offered_resources": {
+          "cpus": 1.4210854715202e-14,
+          "disk": 0,
+          "mem": 0
+        },
+        "capabilities": [],
+        "hostname": "10.66.1.156",
+        "webui_url": "http://10.66.1.156:8080",
+        "active": true,
+        "user": "root",
+        "failover_timeout": 604800,
+        "checkpoint": true,
+        "role": "*",
+        "registered_time": 1456746771.65547,
+        "unregistered_time": 0,
+        "resources": {
+          "cpus": 6.60000000000001,
+          "disk": 0,
+          "mem": 2432,
+          "ports": "[31049-31049, 31062-31062, 31099-31099, 31113-31113, 31164-31164, 31209-31209, 31244-31244, 31362-31362, 31385-31386, 31392-31393, 31506-31506, 31533-31533, 31607-31607, 31623-31623, 31835-31835, 31858-31858, 31887-31887, 31964-31964]"
+        },
+        "reregistered_time": 1457090092.90413,
         "tasks": [
+          {
+            "id": "qa-mailhog.bcdf1bbd-e50a-11e5-b92c-c6c68d973162",
+            "name": "qa-mailhog",
+            "framework_id": "82cde340-9d3b-40a6-87e2-953952745763-0000",
+            "executor_id": "",
+            "slave_id": "02223256-125c-4c3d-81db-3cdafbf233cd-S4",
+            "state": "TASK_RUNNING",
+            "resources": {
+              "cpus": 0.3,
+              "disk": 0,
+              "mem": 128,
+              "ports": "[31385-31386]"
+            },
+            "statuses": [
+              {
+                "state": "TASK_RUNNING",
+                "timestamp": 1457426990.49369,
+                "labels": [
+                  {
+                    "key": "Docker.NetworkSettings.IPAddress",
+                    "value": "10.34.0.8"
+                  }
+                ],
+                "container_status": {
+                  "network_infos": [
+                    {
+                      "ip_address": "10.34.0.8",
+                      "ip_addresses": [
+                        {
+                          "ip_address": "10.34.0.8"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              }
+            ],
+            "labels": [
+              {
+                "key": "traefik.frontend.value",
+                "value": "mailhog.qa.service.vcloud"
+              }
+            ],
+            "container": {
+              "type": "DOCKER",
+              "docker": {
+                "image": "mailhog/mailhog",
+                "network": "BRIDGE",
+                "port_mappings": [
+                  {
+                    "host_port": 31385,
+                    "container_port": 8025,
+                    "protocol": "tcp"
+                  },
+                  {
+                    "host_port": 31386,
+                    "container_port": 1025,
+                    "protocol": "tcp"
+                  }
+                ],
+                "privileged": false,
+                "force_pull_image": false
+              }
+            }
+          },
+          {
+            "id": "chronos.43c76dfb-e25c-11e5-b92c-c6c68d973162",
+            "name": "chronos",
+            "framework_id": "82cde340-9d3b-40a6-87e2-953952745763-0000",
+            "executor_id": "",
+            "slave_id": "02223256-125c-4c3d-81db-3cdafbf233cd-S1",
+            "state": "TASK_RUNNING",
+            "resources": {
+              "cpus": 0.5,
+              "disk": 0,
+              "mem": 512,
+              "ports": "[31062-31062]"
+            },
+            "statuses": [
+              {
+                "state": "TASK_RUNNING",
+                "timestamp": 1457132315.66246,
+                "container_status": {
+                  "network_infos": [
+                    {
+                      "ip_address": "10.66.1.159",
+                      "ip_addresses": [
+                        {
+                          "ip_address": "10.66.1.159"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              }
+            ],
+            "labels": [
+              {
+                "key": "DCOS_PACKAGE_RELEASE",
+                "value": "1"
+              },
+              {
+                "key": "DCOS_PACKAGE_SOURCE",
+                "value": "https://github.com/Capgemini/universe/archive/version-1.x.zip"
+              },
+              {
+                "key": "DCOS_PACKAGE_METADATA",
+                "value": "eyJkZXNjcmlwdGlvbiI6ICJBIGZhdWx0IHRvbGVyYW50IGpvYiBzY2hlZHVsZXIgZm9yIE1lc29zIHdoaWNoIGhhbmRsZXMgZGVwZW5kZW5jaWVzIGFuZCBJU084NjAxIGJhc2VkIHNjaGVkdWxlcy4iLCAiZnJhbWV3b3JrIjogdHJ1ZSwgImltYWdlcyI6IHsiaWNvbi1sYXJnZSI6ICJodHRwczovL2Rvd25sb2Fkcy5tZXNvc3BoZXJlLmlvL2Nocm9ub3MvYXNzZXRzL2ljb24tc2VydmljZS1jaHJvbm9zLWxhcmdlLnBuZyIsICJpY29uLW1lZGl1bSI6ICJodHRwczovL2Rvd25sb2Fkcy5tZXNvc3BoZXJlLmlvL2Nocm9ub3MvYXNzZXRzL2ljb24tc2VydmljZS1jaHJvbm9zLW1lZGl1bS5wbmciLCAiaWNvbi1zbWFsbCI6ICJodHRwczovL2Rvd25sb2Fkcy5tZXNvc3BoZXJlLmlvL2Nocm9ub3MvYXNzZXRzL2ljb24tc2VydmljZS1jaHJvbm9zLXNtYWxsLnBuZyJ9LCAibGljZW5zZXMiOiBbeyJuYW1lIjogIkFwYWNoZSBMaWNlbnNlIFZlcnNpb24gMi4wIiwgInVybCI6ICJodHRwczovL2dpdGh1Yi5jb20vbWVzb3MvY2hyb25vcy9ibG9iL21hc3Rlci9MSUNFTlNFIn1dLCAibWFpbnRhaW5lciI6ICJzdXBwb3J0QG1lc29zcGhlcmUuaW8iLCAibmFtZSI6ICJjaHJvbm9zIiwgInBvc3RJbnN0YWxsTm90ZXMiOiAiQ2hyb25vcyBEQ09TIFNlcnZpY2UgaGFzIGJlZW4gc3VjY2Vzc2Z1bGx5IGluc3RhbGxlZCFcblxuXHREb2N1bWVudGF0aW9uOiBodHRwOi8vbWVzb3MuZ2l0aHViLmlvL2Nocm9ub3Ncblx0SXNzdWVzOiBodHRwczovL2dpdGh1Yi5jb20vbWVzb3MvY2hyb25vcy9pc3N1ZXMiLCAicG9zdFVuaW5zdGFsbE5vdGVzIjogIlRoZSBDaHJvbm9zIERDT1MgU2VydmljZSBoYXMgYmVlbiB1bmluc3RhbGxlZCBhbmQgd2lsbCBubyBsb25nZXIgcnVuLlxuUGxlYXNlIGZvbGxvdyB0aGUgaW5zdHJ1Y3Rpb25zIGF0IGh0dHA6Ly9kb2NzLm1lc29zcGhlcmUuY29tL3NlcnZpY2VzL2Nocm9ub3MvI3VuaW5zdGFsbCB0byBjbGVhbiB1cCBhbnkgcGVyc2lzdGVkIHN0YXRlIiwgInByZUluc3RhbGxOb3RlcyI6ICJXZSByZWNvbW1lbmQgYSBtaW5pbXVtIG9mIG9uZSBub2RlIHdpdGggYXQgbGVhc3QgMSBDUFUgYW5kIDJHQiBvZiBSQU0gYXZhaWxhYmxlIGZvciB0aGUgQ2hyb25vcyBTZXJ2aWNlLiIsICJzY20iOiAiaHR0cHM6Ly9naXRodWIuY29tL21lc29zL2Nocm9ub3MuZ2l0IiwgInRhZ3MiOiBbImNyb24iLCAiYW5hbHl0aWNzIiwgImJhdGNoIl0sICJ2ZXJzaW9uIjogIjIuNC4wIn0="
+              },
+              {
+                "key": "DCOS_PACKAGE_REGISTRY_VERSION",
+                "value": "1.0.0-rc1"
+              },
+              {
+                "key": "DCOS_PACKAGE_FRAMEWORK_NAME",
+                "value": "chronos"
+              },
+              {
+                "key": "DCOS_PACKAGE_VERSION",
+                "value": "2.4.0"
+              },
+              {
+                "key": "DCOS_PACKAGE_NAME",
+                "value": "chronos"
+              },
+              {
+                "key": "DCOS_PACKAGE_IS_FRAMEWORK",
+                "value": "true"
+              }
+            ],
+            "container": {
+              "type": "DOCKER",
+              "docker": {
+                "image": "mesosphere/chronos:chronos-2.4.0-0.1.20150828104228.ubuntu1404-mesos-0.23.0-1.0.ubuntu1404",
+                "network": "HOST",
+                "privileged": false,
+                "force_pull_image": false
+              }
+            }
+          },
+          {
+            "id": "stubby.46eb7e7b-e1fa-11e5-9a50-5ac2a4ac00a4",
+            "name": "stubby",
+            "framework_id": "82cde340-9d3b-40a6-87e2-953952745763-0000",
+            "executor_id": "",
+            "slave_id": "02223256-125c-4c3d-81db-3cdafbf233cd-S1",
+            "state": "TASK_RUNNING",
+            "resources": {
+              "cpus": 0.3,
+              "disk": 0,
+              "mem": 64,
+              "ports": "[31209-31209]"
+            },
+            "statuses": [
+              {
+                "state": "TASK_RUNNING",
+                "timestamp": 1457090071.49399,
+                "labels": [
+                  {
+                    "key": "Docker.NetworkSettings.IPAddress",
+                    "value": "10.36.0.10"
+                  }
+                ],
+                "container_status": {
+                  "network_infos": [
+                    {
+                      "ip_address": "10.36.0.10",
+                      "ip_addresses": [
+                        {
+                          "ip_address": "10.36.0.10"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              }
+            ],
+            "labels": [
+              {
+                "key": "traefik.frontend.value",
+                "value": "stubby.{environment:[a-z]+}.service.vcloud"
+              }
+            ],
+            "container": {
+              "type": "DOCKER",
+              "docker": {
+                "image": "docker-registry.service.tmp.vcloud:5000/stubby",
+                "network": "BRIDGE",
+                "port_mappings": [
+                  {
+                    "host_port": 31209,
+                    "container_port": 8008,
+                    "protocol": "tcp"
+                  }
+                ],
+                "privileged": false,
+                "force_pull_image": false
+              }
+            }
+          },
+          {
+            "id": "stubby.46eba58c-e1fa-11e5-9a50-5ac2a4ac00a4",
+            "name": "stubby",
+            "framework_id": "82cde340-9d3b-40a6-87e2-953952745763-0000",
+            "executor_id": "",
+            "slave_id": "02223256-125c-4c3d-81db-3cdafbf233cd-S1",
+            "state": "TASK_RUNNING",
+            "resources": {
+              "cpus": 0.3,
+              "disk": 0,
+              "mem": 64,
+              "ports": "[31164-31164]"
+            },
+            "statuses": [
+              {
+                "state": "TASK_RUNNING",
+                "timestamp": 1457090071.89577,
+                "labels": [
+                  {
+                    "key": "Docker.NetworkSettings.IPAddress",
+                    "value": "10.36.0.11"
+                  }
+                ],
+                "container_status": {
+                  "network_infos": [
+                    {
+                      "ip_address": "10.36.0.11",
+                      "ip_addresses": [
+                        {
+                          "ip_address": "10.36.0.11"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              }
+            ],
+            "labels": [
+              {
+                "key": "traefik.frontend.value",
+                "value": "stubby.{environment:[a-z]+}.service.vcloud"
+              }
+            ],
+            "container": {
+              "type": "DOCKER",
+              "docker": {
+                "image": "docker-registry.service.tmp.vcloud:5000/stubby",
+                "network": "BRIDGE",
+                "port_mappings": [
+                  {
+                    "host_port": 31164,
+                    "container_port": 8008,
+                    "protocol": "tcp"
+                  }
+                ],
+                "privileged": false,
+                "force_pull_image": false
+              }
+            }
+          },
+          {
+            "id": "dashing.1923ceec-e16d-11e5-9a50-5ac2a4ac00a4",
+            "name": "dashing",
+            "framework_id": "82cde340-9d3b-40a6-87e2-953952745763-0000",
+            "executor_id": "",
+            "slave_id": "02223256-125c-4c3d-81db-3cdafbf233cd-S1",
+            "state": "TASK_RUNNING",
+            "resources": {
+              "cpus": 0.3,
+              "disk": 0,
+              "mem": 128,
+              "ports": "[31244-31244]"
+            },
+            "statuses": [
+              {
+                "state": "TASK_RUNNING",
+                "timestamp": 1457029435.12229,
+                "labels": [
+                  {
+                    "key": "Docker.NetworkSettings.IPAddress",
+                    "value": "10.36.0.9"
+                  }
+                ],
+                "container_status": {
+                  "network_infos": [
+                    {
+                      "ip_address": "10.36.0.9",
+                      "ip_addresses": [
+                        {
+                          "ip_address": "10.36.0.9"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              }
+            ],
+            "labels": [
+              {
+                "key": "traefik.frontend.value",
+                "value": "dashing.service.vcloud"
+              }
+            ],
+            "container": {
+              "type": "DOCKER",
+              "docker": {
+                "image": "docker-registry.service.tmp.vcloud:5000/dashing",
+                "network": "BRIDGE",
+                "port_mappings": [
+                  {
+                    "host_port": 31244,
+                    "container_port": 3030,
+                    "protocol": "tcp"
+                  }
+                ],
+                "privileged": false,
+                "force_pull_image": false
+              }
+            }
+          },
+          {
+            "id": "dashing.475b6e9a-e16c-11e5-9a50-5ac2a4ac00a4",
+            "name": "dashing",
+            "framework_id": "82cde340-9d3b-40a6-87e2-953952745763-0000",
+            "executor_id": "",
+            "slave_id": "02223256-125c-4c3d-81db-3cdafbf233cd-S1",
+            "state": "TASK_RUNNING",
+            "resources": {
+              "cpus": 0.3,
+              "disk": 0,
+              "mem": 128,
+              "ports": "[31607-31607]"
+            },
+            "statuses": [
+              {
+                "state": "TASK_RUNNING",
+                "timestamp": 1457029083.25645,
+                "labels": [
+                  {
+                    "key": "Docker.NetworkSettings.IPAddress",
+                    "value": "10.36.0.3"
+                  }
+                ],
+                "container_status": {
+                  "network_infos": [
+                    {
+                      "ip_address": "10.36.0.3",
+                      "ip_addresses": [
+                        {
+                          "ip_address": "10.36.0.3"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              }
+            ],
+            "labels": [
+              {
+                "key": "traefik.frontend.value",
+                "value": "dashing.service.vcloud"
+              }
+            ],
+            "container": {
+              "type": "DOCKER",
+              "docker": {
+                "image": "docker-registry.service.tmp.vcloud:5000/dashing",
+                "network": "BRIDGE",
+                "port_mappings": [
+                  {
+                    "host_port": 31607,
+                    "container_port": 3030,
+                    "protocol": "tcp"
+                  }
+                ],
+                "privileged": false,
+                "force_pull_image": false
+              }
+            }
+          },
+          {
+            "id": "docker-registry.72dac189-e16a-11e5-9a50-5ac2a4ac00a4",
+            "name": "docker-registry",
+            "framework_id": "82cde340-9d3b-40a6-87e2-953952745763-0000",
+            "executor_id": "",
+            "slave_id": "02223256-125c-4c3d-81db-3cdafbf233cd-S1",
+            "state": "TASK_RUNNING",
+            "resources": {
+              "cpus": 0.3,
+              "disk": 0,
+              "mem": 128,
+              "ports": "[31533-31533]"
+            },
+            "statuses": [
+              {
+                "state": "TASK_RUNNING",
+                "timestamp": 1457028297.08066,
+                "container_status": {
+                  "network_infos": [
+                    {
+                      "ip_address": "10.66.1.159",
+                      "ip_addresses": [
+                        {
+                          "ip_address": "10.66.1.159"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              }
+            ],
+            "labels": [
+              {
+                "key": "traefik.frontend.value",
+                "value": "docker-registry.service.vcloud"
+              }
+            ],
+            "container": {
+              "type": "DOCKER",
+              "volumes": [
+                {
+                  "mode": "RW",
+                  "container_path": "/var/lib/registry",
+                  "host_path": "/tmp/docker-registry"
+                }
+              ],
+              "docker": {
+                "image": "registry:2",
+                "network": "HOST",
+                "privileged": false,
+                "force_pull_image": false
+              }
+            }
+          },
           {
             "id": "stubby-subscriptions.99b498a8-dee3-11e5-9a50-5ac2a4ac00a4",
             "name": "stubby-subscriptions",
@@ -340,6 +1046,66 @@
                 "port_mappings": [
                   {
                     "host_port": 31506,
+                    "container_port": 8008,
+                    "protocol": "tcp"
+                  }
+                ],
+                "privileged": false,
+                "force_pull_image": false
+              }
+            }
+          },
+          {
+            "id": "stubby-subscriptions.99b47197-dee3-11e5-9a50-5ac2a4ac00a4",
+            "name": "stubby-subscriptions",
+            "framework_id": "82cde340-9d3b-40a6-87e2-953952745763-0000",
+            "executor_id": "",
+            "slave_id": "02223256-125c-4c3d-81db-3cdafbf233cd-S1",
+            "state": "TASK_RUNNING",
+            "resources": {
+              "cpus": 0.3,
+              "disk": 0,
+              "mem": 64,
+              "ports": "[31113-31113]"
+            },
+            "statuses": [
+              {
+                "state": "TASK_RUNNING",
+                "timestamp": 1456750478.2401,
+                "labels": [
+                  {
+                    "key": "Docker.NetworkSettings.IPAddress",
+                    "value": "10.36.0.8"
+                  }
+                ],
+                "container_status": {
+                  "network_infos": [
+                    {
+                      "ip_address": "10.36.0.8",
+                      "ip_addresses": [
+                        {
+                          "ip_address": "10.36.0.8"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              }
+            ],
+            "labels": [
+              {
+                "key": "traefik.frontend.value",
+                "value": "stubby-subscriptions.{environment:[a-z]+}.service.vcloud"
+              }
+            ],
+            "container": {
+              "type": "DOCKER",
+              "docker": {
+                "image": "docker-registry.service.tmp.vcloud:5000/stubby",
+                "network": "BRIDGE",
+                "port_mappings": [
+                  {
+                    "host_port": 31113,
                     "container_port": 8008,
                     "protocol": "tcp"
                   }
@@ -470,8 +1236,8 @@
             }
           },
           {
-            "id": "docker-registry.9835e0c7-dedb-11e5-9a50-5ac2a4ac00a4",
-            "name": "docker-registry",
+            "id": "stubby.46ebcc9d-e1fa-11e5-9a50-5ac2a4ac00a4",
+            "name": "stubby",
             "framework_id": "82cde340-9d3b-40a6-87e2-953952745763-0000",
             "executor_id": "",
             "slave_id": "02223256-125c-4c3d-81db-3cdafbf233cd-S1",
@@ -479,20 +1245,26 @@
             "resources": {
               "cpus": 0.3,
               "disk": 0,
-              "mem": 128,
-              "ports": "[31211-31211]"
+              "mem": 64,
+              "ports": "[31049-31049]"
             },
             "statuses": [
               {
                 "state": "TASK_RUNNING",
-                "timestamp": 1456747039.71318,
+                "timestamp": 1457090071.08558,
+                "labels": [
+                  {
+                    "key": "Docker.NetworkSettings.IPAddress",
+                    "value": "10.36.0.5"
+                  }
+                ],
                 "container_status": {
                   "network_infos": [
                     {
-                      "ip_address": "10.66.1.159",
+                      "ip_address": "10.36.0.5",
                       "ip_addresses": [
                         {
-                          "ip_address": "10.66.1.159"
+                          "ip_address": "10.36.0.5"
                         }
                       ]
                     }
@@ -503,21 +1275,21 @@
             "labels": [
               {
                 "key": "traefik.frontend.value",
-                "value": "docker-registry.service.vcloud"
+                "value": "stubby.{environment:[a-z]+}.service.vcloud"
               }
             ],
             "container": {
               "type": "DOCKER",
-              "volumes": [
-                {
-                  "mode": "RW",
-                  "container_path": "/var/lib/registry",
-                  "host_path": "/tmp/docker-registry"
-                }
-              ],
               "docker": {
-                "image": "registry:2",
-                "network": "HOST",
+                "image": "docker-registry.service.tmp.vcloud:5000/stubby",
+                "network": "BRIDGE",
+                "port_mappings": [
+                  {
+                    "host_port": 31049,
+                    "container_port": 8008,
+                    "protocol": "tcp"
+                  }
+                ],
                 "privileged": false,
                 "force_pull_image": false
               }
@@ -644,71 +1416,6 @@
             }
           },
           {
-            "id": "qa-mailhog.e2a6d099-dedd-11e5-9a50-5ac2a4ac00a4",
-            "name": "qa-mailhog",
-            "framework_id": "82cde340-9d3b-40a6-87e2-953952745763-0000",
-            "executor_id": "",
-            "slave_id": "02223256-125c-4c3d-81db-3cdafbf233cd-S1",
-            "state": "TASK_RUNNING",
-            "resources": {
-              "cpus": 0.3,
-              "disk": 0,
-              "mem": 128,
-              "ports": "[31310-31311]"
-            },
-            "statuses": [
-              {
-                "state": "TASK_RUNNING",
-                "timestamp": 1456748023.72745,
-                "labels": [
-                  {
-                    "key": "Docker.NetworkSettings.IPAddress",
-                    "value": "10.36.0.3"
-                  }
-                ],
-                "container_status": {
-                  "network_infos": [
-                    {
-                      "ip_address": "10.36.0.3",
-                      "ip_addresses": [
-                        {
-                          "ip_address": "10.36.0.3"
-                        }
-                      ]
-                    }
-                  ]
-                }
-              }
-            ],
-            "labels": [
-              {
-                "key": "traefik.frontend.value",
-                "value": "mailhog.qa.service.vcloud"
-              }
-            ],
-            "container": {
-              "type": "DOCKER",
-              "docker": {
-                "image": "mailhog/mailhog",
-                "network": "BRIDGE",
-                "port_mappings": [
-                  {
-                    "host_port": 31310,
-                    "container_port": 8025,
-                    "protocol": "tcp"
-                  },
-                  {
-                    "host_port": 31311,
-                    "container_port": 1025,
-                    "protocol": "tcp"
-                  }
-                ],
-                "privileged": false,
-                "force_pull_image": false
-              }
-            }
-          },
-          {
             "id": "stubby-quickprice.8c210f7d-dee2-11e5-9a50-5ac2a4ac00a4",
             "name": "stubby-quickprice",
             "framework_id": "82cde340-9d3b-40a6-87e2-953952745763-0000",
@@ -819,141 +1526,6 @@
                 "port_mappings": [
                   {
                     "host_port": 31964,
-                    "container_port": 8008,
-                    "protocol": "tcp"
-                  }
-                ],
-                "privileged": false,
-                "force_pull_image": false
-              }
-            }
-          },
-          {
-            "id": "chronos.9c11f849-dfa1-11e5-9a50-5ac2a4ac00a4",
-            "name": "chronos",
-            "framework_id": "82cde340-9d3b-40a6-87e2-953952745763-0000",
-            "executor_id": "",
-            "slave_id": "02223256-125c-4c3d-81db-3cdafbf233cd-S4",
-            "state": "TASK_RUNNING",
-            "resources": {
-              "cpus": 0.5,
-              "disk": 0,
-              "mem": 512,
-              "ports": "[31499-31499]"
-            },
-            "statuses": [
-              {
-                "state": "TASK_RUNNING",
-                "timestamp": 1456832234.05129,
-                "container_status": {
-                  "network_infos": [
-                    {
-                      "ip_address": "10.66.1.158",
-                      "ip_addresses": [
-                        {
-                          "ip_address": "10.66.1.158"
-                        }
-                      ]
-                    }
-                  ]
-                }
-              }
-            ],
-            "labels": [
-              {
-                "key": "DCOS_PACKAGE_RELEASE",
-                "value": "1"
-              },
-              {
-                "key": "DCOS_PACKAGE_SOURCE",
-                "value": "https://github.com/Capgemini/universe/archive/version-1.x.zip"
-              },
-              {
-                "key": "DCOS_PACKAGE_METADATA",
-                "value": "eyJkZXNjcmlwdGlvbiI6ICJBIGZhdWx0IHRvbGVyYW50IGpvYiBzY2hlZHVsZXIgZm9yIE1lc29zIHdoaWNoIGhhbmRsZXMgZGVwZW5kZW5jaWVzIGFuZCBJU084NjAxIGJhc2VkIHNjaGVkdWxlcy4iLCAiZnJhbWV3b3JrIjogdHJ1ZSwgImltYWdlcyI6IHsiaWNvbi1sYXJnZSI6ICJodHRwczovL2Rvd25sb2Fkcy5tZXNvc3BoZXJlLmlvL2Nocm9ub3MvYXNzZXRzL2ljb24tc2VydmljZS1jaHJvbm9zLWxhcmdlLnBuZyIsICJpY29uLW1lZGl1bSI6ICJodHRwczovL2Rvd25sb2Fkcy5tZXNvc3BoZXJlLmlvL2Nocm9ub3MvYXNzZXRzL2ljb24tc2VydmljZS1jaHJvbm9zLW1lZGl1bS5wbmciLCAiaWNvbi1zbWFsbCI6ICJodHRwczovL2Rvd25sb2Fkcy5tZXNvc3BoZXJlLmlvL2Nocm9ub3MvYXNzZXRzL2ljb24tc2VydmljZS1jaHJvbm9zLXNtYWxsLnBuZyJ9LCAibGljZW5zZXMiOiBbeyJuYW1lIjogIkFwYWNoZSBMaWNlbnNlIFZlcnNpb24gMi4wIiwgInVybCI6ICJodHRwczovL2dpdGh1Yi5jb20vbWVzb3MvY2hyb25vcy9ibG9iL21hc3Rlci9MSUNFTlNFIn1dLCAibWFpbnRhaW5lciI6ICJzdXBwb3J0QG1lc29zcGhlcmUuaW8iLCAibmFtZSI6ICJjaHJvbm9zIiwgInBvc3RJbnN0YWxsTm90ZXMiOiAiQ2hyb25vcyBEQ09TIFNlcnZpY2UgaGFzIGJlZW4gc3VjY2Vzc2Z1bGx5IGluc3RhbGxlZCFcblxuXHREb2N1bWVudGF0aW9uOiBodHRwOi8vbWVzb3MuZ2l0aHViLmlvL2Nocm9ub3Ncblx0SXNzdWVzOiBodHRwczovL2dpdGh1Yi5jb20vbWVzb3MvY2hyb25vcy9pc3N1ZXMiLCAicG9zdFVuaW5zdGFsbE5vdGVzIjogIlRoZSBDaHJvbm9zIERDT1MgU2VydmljZSBoYXMgYmVlbiB1bmluc3RhbGxlZCBhbmQgd2lsbCBubyBsb25nZXIgcnVuLlxuUGxlYXNlIGZvbGxvdyB0aGUgaW5zdHJ1Y3Rpb25zIGF0IGh0dHA6Ly9kb2NzLm1lc29zcGhlcmUuY29tL3NlcnZpY2VzL2Nocm9ub3MvI3VuaW5zdGFsbCB0byBjbGVhbiB1cCBhbnkgcGVyc2lzdGVkIHN0YXRlIiwgInByZUluc3RhbGxOb3RlcyI6ICJXZSByZWNvbW1lbmQgYSBtaW5pbXVtIG9mIG9uZSBub2RlIHdpdGggYXQgbGVhc3QgMSBDUFUgYW5kIDJHQiBvZiBSQU0gYXZhaWxhYmxlIGZvciB0aGUgQ2hyb25vcyBTZXJ2aWNlLiIsICJzY20iOiAiaHR0cHM6Ly9naXRodWIuY29tL21lc29zL2Nocm9ub3MuZ2l0IiwgInRhZ3MiOiBbImNyb24iLCAiYW5hbHl0aWNzIiwgImJhdGNoIl0sICJ2ZXJzaW9uIjogIjIuNC4wIn0="
-              },
-              {
-                "key": "DCOS_PACKAGE_REGISTRY_VERSION",
-                "value": "1.0.0-rc1"
-              },
-              {
-                "key": "DCOS_PACKAGE_FRAMEWORK_NAME",
-                "value": "chronos"
-              },
-              {
-                "key": "DCOS_PACKAGE_VERSION",
-                "value": "2.4.0"
-              },
-              {
-                "key": "DCOS_PACKAGE_NAME",
-                "value": "chronos"
-              },
-              {
-                "key": "DCOS_PACKAGE_IS_FRAMEWORK",
-                "value": "true"
-              }
-            ],
-            "container": {
-              "type": "DOCKER",
-              "docker": {
-                "image": "mesosphere/chronos:chronos-2.4.0-0.1.20150828104228.ubuntu1404-mesos-0.23.0-1.0.ubuntu1404",
-                "network": "HOST",
-                "privileged": false,
-                "force_pull_image": false
-              }
-            }
-          },
-          {
-            "id": "stubby.a266a8e0-dee2-11e5-9a50-5ac2a4ac00a4",
-            "name": "stubby",
-            "framework_id": "82cde340-9d3b-40a6-87e2-953952745763-0000",
-            "executor_id": "",
-            "slave_id": "02223256-125c-4c3d-81db-3cdafbf233cd-S2",
-            "state": "TASK_RUNNING",
-            "resources": {
-              "cpus": 0.3,
-              "disk": 0,
-              "mem": 64,
-              "ports": "[31801-31801]"
-            },
-            "statuses": [
-              {
-                "state": "TASK_RUNNING",
-                "timestamp": 1456750064.40631,
-                "labels": [
-                  {
-                    "key": "Docker.NetworkSettings.IPAddress",
-                    "value": "10.44.0.4"
-                  }
-                ],
-                "container_status": {
-                  "network_infos": [
-                    {
-                      "ip_address": "10.44.0.4",
-                      "ip_addresses": [
-                        {
-                          "ip_address": "10.44.0.4"
-                        }
-                      ]
-                    }
-                  ]
-                }
-              }
-            ],
-            "labels": [
-              {
-                "key": "traefik.frontend.value",
-                "value": "stubby.{environment:[a-z]+}.service.vcloud"
-              }
-            ],
-            "container": {
-              "type": "DOCKER",
-              "docker": {
-                "image": "docker-registry.service.tmp.vcloud:5000/stubby",
-                "network": "BRIDGE",
-                "port_mappings": [
-                  {
-                    "host_port": 31801,
                     "container_port": 8008,
                     "protocol": "tcp"
                   }
@@ -1092,66 +1664,6 @@
             }
           },
           {
-            "id": "stubby.82ba5542-dee3-11e5-9a50-5ac2a4ac00a4",
-            "name": "stubby",
-            "framework_id": "82cde340-9d3b-40a6-87e2-953952745763-0000",
-            "executor_id": "",
-            "slave_id": "02223256-125c-4c3d-81db-3cdafbf233cd-S1",
-            "state": "TASK_RUNNING",
-            "resources": {
-              "cpus": 0.3,
-              "disk": 0,
-              "mem": 64,
-              "ports": "[31053-31053]"
-            },
-            "statuses": [
-              {
-                "state": "TASK_RUNNING",
-                "timestamp": 1456750439.69039,
-                "labels": [
-                  {
-                    "key": "Docker.NetworkSettings.IPAddress",
-                    "value": "10.36.0.5"
-                  }
-                ],
-                "container_status": {
-                  "network_infos": [
-                    {
-                      "ip_address": "10.36.0.5",
-                      "ip_addresses": [
-                        {
-                          "ip_address": "10.36.0.5"
-                        }
-                      ]
-                    }
-                  ]
-                }
-              }
-            ],
-            "labels": [
-              {
-                "key": "traefik.frontend.value",
-                "value": "stubby.{environment:[a-z]+}.service.vcloud"
-              }
-            ],
-            "container": {
-              "type": "DOCKER",
-              "docker": {
-                "image": "docker-registry.service.tmp.vcloud:5000/stubby",
-                "network": "BRIDGE",
-                "port_mappings": [
-                  {
-                    "host_port": 31053,
-                    "container_port": 8008,
-                    "protocol": "tcp"
-                  }
-                ],
-                "privileged": false,
-                "force_pull_image": false
-              }
-            }
-          },
-          {
             "id": "qt-mailhog.1299e67a-dede-11e5-9a50-5ac2a4ac00a4",
             "name": "qt-mailhog",
             "framework_id": "82cde340-9d3b-40a6-87e2-953952745763-0000",
@@ -1215,37 +1727,139 @@
                 "force_pull_image": false
               }
             }
-          },
+          }
+        ],
+        "completed_tasks": [
           {
-            "id": "stubby.82ba2e31-dee3-11e5-9a50-5ac2a4ac00a4",
-            "name": "stubby",
+            "id": "mesos-ui.920b0d16-dedb-11e5-9a50-5ac2a4ac00a4",
+            "name": "mesos-ui",
             "framework_id": "82cde340-9d3b-40a6-87e2-953952745763-0000",
             "executor_id": "",
             "slave_id": "02223256-125c-4c3d-81db-3cdafbf233cd-S2",
-            "state": "TASK_RUNNING",
+            "state": "TASK_KILLED",
             "resources": {
-              "cpus": 0.3,
+              "cpus": 1,
               "disk": 0,
-              "mem": 64,
-              "ports": "[31022-31022]"
+              "mem": 512,
+              "ports": "[31384-31384]"
             },
             "statuses": [
               {
                 "state": "TASK_RUNNING",
-                "timestamp": 1456750440.62386,
+                "timestamp": 1456747102.06488,
                 "labels": [
                   {
                     "key": "Docker.NetworkSettings.IPAddress",
-                    "value": "10.44.0.5"
+                    "value": "10.44.0.3"
                   }
                 ],
                 "container_status": {
                   "network_infos": [
                     {
-                      "ip_address": "10.44.0.5",
+                      "ip_address": "10.44.0.3",
                       "ip_addresses": [
                         {
-                          "ip_address": "10.44.0.5"
+                          "ip_address": "10.44.0.3"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              },
+              {
+                "state": "TASK_KILLED",
+                "timestamp": 1456747487.90403,
+                "container_status": {
+                  "network_infos": [
+                    {
+                      "ip_address": "10.66.1.160",
+                      "ip_addresses": [
+                        {
+                          "ip_address": "10.66.1.160"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              }
+            ],
+            "labels": [
+              {
+                "key": "DCOS_PACKAGE_NAME",
+                "value": "mesos-ui"
+              },
+              {
+                "key": "DCOS_PACKAGE_IS_FRAMEWORK",
+                "value": "false"
+              },
+              {
+                "key": "DCOS_PACKAGE_VERSION",
+                "value": "0.1.0"
+              }
+            ],
+            "container": {
+              "type": "DOCKER",
+              "docker": {
+                "image": "capgemini/mesos-ui:standalone-0.1.2",
+                "network": "BRIDGE",
+                "port_mappings": [
+                  {
+                    "host_port": 31384,
+                    "container_port": 5000,
+                    "protocol": "tcp"
+                  }
+                ],
+                "privileged": false,
+                "force_pull_image": false
+              }
+            }
+          },
+          {
+            "id": "qa-mailhog.862ba8ec-e50a-11e5-b92c-c6c68d973162",
+            "name": "qa-mailhog",
+            "framework_id": "82cde340-9d3b-40a6-87e2-953952745763-0000",
+            "executor_id": "",
+            "slave_id": "02223256-125c-4c3d-81db-3cdafbf233cd-S2",
+            "state": "TASK_KILLED",
+            "resources": {
+              "cpus": 0.3,
+              "disk": 0,
+              "mem": 128,
+              "ports": "[31912-31913]"
+            },
+            "statuses": [
+              {
+                "state": "TASK_RUNNING",
+                "timestamp": 1457426904.74801,
+                "labels": [
+                  {
+                    "key": "Docker.NetworkSettings.IPAddress",
+                    "value": "10.44.0.4"
+                  }
+                ],
+                "container_status": {
+                  "network_infos": [
+                    {
+                      "ip_address": "10.44.0.4",
+                      "ip_addresses": [
+                        {
+                          "ip_address": "10.44.0.4"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              },
+              {
+                "state": "TASK_KILLED",
+                "timestamp": 1457427005.79127,
+                "container_status": {
+                  "network_infos": [
+                    {
+                      "ip_address": "10.66.1.160",
+                      "ip_addresses": [
+                        {
+                          "ip_address": "10.66.1.160"
                         }
                       ]
                     }
@@ -1256,18 +1870,23 @@
             "labels": [
               {
                 "key": "traefik.frontend.value",
-                "value": "stubby.{environment:[a-z]+}.service.vcloud"
+                "value": "mailhog.qa.service.vcloud"
               }
             ],
             "container": {
               "type": "DOCKER",
               "docker": {
-                "image": "docker-registry.service.tmp.vcloud:5000/stubby",
+                "image": "mailhog/mailhog",
                 "network": "BRIDGE",
                 "port_mappings": [
                   {
-                    "host_port": 31022,
-                    "container_port": 8008,
+                    "host_port": 31912,
+                    "container_port": 8025,
+                    "protocol": "tcp"
+                  },
+                  {
+                    "host_port": 31913,
+                    "container_port": 1025,
                     "protocol": "tcp"
                   }
                 ],
@@ -1277,130 +1896,333 @@
             }
           }
         ],
-        "unregistered_time": 0,
-        "used_resources": {
-          "cpus": 0.5,
-          "disk": 0,
-          "mem": 512,
-          "ports": "[31637-31637]"
-        },
-        "user": "root",
-        "webui_url": "http://52.19.160.202:8080"
+        "offers": [],
+        "executors": []
       }
     ],
-    "git_sha": "4ce5475346a0abb7ef4b7ffc9836c5836d7c7a66",
-    "git_tag": "0.23.0",
-    "hostname": "52.19.160.202",
-    "id": "20150827-145231-1258422282-5050-1",
-    "leader": "master@10.0.2.75:5050",
-    "log_dir": "/var/log/mesos",
-    "orphan_tasks": [],
-    "pid": "master@10.0.2.75:5050",
-    "slaves": [
+    "completed_frameworks": [],
+    "orphan_tasks": [
       {
-        "active": true,
-        "attributes": {},
-        "hostname": "52.19.171.62",
-        "id": "20150827-145231-1258422282-5050-1-S1",
-        "offered_resources": {
-          "cpus": 0,
-          "disk": 0,
-          "mem": 0
-        },
-        "pid": "slave(1)@10.0.0.211:5051",
-        "registered_time": 1440687224.10234,
-        "reserved_resources": {},
+        "id": "qt-mailhog.40f67912-decb-11e5-bd28-7eac32122806",
+        "name": "qt-mailhog",
+        "framework_id": "a2a40f0b-a829-43eb-99e6-c88c314910a4-0000",
+        "executor_id": "",
+        "slave_id": "02223256-125c-4c3d-81db-3cdafbf233cd-S2",
+        "state": "TASK_FAILED",
         "resources": {
-          "cpus": 2,
-          "disk": 3962,
-          "mem": 2740,
-          "ports": "[31000-32000]",
-          "ephemeral_ports": "[32768-57344]"
+          "cpus": 0.3,
+          "disk": 0,
+          "mem": 128,
+          "ports": "[31679-31680]"
         },
-        "unreserved_resources": {
-          "cpus": 2,
-          "disk": 3962,
-          "mem": 2740,
-          "ports": "[31000-32000]",
-          "ephemeral_ports": "[32768-57344]"
-        },
-        "used_resources": {
-          "cpus": 1,
-          "disk": 1940,
-          "mem": 648
+        "statuses": [
+          {
+            "state": "TASK_RUNNING",
+            "timestamp": 1456740026.00905,
+            "labels": [
+              {
+                "key": "Docker.NetworkSettings.IPAddress",
+                "value": "10.44.0.12"
+              }
+            ],
+            "container_status": {
+              "network_infos": [
+                {
+                  "ip_address": "10.44.0.12",
+                  "ip_addresses": [
+                    {
+                      "ip_address": "10.44.0.12"
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "state": "TASK_FAILED",
+            "timestamp": 1456745162.98955,
+            "container_status": {
+              "network_infos": [
+                {
+                  "ip_address": "10.66.1.160",
+                  "ip_addresses": [
+                    {
+                      "ip_address": "10.66.1.160"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        ],
+        "labels": [
+          {
+            "key": "traefik.frontend.value",
+            "value": "mailhog.qt.service.vcloud"
+          }
+        ],
+        "container": {
+          "type": "DOCKER",
+          "docker": {
+            "image": "mailhog/mailhog",
+            "network": "BRIDGE",
+            "port_mappings": [
+              {
+                "host_port": 31679,
+                "container_port": 8025,
+                "protocol": "tcp"
+              },
+              {
+                "host_port": 31680,
+                "container_port": 1025,
+                "protocol": "tcp"
+              }
+            ],
+            "privileged": false,
+            "force_pull_image": false
+          }
         }
       },
       {
-        "active": true,
-        "attributes": {},
-        "hostname": "52.19.171.62",
-        "id": "20150827-145231-1258422282-5050-1-S1",
-        "offered_resources": {
-          "cpus": 0,
-          "disk": 0,
-          "mem": 0
-        },
-        "pid": "slave(1)@10.0.0.211:5051",
-        "registered_time": 1440687224.10234,
-        "reserved_resources": {},
+        "id": "mesos-ui.3fb3b0f1-dc85-11e5-a206-4aa3a2e87422",
+        "name": "mesos-ui",
+        "framework_id": "a2a40f0b-a829-43eb-99e6-c88c314910a4-0000",
+        "executor_id": "",
+        "slave_id": "02223256-125c-4c3d-81db-3cdafbf233cd-S1",
+        "state": "TASK_FAILED",
         "resources": {
-          "cpus": 2,
-          "disk": 3962,
-          "mem": 2740,
-          "ports": "[31000-32000]",
-          "ephemeral_ports": "[32768-57344]"
-        },
-        "unreserved_resources": {
-          "cpus": 2,
-          "disk": 3962,
-          "mem": 2740,
-          "ports": "[31000-32000]",
-          "ephemeral_ports": "[32768-57344]"
-        },
-        "used_resources": {
           "cpus": 1,
-          "disk": 1240,
-          "mem": 1024
+          "disk": 0,
+          "mem": 512,
+          "ports": "[31605-31605]"
+        },
+        "statuses": [
+          {
+            "state": "TASK_RUNNING",
+            "timestamp": 1456490056.8131,
+            "labels": [
+              {
+                "key": "Docker.NetworkSettings.IPAddress",
+                "value": "10.36.0.4"
+              }
+            ],
+            "container_status": {
+              "network_infos": [
+                {
+                  "ip_address": "10.36.0.4",
+                  "ip_addresses": [
+                    {
+                      "ip_address": "10.36.0.4"
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "state": "TASK_FAILED",
+            "timestamp": 1456745157.49481,
+            "container_status": {
+              "network_infos": [
+                {
+                  "ip_address": "10.66.1.159",
+                  "ip_addresses": [
+                    {
+                      "ip_address": "10.66.1.159"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        ],
+        "labels": [
+          {
+            "key": "DCOS_PACKAGE_NAME",
+            "value": "mesos-ui"
+          },
+          {
+            "key": "DCOS_PACKAGE_IS_FRAMEWORK",
+            "value": "false"
+          },
+          {
+            "key": "DCOS_PACKAGE_VERSION",
+            "value": "0.1.0"
+          }
+        ],
+        "container": {
+          "type": "DOCKER",
+          "docker": {
+            "image": "capgemini/mesos-ui:standalone-0.1.2",
+            "network": "BRIDGE",
+            "port_mappings": [
+              {
+                "host_port": 31605,
+                "container_port": 5000,
+                "protocol": "tcp"
+              }
+            ],
+            "privileged": false,
+            "force_pull_image": false
+          }
         }
       },
       {
-        "active": true,
-        "attributes": {},
-        "hostname": "52.19.64.255",
-        "id": "20150827-145231-1258422282-5050-1-S0",
-        "offered_resources": {
-          "cpus": 0,
-          "disk": 0,
-          "mem": 0
-        },
-        "pid": "slave(1)@10.0.1.68:5051",
-        "registered_time": 1440687223.01831,
-        "reserved_resources": {},
+        "id": "qa-mailhog.c020dd40-dec9-11e5-bd28-7eac32122806",
+        "name": "qa-mailhog",
+        "framework_id": "a2a40f0b-a829-43eb-99e6-c88c314910a4-0000",
+        "executor_id": "",
+        "slave_id": "02223256-125c-4c3d-81db-3cdafbf233cd-S1",
+        "state": "TASK_FAILED",
         "resources": {
-          "cpus": 2,
-          "disk": 3962,
-          "mem": 2740,
-          "ports": "[31000-32000]",
-          "ephemeral_ports": "[32768-57344]"
-        },
-        "unreserved_resources": {
-          "cpus": 2,
-          "disk": 3962,
-          "mem": 2740,
-          "ports": "[31000-32000]",
-          "ephemeral_ports": "[32768-57344]"
-        },
-        "used_resources": {
-          "cpus": 0.5,
+          "cpus": 0.3,
           "disk": 0,
-          "mem": 512,
-          "ports": "[31637-31637]"
+          "mem": 128,
+          "ports": "[31460-31461]"
+        },
+        "statuses": [
+          {
+            "state": "TASK_RUNNING",
+            "timestamp": 1456739379.43677,
+            "labels": [
+              {
+                "key": "Docker.NetworkSettings.IPAddress",
+                "value": "10.36.0.3"
+              }
+            ],
+            "container_status": {
+              "network_infos": [
+                {
+                  "ip_address": "10.36.0.3",
+                  "ip_addresses": [
+                    {
+                      "ip_address": "10.36.0.3"
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "state": "TASK_FAILED",
+            "timestamp": 1456745157.50403,
+            "container_status": {
+              "network_infos": [
+                {
+                  "ip_address": "10.66.1.159",
+                  "ip_addresses": [
+                    {
+                      "ip_address": "10.66.1.159"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        ],
+        "labels": [
+          {
+            "key": "traefik.frontend.value",
+            "value": "mailhog.qa.service.vcloud"
+          }
+        ],
+        "container": {
+          "type": "DOCKER",
+          "docker": {
+            "image": "mailhog/mailhog",
+            "network": "BRIDGE",
+            "port_mappings": [
+              {
+                "host_port": 31460,
+                "container_port": 8025,
+                "protocol": "tcp"
+              },
+              {
+                "host_port": 31461,
+                "container_port": 1025,
+                "protocol": "tcp"
+              }
+            ],
+            "privileged": false,
+            "force_pull_image": false
+          }
+        }
+      },
+      {
+        "id": "docker-registry.4a084a7f-dbe1-11e5-a206-4aa3a2e87422",
+        "name": "docker-registry",
+        "framework_id": "a2a40f0b-a829-43eb-99e6-c88c314910a4-0000",
+        "executor_id": "",
+        "slave_id": "02223256-125c-4c3d-81db-3cdafbf233cd-S1",
+        "state": "TASK_FAILED",
+        "resources": {
+          "cpus": 0.3,
+          "disk": 0,
+          "mem": 128,
+          "ports": "[31669-31669]"
+        },
+        "statuses": [
+          {
+            "state": "TASK_RUNNING",
+            "timestamp": 1456419638.02601,
+            "container_status": {
+              "network_infos": [
+                {
+                  "ip_address": "10.66.1.159",
+                  "ip_addresses": [
+                    {
+                      "ip_address": "10.66.1.159"
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "state": "TASK_FAILED",
+            "timestamp": 1456745157.49583,
+            "container_status": {
+              "network_infos": [
+                {
+                  "ip_address": "10.66.1.159",
+                  "ip_addresses": [
+                    {
+                      "ip_address": "10.66.1.159"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        ],
+        "labels": [
+          {
+            "key": "traefik.frontend.value",
+            "value": "docker-registry.service.vcloud"
+          }
+        ],
+        "container": {
+          "type": "DOCKER",
+          "volumes": [
+            {
+              "mode": "RW",
+              "container_path": "/var/lib/registry",
+              "host_path": "/tmp/docker-registry"
+            }
+          ],
+          "docker": {
+            "image": "registry:2",
+            "network": "HOST",
+            "privileged": false,
+            "force_pull_image": false
+          }
         }
       }
     ],
-    "start_time": 1440687151.94147,
-    "unregistered_frameworks": [],
-    "version": "0.23.0"
+    "unregistered_frameworks": [
+      "a2a40f0b-a829-43eb-99e6-c88c314910a4-0000",
+      "a2a40f0b-a829-43eb-99e6-c88c314910a4-0000"
+    ]
   },
   "files/read.json": [
     {
