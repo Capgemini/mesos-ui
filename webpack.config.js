@@ -1,4 +1,5 @@
-/*jshint esnext: true */
+'use strict';
+
 import webpack, { DefinePlugin, BannerPlugin } from 'webpack';
 import merge from 'lodash/object/merge';
 import autoprefixer from 'autoprefixer-core';
@@ -86,7 +87,7 @@ const config = {
       },
       {
 
-        loader: "transform?envify",
+        loader: 'transform?envify',
       },
       {
         test: /\.jsx?$/,
@@ -110,16 +111,16 @@ const appConfig = merge({}, config, {
     filename: 'app.js'
   },
   node: {
-    fs: "empty",
+    fs: 'empty',
   },
   devtool: DEBUG ? 'source-map' : false,
   plugins: config.plugins.concat([
-      new DefinePlugin(merge(GLOBALS, {'__SERVER__': false}))
-    ].concat(DEBUG ? [] : [
-      new webpack.optimize.DedupePlugin(),
-      new webpack.optimize.UglifyJsPlugin(),
-      new webpack.optimize.AggressiveMergingPlugin()
-    ])
+    new DefinePlugin(merge(GLOBALS, {'__SERVER__': false}))
+  ].concat(DEBUG ? [] : [
+    new webpack.optimize.DedupePlugin(),
+    new webpack.optimize.UglifyJsPlugin(),
+    new webpack.optimize.AggressiveMergingPlugin()
+  ])
   )
 });
 

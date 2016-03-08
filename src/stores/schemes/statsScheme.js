@@ -1,3 +1,4 @@
+'use strict';
 var statsScheme = {
   memFreeBytes: 0,
   memTotalBytes: 0,

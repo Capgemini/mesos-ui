@@ -1,4 +1,4 @@
-/*jshint esnext: true */
+'use strict';
 
 import 'babel/polyfill';
 import path from 'path';
@@ -27,7 +27,6 @@ require('./routes/default')(app);
 // running Mesos cluster, so lets just use the stub API in ./stub.json.
 if (process.env.NODE_ENV === 'development') {
   let jsonServer = require('json-server');
-  let fs = require('fs');
 
   // Returns an Express server
   let server = jsonServer.create();

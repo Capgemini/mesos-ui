@@ -1,4 +1,5 @@
-/*jshint esnext: true */
+'use strict';
+
 import React, { PropTypes } from 'react';
 
 class LegendItem extends React.Component {

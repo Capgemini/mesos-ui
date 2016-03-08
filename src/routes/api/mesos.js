@@ -1,4 +1,5 @@
-/*jshint esnext: true */
+'use strict';
+
 import request from 'superagent';
 
 let config = require('../../config/config');
@@ -57,5 +58,3 @@ var mesos = {
 };
 
 module.exports = mesos
-
-

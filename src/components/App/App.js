@@ -1,4 +1,5 @@
-/*jshint esnext: true */
+'use strict';
+
 import React from 'react';
 import { RouteHandler } from 'react-router';
 import withContext from '../../decorators/withContext';
@@ -8,9 +9,8 @@ import Navigation from '../Navigation';
 import Radium from 'radium';
 import ClusterStore from '../../stores/ClusterStore';
 import {Motion, spring} from 'react-motion';
-import request from 'superagent';
 import ZookeeperRedirect from '../ZookeeperRedirect';
-/*jshint esnext: true */
+
 
 let ThemeManager = new mui.Styles.ThemeManager();
 

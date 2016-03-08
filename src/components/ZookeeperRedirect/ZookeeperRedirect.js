@@ -1,4 +1,5 @@
-/*jshint esnext: true */
+'use strict';
+
 import React, { PropTypes } from 'react';
 
 class ZookeeperRedirect extends React.Component {
@@ -13,7 +14,7 @@ class ZookeeperRedirect extends React.Component {
     this.redirectToLeader()
   }
 
-  shouldComponentUpdate(nextProps, nextState) {
+  shouldComponentUpdate(nextProps/*, nextState*/) {
     return nextProps.leader !== this.props.leader;
   }
 

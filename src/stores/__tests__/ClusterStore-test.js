@@ -1,4 +1,4 @@
-/*jshint esnext: true */
+'use strict';
 // __tests__/ClusterStore-test.js
 
 jest.dontMock('../../constants/ClusterConstants');

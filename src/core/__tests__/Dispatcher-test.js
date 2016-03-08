@@ -1,6 +1,6 @@
 
 jest.autoMockOff();
-/*jshint esnext: true */
+ 
 import React from 'react/addons';
 import Dispatcher from '../Dispatcher';
 

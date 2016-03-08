@@ -1,4 +1,5 @@
-/*jshint esnext: true */
+'use strict';
+
 import React from 'react';
 
 class Legend extends React.Component {
