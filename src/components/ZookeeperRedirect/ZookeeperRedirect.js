@@ -12,7 +12,7 @@ class ZookeeperRedirect extends React.Component {
     this.redirectToLeader()
   }
 
-  shouldComponentUpdate(nextProps,/*, nextState*/) {
+  shouldComponentUpdate(nextProps) {
     return nextProps.leader !== this.props.leader;
   }
 
