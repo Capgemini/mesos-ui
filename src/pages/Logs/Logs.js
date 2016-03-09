@@ -1,7 +1,5 @@
 import React, { PropTypes } from 'react';
 import PageTitle from '../../components/PageTitle';
-import DashboardBox from '../../components/DashboardBox';
-import Sunburst from '../../components/Sunburst';
 
 class Logs extends React.Component {
 

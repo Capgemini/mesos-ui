@@ -1,4 +1,3 @@
-/*jshint esnext: true */
 import React, { PropTypes } from 'react';
 import { Styles, Utils } from 'material-ui';
 let { Colors } = Styles;
