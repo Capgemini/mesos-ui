@@ -15,6 +15,7 @@ var stats = require('./schemes/statsScheme.js');
 var state = {
   nodes: [],
   frameworks: [],
+  tasks: [],
   leader: '',
   pid: ''
 };
@@ -77,8 +78,35 @@ function refreshState(data) {
     return nodeData;
   });
 
+  // This give us time complexity O(n) rather than O(n*m)
+  // plus ease to change the patron for grouping at the component level.
+  // O(n*m) shoudn't be a problem as number of frameworks never will be massive.
+  let allTasks = [];
+  let slaveIdName = {};
+  let frameworkIdName = {};
+
+  // Builds an array with all the tasks for all the frameworks.
+  // Builds a hashs framewrokId: frameworkName.
+  for(var index in data.frameworks) {
+    frameworkIdName[data.frameworks[index].id] = data.frameworks[index].name;
+    allTasks = allTasks.concat(data.frameworks[index].tasks);
+  }
+
+  // builds a hash slaveId: hostname.
+  for(var index in data.slaves) {
+    slaveIdName[data.slaves[index].id] = data.slaves[index].hostname;
+  }
+
+  // Add hostname, framework_name and timestamp at the task level.
+  for(var index in allTasks) {
+    allTasks[index].framework_name = frameworkIdName[allTasks[index].framework_id];
+    allTasks[index].hostname = slaveIdName[allTasks[index].slave_id];
+    allTasks[index].timestamp = allTasks[index].statuses.map((status) => { if (status.state == 'TASK_RUNNING') { return status.timestamp }} );
+  }
+
   state.leader = data.leader;
   state.pid = data.pid;
+  state.tasks = allTasks;
 }
 
 var ClusterStore = assign({}, EventEmitter.prototype, {
@@ -101,6 +129,10 @@ var ClusterStore = assign({}, EventEmitter.prototype, {
 
   getFrameworks() {
     return state.frameworks;
+  },
+
+  getTasks() {
+    return state.tasks;
   },
 
   getLeader() {

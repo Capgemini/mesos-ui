@@ -1,0 +1,202 @@
+[
+  {
+    "id": "qa-mailhog.bcdf1bbd-e50a-11e5-b92c-c6c68d973162",
+    "name": "qa-mailhog",
+    "framework_id": "82cde340-9d3b-40a6-87e2-953952745763-0000",
+    "executor_id": "",
+    "slave_id": "02223256-125c-4c3d-81db-3cdafbf233cd-S4",
+    "state": "TASK_RUNNING",
+    "resources": {
+      "cpus": 0.3,
+      "disk": 0,
+      "mem": 128,
+      "ports": "[31385-31386]"
+    },
+    "statuses": [
+      {
+        "state": "TASK_RUNNING",
+        "timestamp": 1457426990.49369,
+        "labels": [
+          {
+            "key": "Docker.NetworkSettings.IPAddress",
+            "value": "10.34.0.8"
+          }
+        ],
+        "container_status": {
+          "network_infos": [
+            {
+              "ip_address": "10.34.0.8",
+              "ip_addresses": [
+                {
+                  "ip_address": "10.34.0.8"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ],
+    "labels": [
+      {
+        "key": "traefik.frontend.value",
+        "value": "mailhog.qa.service.vcloud"
+      }
+    ],
+    "container": {
+      "type": "DOCKER",
+      "docker": {
+        "image": "mailhog/mailhog",
+        "network": "BRIDGE",
+        "port_mappings": [
+          {
+            "host_port": 31385,
+            "container_port": 8025,
+            "protocol": "tcp"
+          },
+          {
+            "host_port": 31386,
+            "container_port": 1025,
+            "protocol": "tcp"
+          }
+        ],
+        "privileged": false,
+        "force_pull_image": false
+      }
+    },
+    "framework_name": "marathon",
+    "hostname": "10.66.1.158",
+    "timestamp": [
+      1457426990.49369
+    ]
+  },
+  {
+    "id": "stubby.46eb7e7b-e1fa-11e5-9a50-5ac2a4ac00a4",
+    "name": "stubby",
+    "framework_id": "82cde340-9d3b-40a6-87e2-953952745763-0000",
+    "executor_id": "",
+    "slave_id": "02223256-125c-4c3d-81db-3cdafbf233cd-S1",
+    "state": "TASK_RUNNING",
+    "resources": {
+      "cpus": 0.3,
+      "disk": 0,
+      "mem": 64,
+      "ports": "[31209-31209]"
+    },
+    "statuses": [
+      {
+        "state": "TASK_RUNNING",
+        "timestamp": 1457090071.49399,
+        "labels": [
+          {
+            "key": "Docker.NetworkSettings.IPAddress",
+            "value": "10.36.0.10"
+          }
+        ],
+        "container_status": {
+          "network_infos": [
+            {
+              "ip_address": "10.36.0.10",
+              "ip_addresses": [
+                {
+                  "ip_address": "10.36.0.10"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ],
+    "labels": [
+      {
+        "key": "traefik.frontend.value",
+        "value": "stubby.{environment:[a-z]+}.service.vcloud"
+      }
+    ],
+    "container": {
+      "type": "DOCKER",
+      "docker": {
+        "image": "docker-registry.service.tmp.vcloud:5000/stubby",
+        "network": "BRIDGE",
+        "port_mappings": [
+          {
+            "host_port": 31209,
+            "container_port": 8008,
+            "protocol": "tcp"
+          }
+        ],
+        "privileged": false,
+        "force_pull_image": false
+      }
+    },
+    "framework_name": "marathon",
+    "hostname": "10.66.1.159",
+    "timestamp": [
+      1457090071.49399
+    ]
+  },
+  {
+    "id": "dashing.1923ceec-e16d-11e5-9a50-5ac2a4ac00a4",
+    "name": "dashing",
+    "framework_id": "82cde340-9d3b-40a6-87e2-953952745763-0000",
+    "executor_id": "",
+    "slave_id": "02223256-125c-4c3d-81db-3cdafbf233cd-S1",
+    "state": "TASK_RUNNING",
+    "resources": {
+      "cpus": 0.3,
+      "disk": 0,
+      "mem": 128,
+      "ports": "[31244-31244]"
+    },
+    "statuses": [
+      {
+        "state": "TASK_RUNNING",
+        "timestamp": 1457029435.12229,
+        "labels": [
+          {
+            "key": "Docker.NetworkSettings.IPAddress",
+            "value": "10.36.0.9"
+          }
+        ],
+        "container_status": {
+          "network_infos": [
+            {
+              "ip_address": "10.36.0.9",
+              "ip_addresses": [
+                {
+                  "ip_address": "10.36.0.9"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ],
+    "labels": [
+      {
+        "key": "traefik.frontend.value",
+        "value": "dashing.service.vcloud"
+      }
+    ],
+    "container": {
+      "type": "DOCKER",
+      "docker": {
+        "image": "docker-registry.service.tmp.vcloud:5000/dashing",
+        "network": "BRIDGE",
+        "port_mappings": [
+          {
+            "host_port": 31244,
+            "container_port": 3030,
+            "protocol": "tcp"
+          }
+        ],
+        "privileged": false,
+        "force_pull_image": false
+      }
+    },
+    "framework_name": "marathon",
+    "hostname": "10.66.1.159",
+    "timestamp": [
+      1457029435.12229
+    ]
+  }
+]

@@ -25,7 +25,7 @@
     "indent": [2, 2, {SwitchCase: 1}],
     "jsx-quotes": 1,
     "quotes": [2, "single"],
-    "camelcase": 2,
+    "camelcase": 0,
     "no-undefined": 2,
     "no-unused-vars": 0,
     "curly": 2,
