@@ -123,7 +123,7 @@ class TaskTable extends React.Component {
               <TableHeaderColumn>ID</TableHeaderColumn>
               <TableHeaderColumn>Name</TableHeaderColumn>
               <TableHeaderColumn>Status</TableHeaderColumn>
-              <TableHeaderColumn>Time of live</TableHeaderColumn>
+              <TableHeaderColumn>Up time</TableHeaderColumn>
               <TableHeaderColumn>Framework</TableHeaderColumn>
               <TableHeaderColumn>Host</TableHeaderColumn>
             </TableRow>

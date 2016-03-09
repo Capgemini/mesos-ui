@@ -1,13 +1,8 @@
 /*jshint esnext: true */
 
 import React, { PropTypes } from 'react';
-import DashboardBox from '../../components/DashboardBox';
-import Sunburst from '../../components/Sunburst';
-import Circle from '../../components/Circle';
-import random from 'lodash/number/random';
-import range from 'lodash/utility/range';
-import List from 'material-ui/lib/lists/list';
-import ListItem from 'material-ui/lib/lists/list-item';
+import Circle from '../Circle';
+import { List, ListItem } from 'material-ui/lib/lists';
 import Checkbox from 'material-ui/lib/checkbox';
 import Toggle from 'material-ui/lib/toggle';
 import RadioButton from 'material-ui/lib/radio-button';
@@ -27,6 +22,10 @@ class TaskVisualizer extends React.Component {
     };
   }
 
+  groupBy(e) {
+    this.setState({parameterToGroupBy: e.target.value});
+  }
+
   stringToColour(str) {
     // str to hash
     for (var i = 0, hash = 0; i < str.length; hash = str.charCodeAt(i++) + ((hash << 5) - hash));
@@ -37,9 +36,7 @@ class TaskVisualizer extends React.Component {
   }
 
   // Return a hash appName: HEX_color_value
-  createAppColorList() {
-
-    let tasks = this.props.tasks.slice();
+  createAppColorList(tasks) {
     let appColorList = {};
     for(var index in tasks) {
       let appName = tasks[index].name;
@@ -95,9 +92,9 @@ class TaskVisualizer extends React.Component {
   createCirclesInGroupsList() {
 
     let tasks = this.excludeToggledTasks();
-    let appColorList = this.createAppColorList();
-    let circlesList = {}
-    let key = 0
+    let appColorList = this.createAppColorList(tasks);
+    let circlesList = {};
+    let key = 0;
 
     for (var index in tasks ) {
       let name = tasks[index].name;
@@ -137,15 +134,12 @@ class TaskVisualizer extends React.Component {
     };
   }
 
-  groupBy(e) {
-    this.setState({parameterToGroupBy: e.target.value});
-  }
-
   render() {
 
+    let tasks = this.props.tasks
     return (
       <div>
-        {this.renderAppColorLegend(this.createAppColorList())}
+        {this.renderAppColorLegend(this.createAppColorList(tasks))}
         <div>
           <RadioButtonGroup ref="groupByRadioButtonGroup" name="groupByRadioButtonGroup" defaultSelected="name" valueSelected={this.state.parameterToGroupBy} onChange={this.groupBy.bind(this)}>
             <RadioButton
@@ -158,7 +152,7 @@ class TaskVisualizer extends React.Component {
               ref="groupBySlave"
               value="hostname"
               label="Group by Host."
-              style={this.getStyles().radioButton}
+              style={this.getStyles().RadioButton}
             />
           </RadioButtonGroup>
         </div>
