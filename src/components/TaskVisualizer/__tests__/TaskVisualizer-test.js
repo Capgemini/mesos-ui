@@ -13,7 +13,7 @@ describe('TaskVisualizer', function() {
   it('gets Hex colors from app names', function() {
     const TaskVisualizer = require('../TaskVisualizer');
     let object = new TaskVisualizer();
-    expect(object.stringToColour('anyAppName')).toMatch("#[a-zA-Z0-9]{6,}$");
+    expect(object.stringToColor('anyAppName')).toMatch("#[a-zA-Z0-9]{6,}$");
   });
 
   it('creates a hash like => appName: hexColor from an array of tasks.', function() {

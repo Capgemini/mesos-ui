@@ -28,8 +28,12 @@ class TaskTable extends React.Component {
   orderTasksByParameter(tasks = [], parameterToOrderBy = 'timestamp') {
     var parameter = parameterToOrderBy;
     tasks.sort(function(a, b) {
-      if (a[parameter] < b[parameter]) return 1;
-      if (a[parameter] > b[parameter]) return -1;
+      if (a[parameter] < b[parameter]) {
+        return 1;
+      }
+      if (a[parameter] > b[parameter]) {
+        return -1;
+      }
       return 0;
     });
     return tasks;
@@ -46,7 +50,7 @@ class TaskTable extends React.Component {
           <RadioButton
             ref="orderByTime"
             value="timestamp"
-            label="Time of live"
+            label="Up time"
             style={this.getStyles().radioButton}
           />
           <RadioButton

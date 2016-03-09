@@ -26,13 +26,25 @@ class TaskVisualizer extends React.Component {
     this.setState({parameterToGroupBy: e.target.value});
   }
 
-  stringToColour(str) {
-    // str to hash
-    for (var i = 0, hash = 0; i < str.length; hash = str.charCodeAt(i++) + ((hash << 5) - hash));
-    // int/hash to hex
-    for (var i = 0, colour = '#'; i < 3; colour += ('00' + ((hash >> i++ * 8) & 0xFF).toString(16)).slice(-2));
+  //http://stackoverflow.com/questions/3426404/create-a-hexadecimal-colour-based-on-a-string-with-javascript
+  hashCode(str) { // java String#hashCode
+    var hash = 0;
+    for (var i = 0; i < str.length; i++) {
+      hash = str.charCodeAt(i) + ((hash << 5) - hash);
+    }
+    return hash;
+  }
 
-    return colour;
+  intToRGB(i){
+    var c = (i & 0x00FFFFFF)
+      .toString(16)
+      .toUpperCase();
+
+    return '#' + '00000'.substring(0, 6 - c.length) + c;
+  }
+
+  stringToColor(string) {
+    return this.intToRGB(this.hashCode(string));
   }
 
   // Return a hash appName: HEX_color_value
@@ -40,7 +52,7 @@ class TaskVisualizer extends React.Component {
     let appColorList = {};
     for(var index in tasks) {
       let appName = tasks[index].name;
-      appColorList[appName] = this.stringToColour(appName);
+      appColorList[appName] = this.stringToColor(appName);
     }
     return appColorList;
   }
