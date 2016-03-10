@@ -12,7 +12,7 @@ build_ui_snapshot:
 
 build_mesos_image: build_ui_snapshot
 	sed "s/VERSION/$(MESOS_VERSION)/g" DockerfileMesos > TempDockerfile
-	docker build -f TempDockerfile -t capgemini/mesos-ui:$(MESOS_UI_VERSION) .
+	docker build -f TempDockerfile -t capgemini/mesos-ui:$(MESOS_UI_VERSION) -t capgemini/mesos-ui:latest .
 
 build_standalone_image:
-	docker build -t capgemini/mesos-ui:standalone-$(MESOS_UI_VERSION) .
+	docker build -t capgemini/mesos-ui:standalone-$(MESOS_UI_VERSION) -t capgemini/mesos-ui:standalone-latest.
