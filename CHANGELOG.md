@@ -1,6 +1,12 @@
-## 1.0.0 (WIP)
+## 0.1.4 (WIP)
 
-IMPROVEMENTS:
+  * This version provides support for Zookeeper Leader Election when running standalone mode.
+
+## 0.1.3 (March 9, 2016)
+
+  * This version provides tasks support with both table and visualizer format.
+
+## 0.1.2 (Dec 7, 2015)
 
   * This version removes the dependency with the nodejs server.
   * This version provides a ready to be served by mesos-core UI.
