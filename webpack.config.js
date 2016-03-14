@@ -84,8 +84,12 @@ const config = {
         loader: 'url-loader?limit=10000&mimetype=image/svg+xml'
       },
       {
-
+        test: /\.jsx?$/,
         loader: 'transform?envify',
+      },
+      {
+        test: /\.json?$/,
+        loader: 'file-loader'
       },
       {
         test: /\.jsx?$/,

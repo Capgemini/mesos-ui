@@ -4,12 +4,13 @@ var config = {
   port: 5000,
   // Backend API URLs.
   // Set this to 'http://127.0.0.1:8000' for using the stub server running in DEV mode.
-  'mesosEndpoint': process.env.MESOS_ENDPOINT || (typeof(document) !== 'undefined' ? document.location.origin : null),
-  'proxyPath': '/proxy/'
+  'mesosEndpoint': (typeof(document) !== 'undefined' ? document.location.origin : null),
+  'proxyPath': '/proxy'
 };
 
-if (process.env.MESOS_ENDPOINT) {
-  config.mesosEndpoint = config.proxyPath + config.mesosEndpoint
+if (process.env.ZOOKEEPER_ADDRESS) {
+  config.zookeeperAddress = process.env.ZOOKEEPER_ADDRESS;
+  config.mesosEndpoint = config.proxyPath;
 }
 
 module.exports = config;
