@@ -18,7 +18,7 @@ You can run and deploy this app in standalone mode via docker like:
 
 or using marathon:
 
-replace MESOS_ENDPOINT with the URL of your Mesos master and run:
+replace ZOOKEEPER_ADDRESS with the address of your zookeeper instances and run:
 
 ``` curl -X POST -HContent-Type:application/json -d @marathon.json http://MARATHON_ENDPOINT:8080/v2/apps ```
 
@@ -99,9 +99,8 @@ Install the NPM packages:
 cd mesos-ui
 npm install
 ```
-Make sure you change the config file to point to the stub server.
-```cd src/config```
-```'mesosEndpoint': 'http://127.0.0.1:8000'``` 
+Make sure you export the environment variable MESOS_ENDPOINT to point to the stub server.
+```export MESOS_ENDPOINT=http://127.0.0.1:8000``` 
 
 Serve the app
 

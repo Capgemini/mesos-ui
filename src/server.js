@@ -19,7 +19,11 @@ app.listen(app.get('port'), () => {
 // Launch the server
 // -----------------------------------------------------------------------------
 // // Default routes
-require('./routes/default')(app);
+if (process.env.ZOOKEEPER_ADDRESS) {
+  require('./routes/zookeeper')(app);
+} else if (process.env.MESOS_ENDPOINT) {
+  require('./routes/dev')(app);
+}
 
 // If we're in development mode spin up a mock server as we may not have a
 // running Mesos cluster, so lets just use the stub API in ./stub.json.

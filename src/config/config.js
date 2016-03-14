@@ -11,6 +11,8 @@ var config = {
 if (process.env.ZOOKEEPER_ADDRESS) {
   config.zookeeperAddress = process.env.ZOOKEEPER_ADDRESS;
   config.mesosEndpoint = config.proxyPath;
+} else if (process.env.MESOS_ENDPOINT) {
+  config.mesosEndpoint = config.proxyPath;
 }
 
 module.exports = config;
