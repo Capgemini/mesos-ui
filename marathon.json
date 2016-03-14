@@ -5,7 +5,7 @@
   "cpus": 1,
   "mem": 512,
   "env": {
-    "MESOS_ENDPOINT": "http://127.0.0.1:5050"
+    "ZOOKEEPER_ADDRESS": "127.0.0.1:2181"
   },
   "labels": {
     "DCOS_PACKAGE_NAME": "mesos-ui",

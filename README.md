@@ -14,7 +14,7 @@ A responsive, realtime dashboard for Apache Mesos built using Node.js, React.js.
 
 You can run and deploy this app in standalone mode via docker like:
 
-```docker run -p 5000:5000 -e MESOS_ENDPOINT=http://production_endpoint:5050 capgemini/mesos-ui:standalone-$TAG```
+```docker run -p 5000:5000 -e ZOOKEEPER_ADDRESS="ip1:2181,ip2:2181,ip3:2181" capgemini/mesos-ui:standalone-$TAG```
 
 or using marathon:
 
