@@ -30,7 +30,10 @@ The quickest way to check it out is just run:
 
 And you should be able to access to 127.0.0.1:5050 via browser.
 
+## Powered By Mesos UI
+Organisations using Mesos UI. If your company uses Mesos UI, we would be glad to get your feedback :) 
 
+- Capgemini
 
 
 
