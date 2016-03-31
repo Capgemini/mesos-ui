@@ -17,10 +17,10 @@ module.exports = function(app) {
   client.once('connected', function () {
     console.log('Connected to the Zookeeper.');
 
-    listChildren(client, '/mesos').then(function(childrenList) {
+    listChildren(client, config.zookeeperPath).then(function(childrenList) {
       // The smallest one is the leader.
       childrenList.sort();
-      return getData(client, '/mesos/' + childrenList[0]);
+      return getData(client, config.zookeeperPath + '/' + childrenList[0]);
     }).then(function(jsonData) {
       // The top-level React component + HTML template for it
       let leader = 'http://' + jsonData.address.ip + ':' + jsonData.address.port;
@@ -74,7 +74,7 @@ module.exports = function(app) {
           listChildren(client, path).then(function(childrenList) {
             // The smallest one is the leader.
             childrenList.sort();
-            return getData(client, '/mesos/' + childrenList[0]);
+            return getData(client, path + '/' + childrenList[0]);
           }).then(function(jsonData) {
             var config = require('../config/config');
             // The top-level React component + HTML template for it
