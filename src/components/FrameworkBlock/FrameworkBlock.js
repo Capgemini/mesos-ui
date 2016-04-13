@@ -24,7 +24,7 @@ class FrameworkBlock extends React.Component {
     let name = props.name;
     let version = props.version;
     let tasks = props.tasks;
-    let webUrl = props.url;
+    let webUrl = props.name + config.domain;
     let logo = props.logoFile || this.defaultLogo();
 
     let appVersion = '';

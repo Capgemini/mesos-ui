@@ -9,6 +9,8 @@ engines:
    enabled: true
  fixme:
    enabled: false
+ shellcheck:
+    enabled: true
 
 exclude_paths:
 - src/public/css/flexboxgrid.min.css
