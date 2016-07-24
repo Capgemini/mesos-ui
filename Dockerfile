@@ -1,4 +1,4 @@
-FROM mhart/alpine-node:4.3.2
+FROM mhart/alpine-node:4.4.7
 
 MAINTAINER Graham Taylor <gtayzlor@gmail.com>
 
