@@ -20,4 +20,7 @@ if (process.env.ZOOKEEPER_PATH) {
   config.zookeeperPath = process.env.ZOOKEEPER_PATH;
 }
 
+if (process.env.PORT0) {
+  config.port = process.env.PORT0;
+}
 module.exports = config;

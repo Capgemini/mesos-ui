@@ -30,7 +30,7 @@
       "network": "BRIDGE",
       "portMappings": [
         {
-          "containerPort": 5000,
+          "containerPort": 0,
           "hostPort": 0,
           "servicePort": 5000,
           "protocol": "tcp"
