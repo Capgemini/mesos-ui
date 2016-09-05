@@ -33,7 +33,7 @@ And you should be able to access to 127.0.0.1:5050 via browser.
 ## Powered By Mesos UI
 Organisations using Mesos UI. If your company uses Mesos UI, we would be glad to get your feedback :) 
 
-- Capgemini
+- [Capgemini](https://www.uk.capgemini.com)
 - [Gumtree AU - Ebay Classifieds group](https://www.gumtree.com.au) 
 - [今日头条 - Toutiao](http://app.toutiao.com/news_article/)
 
