@@ -35,7 +35,7 @@ Organisations using Mesos UI. If your company uses Mesos UI, we would be glad to
 
 - Capgemini
 - [Gumtree AU - Ebay Classifieds group](https://www.gumtree.com.au) 
-- [今日头条](http://app.toutiao.com/news_article/)
+- [今日头条 - Toutiao](http://app.toutiao.com/news_article/)
 
 
 
