@@ -1,4 +1,5 @@
 # Mesos UI
+[![wercker status](https://app.wercker.com/status/3e566621ba967bfeb6ee57a76ddf42cc/s/master "wercker status")](https://app.wercker.com/project/bykey/3e566621ba967bfeb6ee57a76ddf42cc)
 
 [![Join the chat at https://gitter.im/Capgemini/mesos-ui](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/Capgemini/mesos-ui?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
