@@ -31,7 +31,7 @@
     "fastclick": "1.0.6",
     "flux": "2.1.1",
     "is-plain-object": "~2.0.1",
-    "lodash": "3.10.1",
+    "lodash": "4.17.19",
     "material-ui": "0.11.1",
     "node-sass": "~3.3.0",
     "normalize.css": "3.0.3",
