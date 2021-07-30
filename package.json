@@ -19,7 +19,7 @@
     "npm": ">= 2.14"
   },
   "dependencies": {
-    "node-zookeeper-client": "0.2.2",
+    "node-zookeeper-client": "1.1.1",
     "array-find": "~1.0.0",
     "babel": "5.8.23",
     "babel-plugin-flow-comments": "~1.0.9",
