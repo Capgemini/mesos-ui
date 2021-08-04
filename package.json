@@ -36,7 +36,7 @@
     "node-sass": "~3.3.0",
     "normalize.css": "3.0.3",
     "object-assign": "~4.0.1",
-    "radium": "~0.14.1",
+    "radium": "~0.16.0",
     "react": "0.13.3",
     "react-motion": "^0.3.0",
     "react-router": "0.13.3",
@@ -47,7 +47,8 @@
     "history": "1.12.0",
     "envify": "3.4.0",
     "express-http-proxy": "0.6.0",
-    "transform-loader": "0.2.3"
+    "transform-loader": "0.2.3",
+    "@snyk/protect": "latest"
   },
   "devDependencies": {
     "autoprefixer-core": "~5.2.0",
@@ -100,6 +101,9 @@
     "coverage": "jest --coverage",
     "build": "gulp build",
     "serve": "gulp serve",
-    "sync": "gulp sync"
-  }
+    "sync": "gulp sync",
+    "prepublish": "npm run snyk-protect",
+    "snyk-protect": "snyk-protect"
+  },
+  "snyk": true
 }
