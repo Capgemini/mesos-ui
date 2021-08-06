@@ -33,7 +33,7 @@
     "is-plain-object": "~2.0.1",
     "lodash": "3.10.1",
     "material-ui": "0.11.1",
-    "node-sass": "~3.3.0",
+    "node-sass": "~5.0.0",
     "normalize.css": "3.0.3",
     "object-assign": "~4.0.1",
     "radium": "~0.14.1",
